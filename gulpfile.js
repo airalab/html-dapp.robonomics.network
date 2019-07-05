@@ -25,9 +25,10 @@ var gulp             = require('gulp'),
 var path = {
 
     file:{
-        csscompile: 'app/css/compile.scss',
+        csscompile: 'app/css/*.scss',
         cssall: 'app/css/**/*.scss',
         jsall: 'app/js/**/*.js',
+        layoutscompile: 'app/layouts/*.pug',
         layoutsall: 'app/layouts/**/*.pug',
         fonticons: 'app/fonticons/*.svg'
     },
@@ -44,8 +45,8 @@ var path = {
     },
 
     filename:{
-        css: 'robonomics_website',
-        js: 'robonomics_plugins.js',
+        css: 'robonomics',
+        js: 'robonomics-html.js',
         fonticons: 'iconfont'
     }
 
@@ -59,9 +60,6 @@ gulp.task('css', function() {
 			sass: path.folder.sass,
 			image: path.folder.image
 		}))
-		.pipe(rename({
-            basename: path.filename.css
-        }))
         .pipe(gulp.dest(path.folder.css))
         .pipe(cleancss({
           compatibility: 'ie8'
@@ -88,7 +86,7 @@ gulp.task('js', function() {
 
 
 gulp.task('layouts', function() {
-  return gulp.src([path.file.layoutsall])
+  return gulp.src([path.file.layoutscompile])
     .pipe(pug({
       pretty: true
     }))
