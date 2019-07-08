@@ -35,9 +35,14 @@
     section:first-child { padding-top: 0; }
   }
 
+.sidebar-col-tog
+  {
+    @extend %hidden;
+  }
+
 .sidebar-i--lg
   {
-    $size-i--lg: 42px;
+    $size-i--lg: 38px;
 
     width: $size-i--lg;
     height: $size-i--lg;
@@ -51,12 +56,4 @@
     transition: 0.2s all ease;
 
     &:last-child { margin-bottom: 0; }
-    &#sidebar-show--nav.on{ transform:rotate(-180deg); }
   }
-
-#sidebar-nav0 span[class^='i-']
-  {
-    font-size: $font-size-base*2;
-    margin-right: 0;
-  }
-

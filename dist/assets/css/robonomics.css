@@ -1907,14 +1907,14 @@ a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .s
   flex-grow: 1;
 }
 
-.sidebar-col-tog, .close, .slide-right.open, .theme-day, .theme-night {
+.sidebar-col-tog, .close, .slide-right.open {
   visibility: hidden;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.open, .theme-light .theme-day, .theme-dark .theme-night {
+.open {
   visibility: visible;
   opacity: 1;
   width: auto;
@@ -2495,7 +2495,7 @@ input:not([type='submit']):not([type='button']).input-line {
   font-weight: normal;
   font-style: normal;
 }
-.i-back, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu {
+.i-back, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-multicolor {
   font-family: 'iconfont';
   speak: none;
   font-size: 100%;
@@ -2548,7 +2548,7 @@ input:not([type='submit']):not([type='button']).input-line {
   content: "󪀐";
 }
 
-.i-menu:before {
+.i-multicolor:before {
   content: "󪀑";
 }
 
@@ -2684,9 +2684,9 @@ section section {
 }
 
 .sidebar-i--lg {
-  width: 38px;
-  height: 38px;
-  border-radius: 19px;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
   border-width: 1px;
   border-style: solid;
   margin: 0 auto 20px;
@@ -2694,6 +2694,9 @@ section section {
 }
 .sidebar-i--lg:last-child {
   margin-bottom: 0;
+}
+.sidebar-i--lg#sidebar-show--nav.on {
+  transform: rotate(-180deg);
 }
 
 html, body {
@@ -2819,6 +2822,53 @@ body {
 }
 
 /*====== end of Bootstrap ======*/
+/*====== Navigation ======*/
+.dropdown {
+  position: relative;
+}
+.dropdown > .dropdown-content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  text-align: left;
+  padding-top: 10px;
+}
+.dropdown:hover > .dropdown-content {
+  animation: 0.2s FadeIn 0.4s ease-out forwards;
+}
+.dropdown.dropdown-color, .dropdown.dropdown-color .inside {
+  padding: 8px 15px;
+  background: #222222;
+  border: 1px solid #7481b9;
+  border-radius: 4px;
+}
+
+/*====== end of Navigation ======*/
+/*====== Random ======*/
+.separator-dark, .separator-light, .separator-pale {
+  height: 1px;
+  background-color: #fff;
+}
+
+.separator-light {
+  background-color: #fff;
+}
+
+.separator-pale {
+  background-color: #7481b9;
+}
+
+.separator-animated {
+  transform: scale(0);
+}
+.separator-animated.isInView {
+  animation: ScaleIn 0.6s 0.8s ease-in-out forwards;
+}
+
+/*====== end of Random ======*/
 /* action states (1-actions.js) */
 .slide-right.open {
   transform: translateX(-100%);

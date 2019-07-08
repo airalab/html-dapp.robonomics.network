@@ -25,7 +25,7 @@ var gulp             = require('gulp'),
 var path = {
 
     file:{
-        csscompile: 'app/css/*.scss',
+        csscompile: 'app/css/compile.scss',
         cssall: 'app/css/**/*.scss',
         jsall: 'app/js/**/*.js',
         layoutscompile: 'app/layouts/*.pug',

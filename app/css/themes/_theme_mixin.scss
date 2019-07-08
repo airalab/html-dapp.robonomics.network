@@ -41,6 +41,10 @@
 
 ){
 
+  .theme-day, .theme-night { @extend %hidden; }
+  .theme-light .theme-day { @extend %visible; }
+  .theme-dark .theme-night { @extend %visible; }
+
   #{$theme-class} //body class for theme
   {
     background-color: $body-background;
