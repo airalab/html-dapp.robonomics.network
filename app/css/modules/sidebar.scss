@@ -6,6 +6,8 @@
     @extend %position_sticky__top;
 
     nav a { white-space: nowrap; }
+    a.active { opacity: 0.5; cursor: default; }
+
     span[class^='i-'] { margin-right: 10px; }
   }
 
@@ -22,7 +24,6 @@
     
     .sidebar-col-in { padding: 40px 20px; }
     section:first-child { margin-top: 0; }
-    nav a.active { opacity: 0.5; cursor: default; }
   }
 
 .sidebar-col--bottom

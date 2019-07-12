@@ -2,33 +2,7 @@ var
 	selector = 'on-toggle',
 	onclose  = 'on-close',
 	classOpen = 'open',
-	classSwitchOn = 'on';
-
-
-// function close(e){
-// 	var o, link;
-
-// 	o = document.querySelectorAll( e.getAttribute(onclose) );
-// 	o.forEach(function(i){
-// 		i.classList.remove(classOpen);
-// 	});
-
-// 	link = document.querySelectorAll('[' + selector + ']');
-// 	link.forEach(function(i){
-// 		i.classList.remove(classSwitchOn);
-// 	});
-// }
-
-
-// function open(e){
-
-// 	e.classList.toggle(classSwitchOn);
-
-// 	o = document.querySelectorAll( e.getAttribute(selector) );
-// 	o.forEach(function(i){
-// 		i.classList.toggle(classOpen);
-// 	});
-// }
+	classSwitchOn = 'active';
 
 
 function init(){
@@ -76,18 +50,6 @@ function init(){
 
 		});
 	});
-
-	// var e = document.querySelectorAll('[' + selector + ']');
-
-	// e.forEach(function(i){
-
-	// 	i.addEventListener("click", function(event){
-	// 		event.preventDefault();
-	// 		close(this);
-	// 		open(this);
-	// 	});
-
-	// });
 }
 
 

@@ -1886,7 +1886,7 @@ a, a.a-noline, a.a-icon, a.a-icon--border, input[type="submit"], input[type="but
 
 h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .window-head, .loading-logo:after {
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .i-block {
@@ -1942,13 +1942,12 @@ html {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   font-weight: 300;
 }
 
 h1, h2 {
   margin-top: 90px;
-  margin-bottom: 12px;
 }
 h1:first-child, h2:first-child {
   margin-top: 0;
@@ -2029,7 +2028,7 @@ a.a-icon--border > span, a.a-icon--border > b {
 }
 
 li, p, blockquote {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 li:last-child, p:last-child, blockquote:last-child {
   margin-bottom: 0;
@@ -2419,7 +2418,6 @@ input:not([type='submit']):not([type='button']), input[type="submit"], input[typ
   border-radius: 6px;
   display: inline-block;
   vertical-align: middle;
-  box-sizing: border-box;
   padding: 6px 10px;
 }
 
@@ -2437,11 +2435,6 @@ input[disabled][type="submit"], input[disabled][type="button"], button[disabled]
 }
 input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled][class*='btn-'], input[disabled][type="submit"]:hover, input[disabled][type="button"]:hover, button[disabled]:hover, [disabled][class*='btn-']:hover {
   opacity: 0.5;
-}
-input.container-full[type="submit"], input.container-full[type="button"], button.container-full, .container-full[class*='btn-'] {
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 input:not([type='submit']):not([type='button']) {
@@ -2469,6 +2462,34 @@ input:not([type='submit']):not([type='button']).input-line {
 .input-size--lg {
   width: 600px;
   max-width: 100%;
+}
+
+.form-inputline {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  white-space: nowrap;
+}
+.form-inputline input, .form-inputline button {
+  flex-grow: 1;
+  border-radius: 6px 0 0 6px !important;
+  border-right-width: 0px !important;
+}
+.form-inputline input:last-child, .form-inputline button:last-child {
+  border-radius: 0 6px 6px 0 !important;
+  border-right-width: 1px !important;
+  border-left-width: 0px !important;
+}
+
+.input-measured {
+  position: relative;
+  display: inline-block;
+}
+.input-measured .input-measure {
+  position: absolute;
+  right: 10px;
+  top: calc( 50% - 16px/2);
+  line-height: 1;
 }
 
 /* Icons */
@@ -2631,6 +2652,10 @@ section section {
 .sidebar nav a {
   white-space: nowrap;
 }
+.sidebar a.active {
+  opacity: 0.5;
+  cursor: default;
+}
 .sidebar span[class^='i-'] {
   margin-right: 10px;
 }
@@ -2654,10 +2679,6 @@ section section {
 }
 .sidebar-col section:first-child {
   margin-top: 0;
-}
-.sidebar-col nav a.active {
-  opacity: 0.5;
-  cursor: default;
 }
 
 .sidebar-col--bottom {
@@ -2685,6 +2706,18 @@ section section {
   margin-bottom: 0;
 }
 
+.page-alembic--actionblock img {
+  max-height: 80px;
+  margin: 0 auto;
+}
+.page-alembic--actionblock .content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.page-alembic--actionblock button {
+  margin-top: 10px;
+}
+
 html, body {
   position: relative;
 }
@@ -2706,7 +2739,6 @@ body {
 
 .container-full {
   width: 100%;
-  box-sizing: border-box;
 }
 
 .container-padding {
@@ -2849,25 +2881,19 @@ body {
   background-color: #f0f0f0;
   color: #656d76;
 }
+.theme-light .sidebar a {
+  color: #656d76;
+}
+.theme-light .sidebar a:not([class*='sidebar-i--lg']):not([class*='active']):hover {
+  color: #03A5ED;
+}
+.theme-light .sidebar-i--lg.active {
+  background-color: #f6f6f6;
+  border-color: #6c757e;
+}
 .theme-light .sidebar-col {
   background-color: #ffffff;
   border-color: #ebebeb;
-  color: #6c757e;
-}
-.theme-light .sidebar-col.open {
-  background-color: #f6f6f6;
-  border-color: #e0e0e0;
-  color: #656d76;
-}
-.theme-light .sidebar-col nav a {
-  color: #656d76;
-}
-.theme-light .sidebar-col nav a:not([class*='active']):hover {
-  color: #03A5ED;
-}
-.theme-light .sidebar-i--lg.on {
-  background-color: #f6f6f6;
-  border-color: #6c757e;
   color: #6c757e;
 }
 .theme-light .panel-top .panel-top--cell {
@@ -2897,12 +2923,19 @@ body {
 .theme-light input:not([type='submit']):not([type='button']).input-line {
   background-color: transparent;
 }
+.theme-light input:not([type='submit']):not([type='button'])[disabled] {
+  background-color: #f2f2f2;
+  border-color: rgba(101, 109, 118, 0.2);
+}
 .theme-light input[type="submit"], .theme-light input[type="button"], .theme-light button, .theme-light .btn-blue {
   color: #ffffff;
   background-color: #03A5ED;
 }
 .theme-light input[type="submit"]:not([disabled]):hover, .theme-light input[type="button"]:not([disabled]):hover, .theme-light button:not([disabled]):hover, .theme-light .btn-blue:not([disabled]):hover {
   background-color: #0282bb;
+}
+.theme-light .input-measure {
+  color: #8b949c;
 }
 .theme-light .btn-green {
   color: #ffffff;
@@ -2939,25 +2972,19 @@ body {
   background-color: #202020;
   color: #eaeaea;
 }
+.theme-dark .sidebar a {
+  color: #eaeaea;
+}
+.theme-dark .sidebar a:not([class*='sidebar-i--lg']):not([class*='active']):hover {
+  color: #0282bb;
+}
+.theme-dark .sidebar-i--lg.active {
+  background-color: #262626;
+  border-color: #f2f2f2;
+}
 .theme-dark .sidebar-col {
   background-color: #2f2f2f;
   border-color: #1b1b1b;
-  color: #f2f2f2;
-}
-.theme-dark .sidebar-col.open {
-  background-color: #262626;
-  border-color: #101010;
-  color: #eaeaea;
-}
-.theme-dark .sidebar-col nav a {
-  color: #eaeaea;
-}
-.theme-dark .sidebar-col nav a:not([class*='active']):hover {
-  color: #0282bb;
-}
-.theme-dark .sidebar-i--lg.on {
-  background-color: #262626;
-  border-color: #f2f2f2;
   color: #f2f2f2;
 }
 .theme-dark .panel-top .panel-top--cell {
@@ -2987,12 +3014,19 @@ body {
 .theme-dark input:not([type='submit']):not([type='button']).input-line {
   background-color: transparent;
 }
+.theme-dark input:not([type='submit']):not([type='button'])[disabled] {
+  background-color: #222222;
+  border-color: rgba(234, 234, 234, 0.2);
+}
 .theme-dark input[type="submit"], .theme-dark input[type="button"], .theme-dark button, .theme-dark .btn-blue {
   color: #e6e6e6;
   background-color: #0282bb;
 }
 .theme-dark input[type="submit"]:not([disabled]):hover, .theme-dark input[type="button"]:not([disabled]):hover, .theme-dark button:not([disabled]):hover, .theme-dark .btn-blue:not([disabled]):hover {
   background-color: #025f88;
+}
+.theme-dark .input-measure {
+  color: white;
 }
 .theme-dark .btn-green {
   color: #e6e6e6;

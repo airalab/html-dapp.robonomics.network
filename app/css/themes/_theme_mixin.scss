@@ -51,25 +51,29 @@
     background-color: $body-background;
     color: $body-textcolor;
 
+
+   .sidebar
+     {
+        a{
+            color: $body-textcolor;
+
+            &:not([class *= 'sidebar-i--lg']):not([class *= 'active']):hover { color: $blue; }
+          }
+      }
+
+    .sidebar-i--lg.active
+      {
+        background-color: $section-background-dark;
+        border-color: $section-textcolor;
+      }
+
+
     .sidebar-col
       {
         @include fullcoloring($section-background, $section-border, $section-textcolor);
-
-        &.open{
-          @include fullcoloring($section-background-dark, $section-border-dark, $section-textcolor-dark);
-        }
-
-        nav a{
-          color: $body-textcolor;
-
-          &:not([class *= 'active']):hover { color: $blue; }
-        }
       }
 
-    .sidebar-i--lg.on
-      {
-        @include fullcoloring($section-background-dark, $section-textcolor, $section-textcolor);
-      }
+    
 
 
 
@@ -113,12 +117,20 @@
           {
             background-color: transparent;
           }
+
+      &[disabled]
+        {
+          background-color: darken($section-background, 5%);
+          border-color: rgba($body-textcolor, .2);
+        }
     }
 
 
     input[type="submit"], input[type="button"], button, .btn-blue{
       @include btn($btn-textcolor, $blue);
     }
+
+    .input-measure { color: lighten($body-textcolor, 15%); }
 
     .btn-green{ @include btn($btn-textcolor, $green); }
 

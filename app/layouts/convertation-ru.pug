@@ -12,15 +12,14 @@ block content
 	.content
 		+panelTop()
 		.content-in
-			section
-				h1 Перегонный куб Aira токенов в XRT
-				section.section-light.window#window-developletter
-					.window-head
-						span Письмо разработчиков
-						a.window-head-toggle(href="#") –
-					.window-content
-
-						p: b Держатель токенов Aira!
+			h1 Перегонный куб Aira токенов в XRT
+			
+			section.section-light.window#window-developletter
+				.window-head
+					span Письмо разработчиков
+					a.window-head-toggle(href="#") –
+				.window-content
+					p: b Держатель токенов Aira!
 						p С твоей помощью мы проделали путь от прототипа программного обеспечения 
 							a(href="http://aira.life", target="_blank") Aira 
 							| до 
@@ -57,106 +56,122 @@ block content
 									td(data-th="Aira → Aira KYC") Токен Aira и Aira KYC не будут предлагаться разработчиками на дексы
 									td(data-th="Aira → Aira KYC → XRT") XRT будет предлагаться разработчиками и сообществом для добавления на биржи
 
-
 			section.section-light
 
 				h3 К действию!
 
 
 				section.t-align--center.d-table.container-full.table-space--10.table-fixed
-					.d-table--cell.section-mid
-							h3 1. Прохождение KYC
-							img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
-							br/
-							p
-								a(href="#")
-									+avatar('avatar-small align-vertical m-r-10')
-									b 0x40c5...c8d3
-							button.container-full Пройти KYS
 					
-					.d-table--cell.section-mid.disabled
-							h3 2. Aira → Aira KYC
-							img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
-							br/
-							p
-								input.input-line.input-size--sm(type="text", value="1")
-								span AIRA
-							button.container-full Конвертировать в AIRA KYC
-					.d-table--cell.section-mid.disabled
-							h3 3. Aira KYC → XRT
-							img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-							br/
-							p
-								input.input-line.input-size--sm(type="text")
-								span AIRA KYC
-							button.container-full Конвертировать в XRT
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-2.png")
+						h3 Aira → Aira ID
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1")
+								span.input-measure AIRA
+							button.container-full Конвертировать в 1 AIRA ID
+
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-3.png")
+						h3 Aira ID → XRT
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1")
+								span.input-measure AIRA ID
+							button.container-full Конвертировать в 1 XRT
+
 
 
 				section.t-align--center.d-table.container-full.table-space--10.table-fixed
-					.d-table--cell.section-mid
-						h3 1. Passing KYC
-						img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
-						br/
-						p
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-1.png")
+						h3 Passing Civic ID
+						.content
 							a(href="#")
 								+avatar('avatar-small align-vertical m-r-10')
 								b 0x40c5...c8d3
-						button.btn-green.container-full(disabled) KYC пройден
+							button.container-full Пройти Civic ID
 					
-					.d-table--cell.section-mid
-						h3 2. Aira → Aira KYC
-						img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
-						br/
-						p
-							input.input-line.input-size--sm(type="text", value="1")
-							span AIRA
-						p
+					.d-table--cell.section-mid.page-alembic--actionblock.disabled
+						img.i-block(alt="", src="assets/i/cube/i-cube-2.png")
+						h3 Aira → Aira ID
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1")
+								span.input-measure AIRA
+							button.container-full Конвертировать в 1 AIRA ID
+
+					.d-table--cell.section-mid.page-alembic--actionblock.disabled
+						img.i-block(alt="", src="assets/i/cube/i-cube-3.png")
+						h3 Aira ID → XRT
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1")
+								span.input-measure AIRA ID
+							button.container-full Конвертировать в 1 XRT
+
+				section.t-align--center.d-table.container-full.table-space--10.table-fixed
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-1.png")
+						h3 Passing Civic ID
+						.content
+							a(href="#")
+								+avatar('avatar-small align-vertical m-r-10')
+								b 0x40c5...c8d3
+							button.container-full.btn-green(disabled) Civic ID пройден
+
+
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-2.png")
+						h3 Aira → Aira ID
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1",disabled)
+								span.input-measure AIRA
 							button.container-full(disabled)
-								span.align-vertical Конвертировать в AIRA KYC
+								span.align-vertical Конвертирование в 1 AIRA ID
 								.loader-ring.align-vertical.m-l-10
-						p.t-sm Подождите исполнения 
-							a(href="", target="_blank") транзакции
+							p.t-sm Подождите исполнения 
+								a(href="", target="_blank") транзакции
 
-
-					.d-table--cell.section-mid
-						h3 3. Aira KYC → XRT
-						img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-						br/
-						p
-							input.input-line.input-size--sm(type="text")
-							span AIRA KYC
-						button.container-full Конвертировать в XRT
-
-
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-3.png")
+						h3 Aira ID → XRT
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1")
+								span.input-measure AIRA ID
+							button.container-full Конвертировать в 1 XRT
 
 
 				section.t-align--center.d-table.container-full.table-space--10.table-fixed
-					.d-table--cell.section-mid
-						h3 1. Passing KYC
-						img.i-block(alt="", src="assets/i/cube/i-cube-1.jpg", style="max-height: 80px;margin:0 auto")
-						br/
-						p
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-1.png")
+						h3 Passing Civic ID
+						.content
 							a(href="#")
 								+avatar('avatar-small align-vertical m-r-10')
 								b 0x40c5...c8d3
-						button.btn-green.container-full(disabled) KYC пройден
+							button.container-full.btn-green(disabled) Civic ID passed
 					
-					.d-table--cell.section-mid
-						h3 2. Aira → Aira KYC
-						img.i-block(alt="", src="assets/i/cube/i-cube-2.jpg", style="max-height: 80px;margin:0 auto")
-						br/
-						p
-							input.input-line.input-size--sm(type="text", value="1")
-							span AIRA
-						button.container-full Конвертировать в AIRA KYC
-					.d-table--cell.section-mid
-						h3 3. Aira KYC → XRT
-						img.i-block(alt="", src="assets/i/cube/i-cube-3.jpg", style="max-height: 80px;margin:0 auto")
-						br/
-						p
-							input.input-line.input-size--sm(type="text")
-							span AIRA KYC
-						button.container-full Конвертировать в XRT
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-2.png")
+						h3 Aira → Aira ID
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="1")
+								span.input-measure AIRA
+							button.container-full Конвертировать в 1 AIRA ID
+
+					.d-table--cell.section-mid.page-alembic--actionblock
+						img.i-block(alt="", src="assets/i/cube/i-cube-3.png")
+						h3 Aira ID → XRT
+						form.content
+							.input-measured.container-full
+								input.container-full(type="text", value="")
+								span.input-measure AIRA ID
+							button.container-full Конвертировать в XRT
 
 
 				section

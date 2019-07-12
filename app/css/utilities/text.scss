@@ -8,14 +8,14 @@ body { @extend %font_base; }
 		@extend %text_uppercase;
 		line-height: 1.5;
 		font-weight: 500;
-  		margin-bottom: $vertical-rythm/2;
+  		margin-bottom: $vertical-rythm;
   		font-weight: 300;
 	}
 
 #{headings(1,2)}
 	{
 		margin-top: $margin-sec*2;
-		margin-bottom: $vertical-rythm/2;
+		
 
 		&:first-child { margin-top: 0; }
 	}
@@ -92,7 +92,7 @@ a
 
 li, p, blockquote
 	{
-	  margin-bottom: $vertical-rythm/2;
+	  margin-bottom: $vertical-rythm;
 
 	  &:last-child{
 	  	margin-bottom: 0;

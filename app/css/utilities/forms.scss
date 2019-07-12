@@ -1,12 +1,13 @@
+$border-radius: 6px;
+
 %inputs_base{
 	@extend %font_base;
 	font-size: $font-size-base;
 	font-weight: 500;
-  	border-radius: 6px;
+  	border-radius: $border-radius;
 
   	display: inline-block;
   	vertical-align: middle;
-  	box-sizing: border-box;
   	padding: 6px 10px;
 }
 
@@ -30,12 +31,6 @@
 			{
 				opacity: 0.5;
 			}
-	}
-
-	&.container-full{
-		max-width: 300px;
-		margin-left: auto;
-		margin-right: auto;
 	}
 }
 
@@ -85,3 +80,44 @@ input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 		width: 600px;
 		max-width: 100%;
 	}
+
+
+.form-inputline
+	{
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+
+		white-space: nowrap;
+
+		input, button
+			{
+				flex-grow: 1;
+				border-radius: $border-radius 0 0 $border-radius !important;
+				border-right-width: 0px !important;
+
+				&:last-child{
+					border-radius: 0 $border-radius $border-radius 0 !important;
+					border-right-width: 1px !important;
+					border-left-width: 0px !important;
+				}
+			}
+	}
+
+
+
+.input-measured
+	{
+		position: relative;
+		display: inline-block;
+
+		.input-measure
+			{
+				position: absolute;
+				right: 10px;
+				top: calc( 50% - #{$font-size-base}/2);
+				line-height: 1;
+			}
+	}
+
+
