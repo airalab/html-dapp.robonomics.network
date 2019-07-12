@@ -15,13 +15,14 @@
 .sidebar-col
   {
     transition: opacity .4s ease-out;
-    
+
     position: relative;
     border-width: 0 1px 0 0;
     border-style: solid;
     
     .sidebar-col-in { padding: 40px 20px; }
     section:first-child { margin-top: 0; }
+    nav a.active { opacity: 0.5; cursor: default; }
   }
 
 .sidebar-col--bottom
@@ -37,7 +38,7 @@
     section:first-child { padding-top: 0; }
   }
 
-.sidebar-col-tog
+.js-sidebar-content
   {
     @extend %hidden;
   }

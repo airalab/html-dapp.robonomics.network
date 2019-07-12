@@ -24,12 +24,12 @@
       <div class="sidebar-col sidebar-col--sm">
         <div class="sidebar-col-in">
           <section><a href="/"><img alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/></a></section>
-          <section><a class="sidebar-i--lg" href="javascript:;" data-toggle="#sidebar-nav1"><i class="i-menu"></i></a><a class="sidebar-i--lg" href="javascript:;">EN</a><a class="sidebar-i--lg" href="javascript:;"><i class="i-day"></i></a>
+          <section><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-nav1"><i class="i-menu"></i></a><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-lang">EN</a><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-theme"><i class="i-day"></i></a>
           </section>
-          <section class="sidebar-col--bottom"><a class="sidebar-i--lg" href="javascript:;" data-toggle="#sidebar-info">?</a></section>
+          <section class="sidebar-col--bottom"><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-info">?</a></section>
         </div>
       </div>
-      <div class="sidebar-col sidebar-col-tog slide-right" id="sidebar-nav1">
+      <div class="sidebar-col js-sidebar-content" id="sidebar-nav1">
         <div class="sidebar-col-in">
           <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-text-blue.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-text.svg"/></a></section>
           <section>
@@ -38,7 +38,21 @@
           </section>
         </div>
       </div>
-      <div class="sidebar-col sidebar-col-padding sidebar-col-tog close" id="sidebar-info">
+      <div class="sidebar-col sidebar-col-padding js-sidebar-content" id="sidebar-lang">
+        <div class="sidebar-col-in">
+          <section>
+            <nav class="nav-vertical"><a class="active" href="#">EN - English</a><a href="#">RU - Русский</a></nav>
+          </section>
+        </div>
+      </div>
+      <div class="sidebar-col sidebar-col-padding js-sidebar-content" id="sidebar-theme">
+        <div class="sidebar-col-in">
+          <section>
+            <nav class="nav-vertical"><a class="active" href="#"><span class="i-day align-vertical"></span><span class="align-vertical">Light</span></a><a href="#"><span class="i-night align-vertical"></span><span class="align-vertical">Dark</span></a></nav>
+          </section>
+        </div>
+      </div>
+      <div class="sidebar-col sidebar-col-padding js-sidebar-content" id="sidebar-info">
         <div class="sidebar-col-in">
           <section>
             <nav class="nav-vertical"><a href="#"><span class="i-github align-vertical"></span><span class="align-vertical">Github</span></a><a href="#"><span class="i-reddit align-vertical"></span><span class="align-vertical">Reddit</span></a><a href="#"><span class="i-cursor align-vertical"></span><span class="align-vertical">robonomomics.network</span></a><a href="#"><span class="i-cursor align-vertical"></span><span class="align-vertical">aira.life</span></a></nav>

@@ -28,20 +28,20 @@ mixin sidebar($navActive, $multilang)
 						img(alt="dApp logo", src="assets/i/logo-dapp-sign.svg")
 
 				section
-					a(href="javascript:;", data-toggle="#sidebar-nav1").sidebar-i--lg
+					a(href="javascript:;", on-toggle="#sidebar-nav1").sidebar-i--lg.js-sidebar-link
 						i.i-menu
 
 					if $multilang
-						a(href="javascript:;").sidebar-i--lg EN
+						a(href="javascript:;", on-toggle="#sidebar-lang").sidebar-i--lg.js-sidebar-link EN
 
-					a(href="javascript:;").sidebar-i--lg
+					a(href="javascript:;", on-toggle="#sidebar-theme").sidebar-i--lg.js-sidebar-link
 						i.i-day
 
 				section.sidebar-col--bottom
-					a(href="javascript:;", data-toggle="#sidebar-info").sidebar-i--lg ?
+					a(href="javascript:;", on-toggle="#sidebar-info").sidebar-i--lg.js-sidebar-link ?
 
 
-		.sidebar-col.sidebar-col-tog#sidebar-nav1.slide-right
+		.sidebar-col.js-sidebar-content#sidebar-nav1
 			.sidebar-col-in
 				section
 					a(href="/")
@@ -77,8 +77,27 @@ mixin sidebar($navActive, $multilang)
 								span.i-transfer.align-vertical
 								span.align-vertical AIRA to XRT
 
+		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-lang
+			.sidebar-col-in
+				section
+					nav.nav-vertical
+						a(href="#").active EN - English
+						a(href="#") RU - Русский
 
-		.sidebar-col.sidebar-col-padding.sidebar-col-tog.close#sidebar-info
+		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-theme
+			.sidebar-col-in
+				section
+					nav.nav-vertical
+						a(href="#").active
+							span.i-day.align-vertical
+							span.align-vertical Light
+
+						a(href="#")
+							span.i-night.align-vertical
+							span.align-vertical Dark
+
+
+		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
 			.sidebar-col-in
 				section
 					nav.nav-vertical
