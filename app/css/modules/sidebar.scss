@@ -14,6 +14,8 @@
 
 .sidebar-col
   {
+    transition: opacity .4s ease-out;
+    
     position: relative;
     border-width: 0 1px 0 0;
     border-style: solid;

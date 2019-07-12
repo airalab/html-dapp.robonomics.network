@@ -186,23 +186,10 @@ body
 .open { @extend %visible; }
 .close { @extend %hidden; }
 
-.slide-right
-{
-  &.open
-    {
-      transform: translateX(-100%);
-      @extend %hidden;
-      animation: 0.2s SlideRight 0.2s ease forwards,  0.2s FadeIn 0.2s ease forwards;
-    }
-}
 
-
-
-
-.disabled
+.disabled *
   {
     filter: grayscale(1);
     opacity: 0.5;
     pointer-events: none;
   }
-

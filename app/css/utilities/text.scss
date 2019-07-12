@@ -226,21 +226,13 @@ table
 		white-space: nowrap;
 	}
 
-.t-label--blue, .t-label--orange, .t-label--green, .t-label--violet, .t-label--gray
-	{
-		padding: 5px $padding-fields-in;
-		color: #fff;
-
-		&.t-sm{
-			padding: 5px 10px;
-		}
-	}
-
-.t-label--blue { background-color: $c-blue; }
-.t-label--orange { background-color: $c-orange; }
-.t-label--green { background-color: $c-green; }
-.t-label--violet { background-color: $c-violet; }
-.t-label--gray { background-color: lighten($c-background, 30%); }
-
 .i-block { @extend %i-block; }
+
+
+.label
+	{
+		border-radius: 8px;
+		font-weight: 500;
+		padding: 0 10px;
+	}
 

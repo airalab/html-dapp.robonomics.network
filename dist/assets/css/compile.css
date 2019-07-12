@@ -1798,6 +1798,12 @@ html {
   vertical-align: baseline;
 }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 img {
   border: 0;
 }
@@ -1907,7 +1913,7 @@ a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .s
   flex-grow: 1;
 }
 
-.sidebar-col-tog, .close, .slide-right.open, .theme-day, .theme-night {
+.sidebar-col-tog, .close, .theme-day, .theme-night {
   visibility: hidden;
   opacity: 0;
   width: 0;
@@ -2349,32 +2355,10 @@ table caption {
   white-space: nowrap;
 }
 
-.t-label--blue, .t-label--orange, .t-label--green, .t-label--violet, .t-label--gray {
-  padding: 5px 10px;
-  color: #fff;
-}
-.t-label--blue.t-sm, .t-label--orange.t-sm, .t-label--green.t-sm, .t-label--violet.t-sm, .t-label--gray.t-sm {
-  padding: 5px 10px;
-}
-
-.t-label--blue {
-  background-color: #03A5ED;
-}
-
-.t-label--orange {
-  background-color: #F15A24;
-}
-
-.t-label--green {
-  background-color: #54CE63;
-}
-
-.t-label--violet {
-  background-color: #7481b9;
-}
-
-.t-label--gray {
-  background-color: #7c7c7c;
+.label {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 0 10px;
 }
 
 @keyframes FadeOut {
@@ -2660,6 +2644,7 @@ section section {
 }
 
 .sidebar-col {
+  transition: opacity .4s ease-out;
   position: relative;
   border-width: 0 1px 0 0;
   border-style: solid;
@@ -2820,12 +2805,7 @@ body {
 
 /*====== end of Bootstrap ======*/
 /* action states (1-actions.js) */
-.slide-right.open {
-  transform: translateX(-100%);
-  animation: 0.2s SlideRight 0.2s ease forwards,  0.2s FadeIn 0.2s ease forwards;
-}
-
-.disabled {
+.disabled * {
   filter: grayscale(1);
   opacity: 0.5;
   pointer-events: none;
@@ -2942,6 +2922,18 @@ body {
 .theme-light table.table-hover tr:hover td {
   background-color: #f7f7f7;
 }
+.theme-light .label-violet {
+  background-color: #809cff;
+  color: #ffffff;
+}
+.theme-light .tooltip {
+  background-color: #809cff;
+  color: #ffffff;
+}
+.theme-light .tooltip .tooltip-arrow,
+.theme-light .popper .popper__arrow {
+  border-color: #809cff;
+}
 
 .theme-dark {
   background-color: #202020;
@@ -3023,4 +3015,100 @@ body {
 }
 .theme-dark table.table-hover tr:hover td {
   background-color: #272727;
+}
+.theme-dark .label-violet {
+  background-color: #6858e4;
+  color: #e6e6e6;
+}
+.theme-dark .tooltip {
+  background-color: #6858e4;
+  color: #e6e6e6;
+}
+.theme-dark .tooltip .tooltip-arrow,
+.theme-dark .popper .popper__arrow {
+  border-color: #6858e4;
+}
+
+.popper,
+.tooltip {
+  position: absolute;
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+.popper .popper__arrow,
+.tooltip .tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+}
+
+.popper[x-placement^="top"],
+.tooltip[x-placement^="top"] {
+  margin-bottom: 6px;
+}
+
+.popper[x-placement^="top"] .popper__arrow,
+.tooltip[x-placement^="top"] .tooltip-arrow {
+  border-width: 5px 5px 0 5px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.popper[x-placement^="bottom"],
+.tooltip[x-placement^="bottom"] {
+  margin-top: 6px;
+}
+
+.tooltip[x-placement^="bottom"] .tooltip-arrow,
+.popper[x-placement^="bottom"] .popper__arrow {
+  border-width: 0 5px 5px 5px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  top: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip[x-placement^="right"],
+.popper[x-placement^="right"] {
+  margin-left: 6px;
+}
+
+.popper[x-placement^="right"] .popper__arrow,
+.tooltip[x-placement^="right"] .tooltip-arrow {
+  border-width: 5px 5px 5px 0;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  left: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.popper[x-placement^="left"],
+.tooltip[x-placement^="left"] {
+  margin-right: 6px;
+}
+
+.popper[x-placement^="left"] .popper__arrow,
+.tooltip[x-placement^="left"] .tooltip-arrow {
+  border-width: 5px 0 5px 5px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  right: -6px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
 }

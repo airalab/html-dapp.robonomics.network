@@ -4,17 +4,17 @@ mixin panelTop()
 			a(href="#")
 				+avatar('avatar-small align-vertical m-r-10')
 				b 0x40c5...c8d3
-		.panel-top--cell.disabled(title="Only for Mainnet")
+		.panel-top--cell.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
 			b 2,100
 			span.t-sm AIRA
-		.panel-top--cell.disabled(title="Only for Mainnet")
+		.panel-top--cell.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
 			b 0
 			span.t-sm AIRA ID
 		.panel-top--cell
 			b 0
 			span.t-sm XRT
 		.panel-top--cell
-			.label Sidechain
+			.label.label-violet Sidechain
 
 		
 
@@ -41,7 +41,7 @@ mixin sidebar($navActive, $multilang)
 					a(href="javascript:;", data-toggle="#sidebar-info").sidebar-i--lg ?
 
 
-		.sidebar-col.sidebar-col-tog#sidebar-nav1
+		.sidebar-col.sidebar-col-tog#sidebar-nav1.slide-right
 			.sidebar-col-in
 				section
 					a(href="/")

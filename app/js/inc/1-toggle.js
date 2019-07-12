@@ -10,7 +10,6 @@ function action(e){
 	o = document.querySelectorAll( e.getAttribute(selector) );
 
 	o.forEach(function(i){
-		console.log(i);
 		i.classList.toggle(classOpen);
 	});
 }
