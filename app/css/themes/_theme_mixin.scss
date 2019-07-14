@@ -107,23 +107,18 @@
 
 
 
-    input:not([type='submit']):not([type='button'])
-    {
-      border-color: rgba($body-textcolor, .5);
-      background-color: $section-background;
-      color: $body-textcolor;
+    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open
+      {
+        border-color: rgba($body-textcolor, .5);
+        background-color: $section-background;
+        color: $body-textcolor;
+      }
 
-      &.input-line
-          {
-            background-color: transparent;
-          }
-
-      &[disabled]
-        {
-          background-color: darken($section-background, 5%);
-          border-color: rgba($body-textcolor, .2);
-        }
-    }
+      input:not([type='submit']):not([type='button'])[disabled]
+      {
+        background-color: darken($section-background, 5%);
+        border-color: rgba($body-textcolor, .2);
+      }
 
 
     input[type="submit"], input[type="button"], button, .btn-blue{

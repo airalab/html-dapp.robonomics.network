@@ -1,21 +1,37 @@
 $border-radius: 6px;
 
 %inputs_base{
-	@extend %font_base;
-	font-size: $font-size-base;
-	font-weight: 500;
+	
   	border-radius: $border-radius;
 
   	display: inline-block;
   	vertical-align: middle;
   	padding: 6px 10px;
-}
-
-%btn_base{
-	@extend %link_noline;
 
   	appearance: none;
   	-webkit-appearance: none;
+
+  	&, &::placeholder {
+  		@extend %font_base;
+		font-size: $font-size-base;
+		font-weight: 500;
+  	}
+}
+
+%disabled
+	{
+		// cursor: default;
+		cursor: not-allowed;
+
+		&, &:hover
+			{
+				opacity: 0.5;
+			}
+	}
+
+%btn{
+	@extend %link_noline;
+
   	border: 0;
   	cursor: pointer;
 
@@ -24,37 +40,27 @@ $border-radius: 6px;
 
   	transition: all 0.2s ease-in-out;
 
-  	&[disabled]{
-  		cursor: default;
-
-		&, &:hover
-			{
-				opacity: 0.5;
-			}
-	}
+  	&[disabled]{ @extend %disabled; }
 }
+
+%inputtext
+{
+	border-width: 1px;
+	border-style: solid;
+}
+
 
 input:not([type='submit']):not([type='button'])
 	{
 		@extend %inputs_base;
-
-		border-width: 1px;
-		border-style: solid;
-
-		&.input-line
-			{
-				border-width: 0 0 1px;
-				border-radius: 0;
-				padding-top: 0;
-				padding-bottom: 0;
-			}
+		@extend %inputtext;	
 	}
 
 
 input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 	{
 		@extend %inputs_base;
-		@extend %btn_base;
+		@extend %btn;
 	}
 
 
