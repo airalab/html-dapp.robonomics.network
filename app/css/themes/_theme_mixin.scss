@@ -129,6 +129,8 @@
 
     .btn-green{ @include btn($btn-textcolor, $green); }
 
+    .ss-main .ss-content .ss-list .ss-option:hover { background-color: lighten($body-background, 3%); }
+
 
 
 

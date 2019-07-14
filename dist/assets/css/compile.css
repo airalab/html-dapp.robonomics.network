@@ -2942,6 +2942,9 @@ body {
 .theme-light .btn-green:not([disabled]):hover {
   background-color: #35ba46;
 }
+.theme-light .ss-main .ss-content .ss-list .ss-option:hover {
+  background-color: #f7f7f7;
+}
 .theme-light table td {
   border-color: #e6e6e6;
 }
@@ -3029,6 +3032,9 @@ body {
 }
 .theme-dark .btn-green:not([disabled]):hover {
   background-color: #2a9237;
+}
+.theme-dark .ss-main .ss-content .ss-list .ss-option:hover {
+  background-color: #272727;
 }
 .theme-dark table td {
   border-color: #161616;
