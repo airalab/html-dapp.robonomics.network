@@ -1901,7 +1901,7 @@ h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .window-head, .lo
   vertical-align: middle;
 }
 
-a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .sidebar-i--lg {
+a.a-icon > span, a.a-icon > b, a.a-icon--border > span, a.a-icon--border > b, .sidebar-i--lg, .flex-center {
   display: flex;
   text-align: center;
   align-items: center;
@@ -2748,11 +2748,13 @@ section section {
 
 html, body {
   position: relative;
+  height: 100%;
 }
 
 body {
   opacity: 0;
   animation: 0.4s FadeIn ease-in forwards;
+  min-height: 100%;
 }
 
 /*====== Set width of container ======*/
@@ -2885,12 +2887,6 @@ body {
   right: -80px;
   top: 0;
   font-size: 30px;
-  color: #7481b9;
-}
-
-.loading-title {
-  font-size: 26px;
-  font-weight: 500;
 }
 
 .loader-ring {
@@ -2899,10 +2895,14 @@ body {
   height: 20px;
   width: 20px;
   border-radius: 20px;
-  border-color: #fff;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-width: 2px 2px 0 0;
+  border-style: solid;
   animation: 0.8s Rotate ease-in-out infinite;
+}
+
+.loading-container {
+  margin-top: 150px;
+  text-align: center;
 }
 
 .theme-light {
@@ -2995,6 +2995,9 @@ body {
 .theme-light .label-orange {
   background-color: #F15A24;
 }
+.theme-light .tcolor-violet {
+  color: #809cff;
+}
 .theme-light .tooltip {
   background-color: #809cff;
   color: #ffffff;
@@ -3002,6 +3005,12 @@ body {
 .theme-light .tooltip .tooltip-arrow,
 .theme-light .popper .popper__arrow {
   border-color: #809cff;
+}
+.theme-light .loading-logo:after {
+  color: #809cff;
+}
+.theme-light .loader-ring {
+  border-color: #656d76;
 }
 
 .theme-dark {
@@ -3094,6 +3103,9 @@ body {
 .theme-dark .label-orange {
   background-color: #d4420e;
 }
+.theme-dark .tcolor-violet {
+  color: #6858e4;
+}
 .theme-dark .tooltip {
   background-color: #6858e4;
   color: #f2f2f2;
@@ -3101,6 +3113,12 @@ body {
 .theme-dark .tooltip .tooltip-arrow,
 .theme-dark .popper .popper__arrow {
   border-color: #6858e4;
+}
+.theme-dark .loading-logo:after {
+  color: #6858e4;
+}
+.theme-dark .loader-ring {
+  border-color: #eaeaea;
 }
 
 .popper,

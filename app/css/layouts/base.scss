@@ -1,9 +1,11 @@
-html, body { position: relative; }
+html, body { position: relative; height: 100% }
 
 body
   {
     opacity: 0;
     animation: 0.4s FadeIn ease-in forwards;
+
+    min-height: 100%;
   }
 
 
@@ -70,6 +72,8 @@ body
 
 .align-vertical { display: inline-block; vertical-align: middle; }
 .align-top { display: inline-block; vertical-align: top; }
+
+.flex-center { @extend %flex_center; }
 
 /*====== Flow elements ======*/
 

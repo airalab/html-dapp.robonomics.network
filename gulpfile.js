@@ -9,9 +9,9 @@ var gulp             = require('gulp'),
     rename           = require('gulp-rename'),
     concat           = require('gulp-concat'),
 
-    svgSprite        = require("gulp-svg-sprite"),
-    svg2png          = require('gulp-svg2png'),
-    image            = require('gulp-image'),
+    // svgSprite        = require("gulp-svg-sprite"),
+    // svg2png          = require('gulp-svg2png'),
+    // image            = require('gulp-image'),
     
     ttf2eot          = require('gulp-ttf2eot'),
     ttf2woff         = require('gulp-ttf2woff'),
@@ -96,51 +96,51 @@ gulp.task('layouts', function() {
 
 
 // //svg and png sprites
-gulp.task('svgSprite', function () {
+// gulp.task('svgSprite', function () {
 
-  var basic = gulp.src(path.folder.sprites + '/basic/*.svg')
-    .pipe(image())
-    .pipe(svgSprite({
-        "shape": {
-            "spacing": {
-                "padding": 0
-            }
-        },
-        "mode": {
-            "css": {
-                "dest": "./",
-                "layout": "horizontal",
-                "sprite": "sprite.svg",
-                "bust": false,
-                "render": {
-                    "scss": {
-                        "dest":  "../../../app/css/utilities/sprite.scss",
-                        // "dest": path.folder.sass + 'utilities/sprite.scss',
-                        "template": path.folder.csstemplates + 'template-sprite.scss'
-                    }
-                }
-            }
-        }
-    }))
-    .pipe(gulp.dest(path.folder.image));
-    // .pipe(browserSync.reload({stream:true}));
+//   var basic = gulp.src(path.folder.sprites + '/basic/*.svg')
+//     .pipe(image())
+//     .pipe(svgSprite({
+//         "shape": {
+//             "spacing": {
+//                 "padding": 0
+//             }
+//         },
+//         "mode": {
+//             "css": {
+//                 "dest": "./",
+//                 "layout": "horizontal",
+//                 "sprite": "sprite.svg",
+//                 "bust": false,
+//                 "render": {
+//                     "scss": {
+//                         "dest":  "../../../app/css/utilities/sprite.scss",
+//                         // "dest": path.folder.sass + 'utilities/sprite.scss',
+//                         "template": path.folder.csstemplates + 'template-sprite.scss'
+//                     }
+//                 }
+//             }
+//         }
+//     }))
+//     .pipe(gulp.dest(path.folder.image));
+//     // .pipe(browserSync.reload({stream:true}));
 
-  return merge(basic);
+//   return merge(basic);
 
-});
+// });
 
-gulp.task('sprite', ['svgSprite']);
+// gulp.task('sprite', ['svgSprite']);
 
-gulp.task('browserSync', function() {
-  browserSync({
-    server: {
-      baseDir: 'dist'
-    },
-    // port: 8080,
-    open: true,
-    notify: false
-  });
-});
+// gulp.task('browserSync', function() {
+//   browserSync({
+//     server: {
+//       baseDir: 'dist'
+//     },
+//     // port: 8080,
+//     open: true,
+//     notify: false
+//   });
+// });
 
 
 gulp.task('iconfont', function(){
@@ -199,7 +199,7 @@ gulp.task('watch', function() {
 
 
 	// //svg and png sprites
-    gulp.watch([path.folder.sprites + '/basic/*.svg'], ['sprite']);
+    // gulp.watch([path.folder.sprites + '/basic/*.svg'], ['sprite']);
 
     // font icons
 	gulp.watch(path.file.fonticons, ['iconfont']);
@@ -208,4 +208,4 @@ gulp.task('watch', function() {
 
 
 //default
-gulp.task('default', ['css', 'js', 'layouts', 'sprite', 'iconfont', 'watch']);
+gulp.task('default', ['css', 'js', 'layouts', 'iconfont', 'watch']);

@@ -153,6 +153,9 @@
     .label-orange { background-color: $orange; }
 
 
+    .tcolor-violet { color: $violet; }
+
+
     .tooltip
       {
         background-color: $violet;
@@ -162,6 +165,11 @@
     .popper .popper__arrow {
       border-color: $violet;
     }
+
+
+
+    .loading-logo:after { color: $violet; }
+    .loader-ring { border-color: $body-textcolor; }
 
   }
 

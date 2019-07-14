@@ -2,13 +2,14 @@ extends extends/layout.pug
 
 block html
 	- var meta_title = 'Loading dApp'
+	- var bodyclass = 'theme-light'
 
 block content
 	.container-basic
-		section.t-align--center
+		section.loading-container
 			.loading-logo
 				img(alt="dApp logo", src="assets/i/logo-dapp-2.svg", style="width: 150px;")
-			.loading-title.title-pale robonomics.network
+			.t-uppercase.t-lg.tcolor-violet robonomics.network
 
 			section
 				.loader
