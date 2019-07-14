@@ -3,7 +3,7 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Robonomics Lighthouse'
-	- var bodyclass = 'flexcols'
+	- var bodyclass = 'flexcols theme-light'
 
 block content
 
@@ -14,23 +14,25 @@ block content
 		.content-in
 			section
 				h2
-					a(href="#").align-vertical.m-r-10.i-back
+					a(href="#", title="Back to choose lighthouse").align-vertical.m-r-20
+						i.i-arrow-left
 					span.align-vertical.m-r-20.breakwords airalab.lighthouse.5.robonomics.eth
 
 				.row
 					.col-lg-4.col-md-5.order-md-last
 						section
-							section.window
+							section.section-light.window#window-developletter
 								.window-head
 									span Lighthouse details
-								.window-content.window-content-light
+									// a.window-head-toggle(href="#") –
+								.window-content
 									p
 										span.t-sm Lighthouse contract address:
 										br/
 										a(href="#", target="_blank").align-vertical.m-r-10
 											+avatar('avatar-small align-vertical m-r-10')
 											b 0xD40A...F9f1
-										a(href="#").align-vertical.i-copy
+										a(href="#", title="copy address").align-vertical.i-copy
 									hr/
 									p
 										span.t-sm Lighthouse status:
@@ -64,13 +66,17 @@ block content
 										input(type="text", value="0").input-size--sm.m-r-10.input-sm
 										button.btn-blue.input-sm Approve XRT
 
+
+
+									
 					.col-lg-8.col-md-7
-						section.window
+						
+						section.section-light.window#window-developletter
 							.window-head
 								span Providers
 								a.window-head-toggle(href="#") –
-							.window-content.p-0.window-content-light
-								table.container-full.m-t-0.m-b-0
+							.window-content
+								table.container-full.table-hover
 									thead
 										tr
 											th #
@@ -85,7 +91,7 @@ block content
 												a(href="#", target="_blank").align-vertical.m-r-10
 													+avatar('avatar-small align-vertical m-r-10')
 													b 0x4200...1680 
-												a(href="#").align-vertical.i-copy
+												a(href="#", title="copy address").align-vertical.i-copy
 											td  1
 											td  0.092 ETH
 											td Active
@@ -95,10 +101,11 @@ block content
 												a(href="#", target="_blank").align-vertical.m-r-10
 													+avatar('avatar-small align-vertical m-r-10')
 													b 0x4bed...df5a
-												a(href="#").align-vertical.i-copy
+												a(href="#", title="copy address").align-vertical.i-copy
 											td  2 / 2
 											td  0.005 ETH
 											td Sleeping
+
 
 						section.m-t-40
 							h2 Test lighthouse
@@ -109,14 +116,14 @@ block content
 											span Demand
 											a(href="#").btn-green.input-sm Test
 										.window-content
-											.section-color.section-color--highlight.m-t-10
+											.section-light.m-t-10
 												p
 													span.t-sm Sent from account:
 													br/
 													a(href="#", target="_blank").align-vertical.m-r-10
 														+avatar('avatar-small align-vertical m-r-10')
 														b 0x40c5...C8d3
-													a(href="#").align-vertical.i-copy
+													a(href="#", title="copy address").align-vertical.i-copy
 												p
 													span.t-sm Demand program description:
 													br/
@@ -141,7 +148,7 @@ block content
 													br/
 													b Without observing network
 
-											.section-color.section-color--highlight.m-t-10
+											.section-light.m-t-10
 												p
 													span.t-sm Sent from account:
 													br/
@@ -179,7 +186,7 @@ block content
 											span Offer
 											a(href="#").btn-green.input-sm Test
 										.window-content
-											.section-color.section-color--highlight.m-t-10
+											.section-light.m-t-10
 												p
 													span.t-sm Sent from account:
 													br/
@@ -216,21 +223,21 @@ block content
 										.window-head
 											span Liabilities
 										.window-content
-											.section-color.section-color--highlight.m-t-10
+											.section-light.m-t-10
 												p
 													span.t-sm Liability:
 													br/
 													a(href="#", target="_blank").align-vertical.m-r-10
 														+avatar('avatar-small align-vertical m-r-10')
 														b 0xEcBA...fcCb
-													a(href="#").align-vertical.i-copy
+													a(href="#", title="copy address").align-vertical.i-copy
 												p
 													span.t-sm Provider address:
 													br/
 													a(href="#", target="_blank").align-vertical.m-r-10
 														+avatar('avatar-small align-vertical m-r-10')
 														b 0x4200...1680
-													a(href="#").align-vertical.i-copy
+													a(href="#", title="copy address").align-vertical.i-copy
 												p
 													span.t-sm Program description:
 													br/
@@ -252,14 +259,14 @@ block content
 													a(href="#", target="_blank").align-vertical.m-r-10
 														+avatar('avatar-small align-vertical m-r-10')
 														b 0x40c5...C8d3
-													a(href="#").align-vertical.i-copy
+													a(href="#", title="copy address").align-vertical.i-copy
 												p
 													span.t-sm Promisor:
 													br/
 													a(href="#", target="_blank").align-vertical.m-r-10
 														+avatar('avatar-small align-vertical m-r-10')
 														b 0x40c5...C8d3
-													a(href="#").align-vertical.i-copy
+													a(href="#", title="copy address").align-vertical.i-copy
 												p
 													button.btn-green.input-sm.container-full Post result
 

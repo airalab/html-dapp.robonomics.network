@@ -24,10 +24,12 @@
 
 @mixin icon($content){
 	@extend %iconsfont;
-	&:before { content: $content; }
+	&:before { content: $content; display: block; }
 }
 
-.i-back { @include icon('\EA01'); }
+.i-arrow-left, .i-arrow-right { @include icon('\EA01'); }
+.i-arrow-right:before { transform: rotate(180deg); }
+
 .i-copy { @include icon('\EA02'); }
 .i-cursor { @include icon('\EA03'); }
 .i-github { @include icon('\EA04'); }

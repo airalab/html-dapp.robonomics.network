@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded',function(){
 				  	e,
 				  	{
 					    title: e.getAttribute('data-tooltip'),
-					    placement: 'auto'
+					    placement: 'auto',
+              container: 'body'
 				  	});
   			});
 

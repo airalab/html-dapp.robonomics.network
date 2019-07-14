@@ -2497,7 +2497,7 @@ input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected {
   font-weight: normal;
   font-style: normal;
 }
-.i-back, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-arrow, .ss-main .ss-single-selected .ss-arrow span {
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-arrow, .ss-main .ss-single-selected .ss-arrow span {
   font-family: 'iconfont';
   speak: none;
   font-size: 100%;
@@ -2510,52 +2510,68 @@ input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-back:before {
+.i-arrow-left:before, .i-arrow-right:before {
   content: "";
+  display: block;
+}
+
+.i-arrow-right:before {
+  transform: rotate(180deg);
 }
 
 .i-copy:before {
   content: "";
+  display: block;
 }
 
 .i-cursor:before {
   content: "";
+  display: block;
 }
 
 .i-github:before {
   content: "";
+  display: block;
 }
 
 .i-reddit:before {
   content: "";
+  display: block;
 }
 
 .i-lighthouse:before {
   content: "";
+  display: block;
 }
 
 .i-piechart:before {
   content: "";
+  display: block;
 }
 
 .i-transfer:before {
   content: "";
+  display: block;
 }
 
 .i-day:before {
   content: "";
+  display: block;
 }
 
 .i-night:before {
   content: "󪀐";
+  display: block;
 }
 
 .i-menu:before {
   content: "󪀑";
+  display: block;
 }
 
 .i-arrow:before {
   content: "󪀒";
+  display: block;
 }
 
 section {
@@ -3028,10 +3044,10 @@ body {
 }
 .theme-dark .btn-green {
   color: #f2f2f2;
-  background-color: #35ba46;
+  background-color: #30a63e;
 }
 .theme-dark .btn-green:not([disabled]):hover {
-  background-color: #2a9237;
+  background-color: #247e2f;
 }
 .theme-dark .ss-main .ss-content .ss-list .ss-option:hover {
   background-color: #272727;
@@ -3065,6 +3081,7 @@ body {
   position: absolute;
   border-radius: 3px;
   padding: 5px 15px;
+  z-index: 1000;
 }
 
 .popper .popper__arrow,
@@ -3216,6 +3233,7 @@ body {
 }
 .ss-main .ss-single-selected .ss-arrow span:before {
   content: "󪀒";
+  display: block;
 }
 
 .ss-main .ss-single-selected .ss-arrow span.arrow-up {
