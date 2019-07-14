@@ -159,6 +159,7 @@ table
 			padding: 5px $padding-fields-in;
 			@extend %text_uppercase;
 			font-size: $font-size-base * 0.75;
+			font-weight: 500;
 		}
 	}
 
@@ -166,6 +167,20 @@ table
 
 .table-space--10 { border-spacing: 10px; }
 .table-fixed { table-layout: fixed }
+
+.table-full
+	{
+		td, th
+			{
+				padding: 5px $padding-fields-in 5px 0;
+				&:last-child { padding-right: 0; }
+			}
+
+		caption
+			{
+				padding: 5px 0;
+			}
+	}
 
 
 /*====== end of Text elements ======*/

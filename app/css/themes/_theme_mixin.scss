@@ -147,11 +147,10 @@
       }
 
 
-    .label-violet
-      {
-        background-color: $violet;
-        color: $btn-textcolor;
-      }
+    .label { color: $btn-textcolor; }
+    .label-violet { background-color: $violet; }
+    .label-green { background-color: $green; }
+    .label-orange { background-color: $orange; }
 
 
     .tooltip
