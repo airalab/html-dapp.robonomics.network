@@ -45,6 +45,19 @@
 	}
 
 
+@keyframes ScaleInImg
+	{
+		0%
+		{
+			transform: scale(1);
+		}
+		100%
+		{
+			transform: scale(1.1);
+		}
+	}
+
+
 @keyframes Rotate
  {
    0%
@@ -58,14 +71,8 @@
  }
 
 
- @keyframes SlideRight
- {
-   0%
-     {
-       transform: translateX(-100%);
-     }
-   100%
-     {
-      transform: translateX(0);
-     }
- }
+@keyframes GradientSwipe {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:125% 50%}
+  }

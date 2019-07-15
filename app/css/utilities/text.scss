@@ -8,18 +8,10 @@ body { @extend %font_base; }
 		@extend %text_uppercase;
 		line-height: 1.5;
 		font-weight: 500;
+  		margin-top: $vertical-rythm;
   		margin-bottom: $vertical-rythm;
   		font-weight: 300;
 	}
-
-#{headings(1,2)}
-	{
-		margin-top: $margin-sec*2;
-		
-
-		&:first-child { margin-top: 0; }
-	}
-
 
 @for $i from 2 through 4
 	{
@@ -121,7 +113,6 @@ blockquote
 	}
 
 hr{
-	background-color: lighten($c-background, 60%);
 	border: 0;
 	height: 1px;
 	margin-top: $vertical-rythm/2;
@@ -251,3 +242,16 @@ table
 		padding: 0 10px;
 	}
 
+
+
+.icon-round-sm
+	{
+		$s: $font-size-base*1.5;
+		display: inline-block;
+		border-radius: $s/2;
+		width: $s;
+		height: $s;
+		border-width: 1px;
+		border-style: solid;
+		@extend %flex_center;
+	}

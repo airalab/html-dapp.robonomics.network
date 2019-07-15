@@ -73,7 +73,55 @@ body
 .align-vertical { display: inline-block; vertical-align: middle; }
 .align-top { display: inline-block; vertical-align: top; }
 
+.flexcols { @extend %flex_columns; }
 .flex-center { @extend %flex_center; }
+
+.flex-grid
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -20px;
+    margin-right: -20px;
+    
+
+    & > * {
+      flex-grow: 1;
+      flex: 0 0 30%;
+      max-width: 30%;
+      margin: 10px;
+    }
+  }
+
+.item
+  {
+    position: relative;
+    padding: 0 0 2*$font-size-base;
+  }
+
+.item-bottom
+  {
+    position: absolute;
+    bottom: 10px;
+  }
+
+.item-img
+  {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+
+    &:hover{
+      img{
+        animation: 0.4s ease ScaleInImg forwards;
+      }
+    }
+  }
+
+.item-content
+  {
+    padding: 20px;
+  }
 
 /*====== Flow elements ======*/
 

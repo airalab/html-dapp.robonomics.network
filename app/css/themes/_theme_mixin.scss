@@ -158,18 +158,21 @@
 
     .tooltip
       {
-        background-color: $violet;
-        color: $btn-textcolor;
+        background-color: $section-textcolor;
+        color: $section-background;
       }
     .tooltip .tooltip-arrow,
     .popper .popper__arrow {
-      border-color: $violet;
+      border-color: $section-textcolor;
     }
 
 
 
     .loading-logo:after { color: $violet; }
     .loader-ring { border-color: $body-textcolor; }
+
+
+    hr { background-color: darken($section-background, 15%); }
 
   }
 
