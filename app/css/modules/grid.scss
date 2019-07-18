@@ -1,0 +1,58 @@
+.flex-grid
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    & > * { flex-grow: 1; }
+    
+    @include flexGrid(3, 1%);
+
+    @include maxTablet(){
+      @include flexGrid(2, 1%);
+    }
+
+    @include mobile(){
+      @include flexGrid(1, 1%);
+    }
+  }
+
+.item
+  {
+    position: relative;
+    padding: 0 0 (2*$font-size-base + $vertical-rythm);
+  }
+
+.item-bottom
+  {
+    position: absolute;
+    bottom: $vertical-rythm;
+  }
+
+.item-img
+  {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+
+    img
+      {
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1);
+      }
+
+    &:hover{
+      img{
+        transform: scale(1.08);
+      }
+    }
+  }
+
+.item-content
+  {
+    padding: $vertical-rythm;
+
+    h2{
+      margin-top: 0;
+    }
+  }

@@ -55,3 +55,16 @@
   .p-b-#{$value} { padding-bottom: #{$value}px !important; }
   .p-l-#{$value} { padding-left: #{$value}px !important; }
 }
+
+
+@mixin flexGrid($numOfCols, $paddingOfCol){
+  margin-left: -#{$paddingOfCol};
+  margin-right: -#{$paddingOfCol};
+
+  & > * {
+    flex: 0 0 (100%/$numOfCols - $paddingOfCol*2);
+    max-width: (100%/$numOfCols - $paddingOfCol*2);
+    margin: $paddingOfCol;
+  }
+}
+
