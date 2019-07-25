@@ -19,19 +19,20 @@ mixin panelTop()
 		
 
 
-mixin sidebar($navActive, $multilang)
+mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', logodark='assets/i/logo-dapp-sign.svg')
 	.sidebar.flexcols
 		.sidebar-col.sidebar-col--sm
 			.sidebar-col-in
 				section
 					a(href="/")
-						img(alt="dApp logo", src="assets/i/logo-dapp-sign.svg")
+						img.theme-day(alt="dApp logo", src=logolight)
+						img.theme-night(alt="dApp logo", src=logodark)
 
 				section
 					a(href="javascript:;", on-toggle="#sidebar-nav1").sidebar-i--lg.js-sidebar-link
 						i.i-menu
 
-					if $multilang
+					if multilang
 						a(href="javascript:;", on-toggle="#sidebar-lang").sidebar-i--lg.js-sidebar-link EN
 
 					a(href="javascript:;", on-toggle="#sidebar-theme").sidebar-i--lg.js-sidebar-link
@@ -41,41 +42,56 @@ mixin sidebar($navActive, $multilang)
 					a(href="javascript:;", on-toggle="#sidebar-info").sidebar-i--lg.js-sidebar-link ?
 
 
-		.sidebar-col.js-sidebar-content#sidebar-nav1
-			.sidebar-col-in
-				section
-					a(href="/")
-						img.theme-day(alt="dApp logo", src="assets/i/logo-dapp-text-blue.svg")
-						img.theme-night(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+		
+		if logolight == 'assets/i/logo-dapp-sign.svg'
+			.sidebar-col.js-sidebar-content#sidebar-nav1
+		else
+			.sidebar-col-padding.sidebar-col.js-sidebar-content#sidebar-nav1
+			
+				.sidebar-col-in
+					if logo == 'assets/i/logo-dapp-sign.svg' 
+						section
+							a(href="/")
+								img.theme-day(alt="dApp logo", src="assets/i/logo-dapp-text-blue.svg")
+								img.theme-night(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
 
-				section
-					nav.nav-vertical
-						if $navActive == 1
-							a(href="#").active
-								span.i-lighthouse.align-vertical
-								span.align-vertical Lighthouses
-						else
-							a(href="#")
-								span.i-lighthouse.align-vertical
-								span.align-vertical Lighthouses
+					section
+						nav.nav-vertical
+							if navActive == 0
+								a(href="#").active
+									span.i-app.align-vertical
+									span.align-vertical Services
+							else
+								a(href="#")
+									span.i-app.align-vertical
+									span.align-vertical Services
 
-						if $navActive == 2
-							a(href="#").active
-								span.i-piechart.align-vertical
-								span.align-vertical Statistics
-						else
-							a(href="#")
-								span.i-piechart.align-vertical
-								span.align-vertical Statistics
+							if navActive == 1
+								a(href="#").active
+									span.i-lighthouse.align-vertical
+									span.align-vertical Lighthouses
+							else
+								a(href="#")
+									span.i-lighthouse.align-vertical
+									span.align-vertical Lighthouses
 
-						if $navActive == 3
-							a(href="#").active
-								span.i-transfer.align-vertical
-								span.align-vertical AIRA to XRT
-						else
-							a(href="#")
-								span.i-transfer.align-vertical
-								span.align-vertical AIRA to XRT
+							if navActive == 2
+								a(href="#").active
+									span.i-piechart.align-vertical
+									span.align-vertical Statistics
+							else
+								a(href="#")
+									span.i-piechart.align-vertical
+									span.align-vertical Statistics
+
+							if navActive == 3
+								a(href="#").active
+									span.i-transfer.align-vertical
+									span.align-vertical AIRA to XRT
+							else
+								a(href="#")
+									span.i-transfer.align-vertical
+									span.align-vertical AIRA to XRT
 
 		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-lang
 			.sidebar-col-in

@@ -1,0 +1,40 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Сервисы DCZD'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(0, true, 'assets/i/logo-dapp-dczd-light.svg', 'assets/i/logo-dapp-dczd-dark.svg')
+
+	.content
+		+panelTop()
+		.content-in
+			h1 Сервисы для роботов
+			
+			section.flex-grid
+
+				.section-light.item
+					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/drone-passport.png")
+					.item-content
+						h2: a(href="#") Drone passport registration
+						.t-hyphen Сервис глобальной регистрации дронов в Ethereum Blockchain.
+						.item-bottom
+							| By 
+							a(href="#") Distributed sky
+							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+
+
+				.section-light.item
+					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/drone-route.png")
+					.item-content
+						h2: a(href="#") Drone flight report
+						.t-hyphen Сервис публичных отчетов о выполненных полетах дронов.
+						.item-bottom
+							| By 
+							a(href="#") Distributed sky
+							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+
+

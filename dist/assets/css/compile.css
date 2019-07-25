@@ -2513,7 +2513,7 @@ input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected {
   font-weight: normal;
   font-style: normal;
 }
-.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-arrow, .ss-main .ss-single-selected .ss-arrow span {
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .ss-main .ss-single-selected .ss-arrow span {
   font-family: 'iconfont';
   speak: none;
   font-size: 100%;
@@ -2585,7 +2585,7 @@ input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected {
   display: block;
 }
 
-.i-arrow:before {
+.i-app:before {
   content: "󪀒";
   display: block;
 }

@@ -1,0 +1,39 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Сервисы IPCI'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(0, true, 'assets/i/logo-dapp-ipci-light.svg', 'assets/i/logo-dapp-ipci-dark.svg')
+
+	.content
+		+panelTop()
+		.content-in
+			h1 Сервисы для роботов
+			
+			section.flex-grid
+			
+				.section-light.item
+					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-buildings.png")
+					.item-content
+						h2: a(href="#") Smart building offsetting
+						.t-hyphen Сервис погашения углеродного следа умных зданий на основе информации о геолокации и потреблении электроэнергии.
+						.item-bottom
+							| By 
+							a(href="#") DAO IPCI IoT connection
+							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+
+
+				.section-light.item
+					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-assets.png")
+					.item-content
+						h2: a(href="#") Environmental assets tokenization
+						.t-hyphen Сервис эмиссии углеродных единиц и зеленых сертификатов на основе данных от возобновляемого источника электроэнергии.
+						.item-bottom
+							| By 
+							a(href="#") DAO IPCI IoT connection
+							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+
