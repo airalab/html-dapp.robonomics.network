@@ -3354,10 +3354,11 @@ body {
 }
 
 .ss-main .ss-single-selected .ss-arrow span {
-  transition: transform 0.2s, margin 0.2s;
+  transition: transform .2s, margin .2s;
+  font-size: 12px;
 }
 .ss-main .ss-single-selected .ss-arrow span:before {
-  content: "󪀒";
+  content: "󪀓";
   display: block;
 }
 

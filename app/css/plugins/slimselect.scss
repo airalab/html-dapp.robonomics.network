@@ -75,8 +75,9 @@
 }
 
 .ss-main .ss-single-selected .ss-arrow span {
-    @include icon('\EA012'); //from fonticons.scss
-    transition: transform .2s, margin .2s
+    @include icon('\EA013'); //from fonticons.scss
+    transition: transform .2s, margin .2s;
+    font-size: 12px;
 }
 
 .ss-main .ss-single-selected .ss-arrow span.arrow-up {
