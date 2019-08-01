@@ -11,6 +11,8 @@ body { @extend %font_base; }
   		margin-top: $vertical-rythm;
   		margin-bottom: $vertical-rythm;
   		font-weight: 300;
+
+  		&:first-child{ margin-top: 0; }
 	}
 
 @for $i from 2 through 4

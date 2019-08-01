@@ -107,11 +107,21 @@
 
 
 
-    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open
+    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open, select
       {
         border-color: rgba($body-textcolor, .5);
         background-color: $section-background;
         color: $body-textcolor;
+
+        &:focus{
+          border-color: $blue;
+        }
+
+        &::placeholder { color: rgba($body-textcolor, .5); }
+
+        &.error{
+          border-color: $red;
+        }
       }
 
       input:not([type='submit']):not([type='button'])[disabled]
@@ -130,6 +140,13 @@
     .btn-green{ @include btn($btn-textcolor, $green); }
 
     .ss-main .ss-content .ss-list .ss-option:hover { background-color: lighten($body-background, 3%); }
+
+    label { color: $body-textcolor; }
+
+    // .input-tip { color: rgba($body-textcolor, .7); }
+    .input-tip { color: $blue; }
+    .input-msg { color: $red; }
+
 
 
 

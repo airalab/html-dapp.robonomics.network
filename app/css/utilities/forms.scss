@@ -1,4 +1,5 @@
 $border-radius: 6px;
+$padding-side: 10px;
 
 %inputs_base{
 	
@@ -6,16 +7,23 @@ $border-radius: 6px;
 
   	display: inline-block;
   	vertical-align: middle;
-  	padding: 6px 10px;
+  	padding: 6px $padding-side;
 
   	appearance: none;
   	-webkit-appearance: none;
 
+  	transition: 0.2s all ease;
+
   	&, &::placeholder {
   		@extend %font_base;
 		font-size: $font-size-base;
-		font-weight: 500;
+		font-weight: 300;
   	}
+
+  	&[data-tip]:focus + .input-tip  {
+		visibility: visible;
+		opacity: 1;
+	}
 }
 
 %disabled
@@ -50,7 +58,7 @@ $border-radius: 6px;
 }
 
 
-input:not([type='submit']):not([type='button'])
+input:not([type='submit']):not([type='button']), select
 	{
 		@extend %inputs_base;
 		@extend %inputtext;	
@@ -63,6 +71,33 @@ input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 		@extend %btn;
 	}
 
+select
+	{
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		margin: 0;
+		outline: none;
+		background-repeat: no-repeat;
+		background-position: 100% 50%;
+		&::-ms-expand { display: none; } /*ie fix*/
+
+		background-image: image-url('select.png');
+	    padding-right: image-width('select.png') + $padding-side;
+	}
+
+label, .input-msg{
+	font-size: $font-size-base * 0.8;
+	font-weight: 700;
+}
+
+
+form{
+	section{
+		margin: 50px 0 !important;
+	}
+}
+
 
 
 
@@ -70,21 +105,18 @@ input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 
 .input-size--sm
 	{
-		width: 70px;
-		max-width: 100%;
+		max-width: 70px;
 		text-align: center;
 	}
 
 .input-size--md
 	{
-		width: 150px;
-		max-width: 100%;
+		max-width: 150px;
 	}
 
 .input-size--lg
 	{
-		width: 600px;
-		max-width: 100%;
+		max-width: 600px;
 	}
 
 
@@ -110,6 +142,19 @@ input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 			}
 	}
 
+.form-line
+	{
+		margin-bottom: $vertical-rythm*1.2;
+		&:last-child { margin-bottom: 0; }
+	}
+
+.form-line-label
+	{
+		input{
+			padding: 0 !important;
+		}
+	}
+
 
 
 .input-measured
@@ -124,6 +169,23 @@ input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 				top: calc( 50% - #{$font-size-base}/2);
 				line-height: 1;
 			}
+	}
+
+
+.input-tip, .input-msg{
+		transition: 0.2s all ease;
+	}
+
+
+.input-tip{
+		visibility: hidden;
+		opacity: 0;
+		font-size: $font-size-base * 0.8;
+	}
+
+.input-msg
+	{
+		margin-left: 15px;
 	}
 
 

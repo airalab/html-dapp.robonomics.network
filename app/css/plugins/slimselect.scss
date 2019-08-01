@@ -71,13 +71,13 @@
     align-items: center;
     justify-content: flex-end;
     flex: 0 1 auto;
-    margin: 0 6px
+    margin: 0 0 6px
 }
 
 .ss-main .ss-single-selected .ss-arrow span {
     @include icon('\EA013'); //from fonticons.scss
     transition: transform .2s, margin .2s;
-    font-size: 12px;
+    font-size: 6px;
 }
 
 .ss-main .ss-single-selected .ss-arrow span.arrow-up {

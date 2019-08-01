@@ -10,40 +10,123 @@ block content
 	+sidebar(1, false)
 
 	.content
-		+panelTop()
 		.content-in
 
-			section
+			section.section-light.section-centered
 				h2 Demand template form
 
 				form
-					.input-size--lg
+					.form-line
 						select#select
 
 
+					.form-line
+						select.container-full
+							option(disabled, selected) Regular select without label
+							option Option 1
+							option Option 2
+							option Option 3
 
-			script.
-				var select = new SlimSelect({
-					select: '#select',
-					valuesUseText: false, // Use text instead of innerHTML for selected values - default false
-					data: [
-						{placeholder: true, text: 'Choose lighthouse'},
-						{innerHTML: '<b>a.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: 'a.lighthouse.5.robonomics.eth', value: 'select1'},
-						{innerHTML: '<b>airalab.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</span>', text: 'airalab.lighthouse.5.robonomics.eth', value: 'select2'},
-						{innerHTML: '<b>mobilerobotics.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x8165ad3d400bda2be5fe27254a5e55e0f393921f</span>', text: 'mobilerobotics.lighthouse.5.robonomics.eth', value: 'select3'},
-						{innerHTML: '<b>New lighthouse</b>', text: 'create new lighthouse', value: 'new', class:'type-new'}
-					],
-					onChange: (info) => {
-					    console.log(info);
-					    if(info.class == 'type-new'){
-							document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
-							+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
-							+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
-							// + '<br/><button class="btn-blue">Create and connect</button>';
-					    }
-					    else{
-					    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
-					    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
-					    }  	
-				  	}
-				});
+					.form-line
+						label(for="regularselect") Regular select with label
+						select.container-full#regularselect
+							option(disabled, selected) Select anything
+							option Option 1
+							option Option 2
+							option Option 3
+
+
+					.form-line
+						label(for="input1") Some label
+						input.container-full#input1(type="text", placeholder="some placeholder")
+
+					.form-line
+						label(for="input2") Some label required*
+						input.container-full#input2(type="text", placeholder="some placeholder", required)
+
+					.form-line
+						label(for="input3") Some label with tip
+						input.container-full#input3(type="text", placeholder="some placeholder")
+						// .input-tip Some tip here useful for user. Example: data example
+
+					.form-line
+						label(for="input4")
+							| Error input value
+							span.input-msg Check if data correct, please. Example: INTCJ123-4567-890
+						input.error.container-full#input4(type="text", placeholder="Example: INTCJ123-4567-890", value="abrakadabra")
+
+				script.
+					var select = new SlimSelect({
+						select: '#select',
+						valuesUseText: false, // Use text instead of innerHTML for selected values - default false
+						data: [
+							{placeholder: true, text: 'Extended select (js required)'},
+							{innerHTML: '<b>a.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: 'a.lighthouse.5.robonomics.eth', value: 'select1'},
+							{innerHTML: '<b>airalab.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</span>', text: 'airalab.lighthouse.5.robonomics.eth', value: 'select2'},
+							{innerHTML: '<b>mobilerobotics.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x8165ad3d400bda2be5fe27254a5e55e0f393921f</span>', text: 'mobilerobotics.lighthouse.5.robonomics.eth', value: 'select3'},
+							{innerHTML: '<b>New lighthouse</b>', text: 'create new lighthouse', value: 'new', class:'type-new'}
+						],
+						onChange: (info) => {
+						    console.log(info);
+						    if(info.class == 'type-new'){
+								document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
+								+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
+								+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
+								// + '<br/><button class="btn-blue">Create and connect</button>';
+						    }
+						    else{
+						    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
+						    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
+						    }  	
+					  	}
+					});
+
+
+
+
+
+			section.section-light.section-centered
+				h2 Example of form with real data
+
+				form
+
+					section
+						h3 Operator
+
+						.form-line.form-line-label
+							label(for="inputdata-email") Contact e-mail *
+							input.container-full#inputdata-email(type="text", required)
+
+						.form-line
+							label(for="inputdata-fullname") Fullname *
+							input.container-full#inputdata-fullname(type="text", required)
+
+						.form-line
+							label(for="inputdata-id") Pilot ID *
+							input.container-full#inputdata-id(type="text", required)
+
+
+					section
+						h3 UAV
+
+						.form-line
+							label(for="inputdata-serial") Serial number *
+							input.container-full#inputdata-serial(type="text", placeholder="Example: INTCJ123-4567-890", required)
+
+						.form-line
+							label(for="inputdata-model") Registration number *
+							input.container-full#inputdata-manufacturer(type="text", placeholder="Example: FA123456789", required)
+
+						.form-line
+							label(for="inputdata-type") Type *
+							input.container-full#inputdata-type(type="text", placeholder="Example: VTOL", required)
+
+						.form-line
+							label(for="inputdata-manufacturer") Manufacturer
+							input.container-full#inputdata-manufacturer(type="text", placeholder="Example: DJI")
+
+						.form-line
+							label(for="inputdata-model") Model
+							input.container-full#inputdata-manufacturer(type="text", placeholder="Example: Matrice 100")
+
+						
