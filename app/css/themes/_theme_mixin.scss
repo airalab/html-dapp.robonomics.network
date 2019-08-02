@@ -107,56 +107,6 @@
 
 
 
-    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open, select
-      {
-        border-color: rgba($body-textcolor, .5);
-        background-color: $section-background;
-        color: $body-textcolor;
-
-        &:focus, &:checked{
-          border-color: $blue;
-        }
-
-        &::placeholder { color: rgba($body-textcolor, .5); }
-
-        &.error{
-          border-color: $red;
-        }
-      }
-
-      input:not([type='submit']):not([type='button'])[disabled]
-      {
-        background-color: darken($section-background, 5%);
-        border-color: rgba($body-textcolor, .2);
-      }
-
-
-    input[type="submit"], input[type="button"], button, .btn-blue{
-      @include btn($btn-textcolor, $blue);
-    }
-
-    input[type="checkbox"]:before { color: $blue; }
-    input[type="radio"]:before { border-color: $blue; }
-
-
-    .input-measure { color: lighten($body-textcolor, 15%); }
-
-    .btn-green{ @include btn($btn-textcolor, $green); }
-
-    .ss-main .ss-content .ss-list .ss-option:hover { background-color: lighten($body-background, 3%); }
-
-    label { color: $body-textcolor; }
-
-    // .input-tip { color: rgba($body-textcolor, .7); }
-    .input-tip { color: $blue; }
-    .input-msg { color: $red; }
-
-    form section h4 { color: rgba($body-textcolor, .5); }
-
-
-
-
-
     table
       {
 
@@ -196,6 +146,61 @@
 
 
     hr { background-color: darken($section-background, 15%); }
+
+    .red, a.red { color: $red; }
+    .green, a.green { color: $green; }
+
+
+
+
+
+
+    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open, select
+      {
+        border-color: rgba($body-textcolor, .5);
+        background-color: $section-background;
+        color: $body-textcolor;
+
+        &:focus, &:checked{
+          border-color: $blue;
+        }
+
+        &::placeholder { color: rgba($body-textcolor, .5); }
+
+        &.error{
+          border-color: $red;
+        }
+      }
+
+      input:not([type='submit']):not([type='button'])[disabled]
+      {
+        background-color: darken($section-background, 5%);
+        border-color: rgba($body-textcolor, .2);
+      }
+
+
+    input[type="submit"], input[type="button"], button, *[class *= 'btn-']
+      {
+        @include btn($btn-textcolor, $blue);
+        .loader-ring { border-color: $btn-textcolor; }
+      }
+
+    input[type="checkbox"]:before { color: $blue; }
+    input[type="radio"]:before { border-color: $blue; }
+
+
+    .input-measure { color: lighten($body-textcolor, 15%); }
+
+    .btn-green{ @include btn($btn-textcolor, $green); }
+
+    .ss-main .ss-content .ss-list .ss-option:hover { background-color: lighten($body-background, 3%); }
+
+    label { color: $body-textcolor; }
+
+    .input-tip { color: $blue; }
+    .input-msg { color: $red; }
+
+    form section h4 { color: rgba($body-textcolor, .5); }
 
   }
 

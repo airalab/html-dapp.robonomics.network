@@ -1,0 +1,52 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Robonomics Lighthouse'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(1, true)
+
+	.content
+		.content-in
+
+			section.section-light.section-centered
+				h2 Demand template form (progress)
+
+				form
+					.form-item.d-table
+						.d-table--cell
+							.i-check.m-r-15.green
+						.d-table--cell
+							| Вещаем сообщение
+
+					.form-item.d-table
+						.d-table--cell
+							.i-check.m-r-15.green
+						.d-table--cell
+							| Cервис ответил на спрос
+
+					.form-item.d-table
+						.d-table--cell
+							.i-check.m-r-15.green
+						.d-table--cell
+							| Провайдер Робономики отправил транзакцию в Ethereum
+
+
+					.form-item.d-table
+						.d-table--cell
+							.i-check.m-r-15.green
+						.d-table--cell
+							| Умный контракт создан, ожидаем исполнения сервиса роботом
+
+
+					.form-item.d-table
+						.d-table--cell
+							.loader-ring.m-r-15
+						.d-table--cell
+							| Умный контракт исполнен! Посмотреть результаты можно по 
+							a(href="#", target="_blank") ссылке
+
+					// button.container-full.btn-big Submit
