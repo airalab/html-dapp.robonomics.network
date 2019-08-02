@@ -64,10 +64,10 @@
         <section class="section-light section-centered">
           <h2>Demand template form</h2>
           <form>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <select id="select"></select>
             </div>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <select class="container-full">
                 <option disabled selected>Regular select without label</option>
                 <option>Option 1</option>
@@ -75,7 +75,7 @@
                 <option>Option 3</option>
               </select>
             </div>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <label for="regularselect">Regular select with label</label>
               <select class="container-full" id="regularselect">
                 <option disabled selected>Select anything</option>
@@ -84,20 +84,20 @@
                 <option>Option 3</option>
               </select>
             </div>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <label for="input1">Some label</label>
               <input class="container-full" id="input1" type="text" placeholder="some placeholder">
             </div>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <label for="input2">Some label required*</label>
               <input class="container-full" id="input2" type="text" placeholder="some placeholder" required>
             </div>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <label for="input3">Some label with tip</label>
               <input class="container-full" id="input3" type="text" placeholder="some placeholder">
               <!-- .input-tip Some tip here useful for user. Example: data example-->
             </div>
-            <div class="form-line form-line-label">
+            <div class="form-item form-line-label">
               <label for="input4">Error input value<span class="input-msg">Check if data correct, please. Example: INTCJ123-4567-890</span></label>
               <input class="error container-full" id="input4" type="text" placeholder="Example: INTCJ123-4567-890" value="abrakadabra">
             </div>
@@ -139,40 +139,46 @@
           <form>
             <section>
               <h4>Operator</h4>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-email">Contact e-mail *</label>
                 <input class="container-full" id="inputdata-email" type="text" required>
               </div>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-fullname">Fullname *</label>
                 <input class="container-full" id="inputdata-fullname" type="text" required>
               </div>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-id">Pilot ID *</label>
                 <input class="container-full" id="inputdata-id" type="text" required>
               </div>
             </section>
             <section>
               <h4>UAV</h4>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-serial">Serial number *</label>
                 <input class="container-full" id="inputdata-serial" type="text" placeholder="Example: INTCJ123-4567-890" required>
               </div>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-model">Registration number *</label>
                 <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: FA123456789" required>
               </div>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-type">Type *</label>
                 <input class="container-full" id="inputdata-type" type="text" placeholder="Example: VTOL" required>
               </div>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-manufacturer">Manufacturer</label>
                 <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: DJI">
               </div>
-              <div class="form-line form-line-label">
+              <div class="form-item form-line-label">
                 <label for="inputdata-model">Model</label>
                 <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: Matrice 100">
+              </div>
+            </section>
+            <section>
+              <div class="form-item">
+                <input id="inputdata-agreement" type="checkbox" checked>
+                <label for="inputdata-agreement">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
               </div>
             </section>
           </form>

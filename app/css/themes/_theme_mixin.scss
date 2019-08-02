@@ -113,7 +113,7 @@
         background-color: $section-background;
         color: $body-textcolor;
 
-        &:focus{
+        &:focus, &:checked{
           border-color: $blue;
         }
 

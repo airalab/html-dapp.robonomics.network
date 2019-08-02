@@ -2444,10 +2444,6 @@ input:not([type='submit']):not([type='button']), select, input[type="submit"], i
   font-size: 16px;
   font-weight: 300;
 }
-input[data-tip]:focus:not([type='submit']):not([type='button']) + .input-tip, select[data-tip]:focus + .input-tip, input[data-tip][type="submit"]:focus + .input-tip, input[data-tip][type="button"]:focus + .input-tip, button[data-tip]:focus + .input-tip, [data-tip][class*='btn-']:focus + .input-tip, .ss-main [data-tip].ss-single-selected:focus + .input-tip {
-  visibility: visible;
-  opacity: 1;
-}
 
 input[disabled][type="submit"], input[disabled][type="button"], button[disabled], [disabled][class*='btn-'] {
   cursor: not-allowed;
@@ -2461,12 +2457,29 @@ input[type="submit"], input[type="button"], button, *[class*='btn-'] {
   cursor: pointer;
   font-size: 16px;
   text-align: center;
-  transition: all 0.2s ease-in-out;
 }
 
 input:not([type='submit']):not([type='button']), select, .ss-main .ss-single-selected {
   border-width: 1px;
   border-style: solid;
+}
+
+input[type="checkbox"] {
+  padding: 8px !important;
+  margin-right: 15px;
+  border-radius: 3px !important;
+  position: relative;
+}
+input[type="checkbox"]:after {
+  content: "√";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+input[type="checkbox"]:checked:after {
+  opacity: 1;
 }
 
 select {
@@ -2527,10 +2540,10 @@ form section h4 {
   border-left-width: 0px !important;
 }
 
-.form-line {
+.form-item {
   margin-bottom: 24px;
 }
-.form-line:last-child {
+.form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -2552,16 +2565,6 @@ form section h4 {
   right: 10px;
   top: calc( 50% - 16px/2);
   line-height: 1;
-}
-
-.input-tip, .input-msg {
-  transition: 0.2s all ease;
-}
-
-.input-tip {
-  visibility: hidden;
-  opacity: 0;
-  font-size: 12.8px;
 }
 
 .input-msg {
@@ -3091,7 +3094,7 @@ body {
   background-color: #ffffff;
   color: #656d76;
 }
-.theme-light input:not([type='submit']):not([type='button']):focus, .theme-light .ss-main .ss-single-selected:focus, .theme-light .ss-content.ss-open:focus, .theme-light select:focus {
+.theme-light input:not([type='submit']):not([type='button']):focus, .theme-light input:not([type='submit']):not([type='button']):checked, .theme-light .ss-main .ss-single-selected:focus, .theme-light .ss-main .ss-single-selected:checked, .theme-light .ss-content.ss-open:focus, .theme-light .ss-content.ss-open:checked, .theme-light select:focus, .theme-light select:checked {
   border-color: #03A5ED;
 }
 .theme-light input:not([type='submit']):not([type='button'])::placeholder, .theme-light .ss-main .ss-single-selected::placeholder, .theme-light .ss-content.ss-open::placeholder, .theme-light select::placeholder {
@@ -3223,7 +3226,7 @@ body {
   background-color: #2f2f2f;
   color: #eaeaea;
 }
-.theme-dark input:not([type='submit']):not([type='button']):focus, .theme-dark .ss-main .ss-single-selected:focus, .theme-dark .ss-content.ss-open:focus, .theme-dark select:focus {
+.theme-dark input:not([type='submit']):not([type='button']):focus, .theme-dark input:not([type='submit']):not([type='button']):checked, .theme-dark .ss-main .ss-single-selected:focus, .theme-dark .ss-main .ss-single-selected:checked, .theme-dark .ss-content.ss-open:focus, .theme-dark .ss-content.ss-open:checked, .theme-dark select:focus, .theme-dark select:checked {
   border-color: #0282bb;
 }
 .theme-dark input:not([type='submit']):not([type='button'])::placeholder, .theme-dark .ss-main .ss-single-selected::placeholder, .theme-dark .ss-content.ss-open::placeholder, .theme-dark select::placeholder {

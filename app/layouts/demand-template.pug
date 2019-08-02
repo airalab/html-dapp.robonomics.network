@@ -16,18 +16,18 @@ block content
 				h2 Demand template form
 
 				form
-					.form-line.form-line-label
+					.form-item.form-line-label
 						select#select
 
 
-					.form-line.form-line-label
+					.form-item.form-line-label
 						select.container-full
 							option(disabled, selected) Regular select without label
 							option Option 1
 							option Option 2
 							option Option 3
 
-					.form-line.form-line-label
+					.form-item.form-line-label
 						label(for="regularselect") Regular select with label
 						select.container-full#regularselect
 							option(disabled, selected) Select anything
@@ -36,20 +36,20 @@ block content
 							option Option 3
 
 
-					.form-line.form-line-label
+					.form-item.form-line-label
 						label(for="input1") Some label
 						input.container-full#input1(type="text", placeholder="some placeholder")
 
-					.form-line.form-line-label
+					.form-item.form-line-label
 						label(for="input2") Some label required*
 						input.container-full#input2(type="text", placeholder="some placeholder", required)
 
-					.form-line.form-line-label
+					.form-item.form-line-label
 						label(for="input3") Some label with tip
 						input.container-full#input3(type="text", placeholder="some placeholder")
 						// .input-tip Some tip here useful for user. Example: data example
 
-					.form-line.form-line-label
+					.form-item.form-line-label
 						label(for="input4")
 							| Error input value
 							span.input-msg Check if data correct, please. Example: INTCJ123-4567-890
@@ -93,15 +93,15 @@ block content
 					section
 						h4 Operator
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-email") Contact e-mail *
 							input.container-full#inputdata-email(type="text", required)
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-fullname") Fullname *
 							input.container-full#inputdata-fullname(type="text", required)
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-id") Pilot ID *
 							input.container-full#inputdata-id(type="text", required)
 
@@ -109,24 +109,33 @@ block content
 					section
 						h4 UAV
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-serial") Serial number *
 							input.container-full#inputdata-serial(type="text", placeholder="Example: INTCJ123-4567-890", required)
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-model") Registration number *
 							input.container-full#inputdata-manufacturer(type="text", placeholder="Example: FA123456789", required)
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-type") Type *
 							input.container-full#inputdata-type(type="text", placeholder="Example: VTOL", required)
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-manufacturer") Manufacturer
 							input.container-full#inputdata-manufacturer(type="text", placeholder="Example: DJI")
 
-						.form-line.form-line-label
+						.form-item.form-line-label
 							label(for="inputdata-model") Model
 							input.container-full#inputdata-manufacturer(type="text", placeholder="Example: Matrice 100")
+
+
+					section
+						.form-item
+							input#inputdata-agreement(type="checkbox", checked)
+							label(for="inputdata-agreement") I agree to the 
+								a(href="#") Terms
+								|  and 
+								a(href="#") Privacy Policy
 
 						
