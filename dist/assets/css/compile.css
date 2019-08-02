@@ -2431,6 +2431,115 @@ table caption {
     background-position: 125% 50%;
   }
 }
+/* Icons */
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont.eot") format("embedded-opentype"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
+  font-family: 'iconfont' !important;
+  speak: none;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-arrow-left:before, .i-arrow-right:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-arrow-right:before {
+  transform: rotate(180deg);
+}
+
+.i-copy:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-cursor:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-github:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-reddit:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-lighthouse:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-piechart:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-transfer:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-day:before {
+  content: "";
+  display: block;
+  line-height: 1;
+}
+
+.i-night:before {
+  content: "󪀐";
+  display: block;
+  line-height: 1;
+}
+
+.i-menu:before {
+  content: "󪀑";
+  display: block;
+  line-height: 1;
+}
+
+.i-app:before {
+  content: "󪀒";
+  display: block;
+  line-height: 1;
+}
+
+.i-arrowhead:before {
+  content: "󪀓";
+  display: block;
+  line-height: 1;
+}
+
+.i-check:before {
+  content: "󪀔";
+  display: block;
+  line-height: 1;
+}
+
 input:not([type='submit']):not([type='button']), select, input[type="submit"], input[type="button"], button, *[class*='btn-'], .ss-main .ss-single-selected {
   border-radius: 6px;
   display: inline-block;
@@ -2470,15 +2579,20 @@ input[type="checkbox"] {
   border-radius: 3px !important;
   position: relative;
 }
-input[type="checkbox"]:after {
-  content: "√";
+input[type="checkbox"]:before {
+  content: "󪀔";
+  display: block;
+  line-height: 1;
+}
+input[type="checkbox"]:before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
   opacity: 0;
   transition: 0.2s all ease;
+  font-size: 13px;
 }
-input[type="checkbox"]:checked:after {
+input[type="checkbox"]:checked:before {
   opacity: 1;
 }
 
@@ -2569,91 +2683,6 @@ form section h4 {
 
 .input-msg {
   margin-left: 15px;
-}
-
-/* Icons */
-@font-face {
-  font-family: 'iconfont';
-  src: url("../fonts/iconfont.eot");
-  src: url("../fonts/iconfont.eot") format("embedded-opentype"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .ss-main .ss-single-selected .ss-arrow span {
-  font-family: 'iconfont';
-  speak: none;
-  font-size: 100%;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.i-arrow-left:before, .i-arrow-right:before {
-  content: "";
-  display: block;
-}
-
-.i-arrow-right:before {
-  transform: rotate(180deg);
-}
-
-.i-copy:before {
-  content: "";
-  display: block;
-}
-
-.i-cursor:before {
-  content: "";
-  display: block;
-}
-
-.i-github:before {
-  content: "";
-  display: block;
-}
-
-.i-reddit:before {
-  content: "";
-  display: block;
-}
-
-.i-lighthouse:before {
-  content: "";
-  display: block;
-}
-
-.i-piechart:before {
-  content: "";
-  display: block;
-}
-
-.i-transfer:before {
-  content: "";
-  display: block;
-}
-
-.i-day:before {
-  content: "";
-  display: block;
-}
-
-.i-night:before {
-  content: "󪀐";
-  display: block;
-}
-
-.i-menu:before {
-  content: "󪀑";
-  display: block;
-}
-
-.i-app:before {
-  content: "󪀒";
-  display: block;
 }
 
 section {
@@ -3114,6 +3143,9 @@ body {
 .theme-light input[type="submit"]:not([disabled]):hover, .theme-light input[type="button"]:not([disabled]):hover, .theme-light button:not([disabled]):hover, .theme-light .btn-blue:not([disabled]):hover {
   background-color: #0282bb;
 }
+.theme-light input[type="checkbox"]:before {
+  color: #03A5ED;
+}
 .theme-light .input-measure {
   color: #8b949c;
 }
@@ -3245,6 +3277,9 @@ body {
 }
 .theme-dark input[type="submit"]:not([disabled]):hover, .theme-dark input[type="button"]:not([disabled]):hover, .theme-dark button:not([disabled]):hover, .theme-dark .btn-blue:not([disabled]):hover {
   background-color: #025f88;
+}
+.theme-dark input[type="checkbox"]:before {
+  color: #0282bb;
 }
 .theme-dark .input-measure {
   color: white;
@@ -3475,6 +3510,7 @@ body {
 .ss-main .ss-single-selected .ss-arrow span:before {
   content: "󪀓";
   display: block;
+  line-height: 1;
 }
 
 .ss-main .ss-single-selected .ss-arrow span.arrow-up {

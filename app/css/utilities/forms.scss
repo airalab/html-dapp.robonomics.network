@@ -72,16 +72,20 @@ input[type="checkbox"]
 
 		position: relative;
 
-		&:after{
-			content: "√";
+		@include icon('\EA014');
+		
+
+		&:before{
+			// content: "√";
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 2px;
+			left: 2px;
 			opacity: 0;
 			transition: 0.2s all ease;
+			font-size: 13px;
 		}
 
-		&:checked:after{
+		&:checked:before{
 			opacity: 1;
 		}
 	}

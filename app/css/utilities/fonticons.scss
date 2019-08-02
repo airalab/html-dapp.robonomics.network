@@ -10,7 +10,7 @@
 }
 
 %iconsfont{
-	font-family: 'iconfont';
+	font-family: 'iconfont' !important;
 	speak: none;
 	font-size: 100%;
 	font-style: normal;
@@ -24,7 +24,7 @@
 
 @mixin icon($content){
 	@extend %iconsfont;
-	&:before { content: $content; display: block; }
+	&:before { content: $content; display: block; line-height: 1; }
 }
 
 .i-arrow-left, .i-arrow-right { @include icon('\EA01'); }
@@ -41,3 +41,5 @@
 .i-night { @include icon('\EA010'); }
 .i-menu { @include icon('\EA011'); }
 .i-app { @include icon('\EA012'); }
+.i-arrowhead { @include icon('\EA013'); }
+.i-check { @include icon('\EA014'); }
