@@ -45,16 +45,52 @@ mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', log
 		
 		if logolight == 'assets/i/logo-dapp-sign.svg'
 			.sidebar-col.js-sidebar-content#sidebar-nav1
+				.sidebar-col-in 
+					section
+						a(href="/")
+							img.theme-day(alt="dApp logo", src="assets/i/logo-dapp-text-blue.svg")
+							img.theme-night(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+
+					section
+						nav.nav-vertical
+							if navActive == 0
+								a(href="#").active
+									span.i-app.align-vertical
+									span.align-vertical Services
+							else
+								a(href="#")
+									span.i-app.align-vertical
+									span.align-vertical Services
+
+							if navActive == 1
+								a(href="#").active
+									span.i-lighthouse.align-vertical
+									span.align-vertical Lighthouses
+							else
+								a(href="#")
+									span.i-lighthouse.align-vertical
+									span.align-vertical Lighthouses
+
+							if navActive == 2
+								a(href="#").active
+									span.i-piechart.align-vertical
+									span.align-vertical Statistics
+							else
+								a(href="#")
+									span.i-piechart.align-vertical
+									span.align-vertical Statistics
+
+							if navActive == 3
+								a(href="#").active
+									span.i-transfer.align-vertical
+									span.align-vertical AIRA to XRT
+							else
+								a(href="#")
+									span.i-transfer.align-vertical
+									span.align-vertical AIRA to XRT
 		else
 			.sidebar-col-padding.sidebar-col.js-sidebar-content#sidebar-nav1
-			
-				.sidebar-col-in
-					if logo == 'assets/i/logo-dapp-sign.svg' 
-						section
-							a(href="/")
-								img.theme-day(alt="dApp logo", src="assets/i/logo-dapp-text-blue.svg")
-								img.theme-night(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
-
+				.sidebar-col-in 
 					section
 						nav.nav-vertical
 							if navActive == 0
