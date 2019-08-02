@@ -55,6 +55,12 @@ block content
 							span.input-msg Check if data correct, please. Example: INTCJ123-4567-890
 						input.error.container-full#input4(type="text", placeholder="Example: INTCJ123-4567-890", value="abrakadabra")
 
+					.form-item
+							input#checkbox(type="checkbox", checked)
+							label(for="checkbox") Some checkbox
+
+					button.container-full.btn-big Submit
+
 				script.
 					var select = new SlimSelect({
 						select: '#select',
@@ -137,5 +143,8 @@ block content
 								a(href="#") Terms
 								|  and 
 								a(href="#") Privacy Policy
+
+					section
+						button.container-full.btn-big Submit
 
 						

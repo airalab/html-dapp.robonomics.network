@@ -2566,6 +2566,11 @@ input[type="submit"], input[type="button"], button, *[class*='btn-'] {
   cursor: pointer;
   font-size: 16px;
   text-align: center;
+  font-weight: 500;
+}
+input.btn-big[type="submit"], input.btn-big[type="button"], button.btn-big, .btn-big[class*='btn-'] {
+  font-size: 19.2px;
+  padding: 10px 20px;
 }
 
 input:not([type='submit']):not([type='button']), select, .ss-main .ss-single-selected {
@@ -2575,7 +2580,7 @@ input:not([type='submit']):not([type='button']), select, .ss-main .ss-single-sel
 
 input[type="checkbox"] {
   padding: 8px !important;
-  margin-right: 15px;
+  margin-right: 10px;
   border-radius: 3px !important;
   position: relative;
 }
@@ -2618,7 +2623,7 @@ label, .input-msg {
 }
 
 form section {
-  margin: 60px 0 !important;
+  margin: 50px 0 !important;
 }
 form section h4 {
   margin-bottom: 12px;
@@ -2630,7 +2635,7 @@ form section h4 {
 }
 
 .input-size--md {
-  max-width: 150px;
+  max-width: 350px;
 }
 
 .input-size--lg {
