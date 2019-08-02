@@ -2491,7 +2491,10 @@ label, .input-msg {
 }
 
 form section {
-  margin: 50px 0 !important;
+  margin: 60px 0 !important;
+}
+form section h4 {
+  margin-bottom: 12px;
 }
 
 .input-size--sm {
@@ -2525,14 +2528,19 @@ form section {
 }
 
 .form-line {
-  margin-bottom: 28.8px;
+  margin-bottom: 24px;
 }
 .form-line:last-child {
   margin-bottom: 0;
 }
 
-.form-line-label input {
+.form-line-label input:not([type='submit']):not([type='button']), .form-line-label select {
   padding: 0 !important;
+  border-width: 0 0 1px !important;
+  border-radius: 0 !important;
+}
+.form-line-label label {
+  display: block;
 }
 
 .input-measured {
@@ -2677,13 +2685,6 @@ section section {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-.section-centered input, .section-centered select {
-  border-width: 0 0 1px !important;
-  border-radius: 0 !important;
-  padding-top: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 
 .content-in > section:first-child {
@@ -3132,6 +3133,9 @@ body {
 .theme-light .input-msg {
   color: #E84004;
 }
+.theme-light form section h4 {
+  color: rgba(101, 109, 118, 0.5);
+}
 .theme-light table td {
   border-color: #e6e6e6;
 }
@@ -3260,6 +3264,9 @@ body {
 }
 .theme-dark .input-msg {
   color: #b63203;
+}
+.theme-dark form section h4 {
+  color: rgba(234, 234, 234, 0.5);
 }
 .theme-dark table td {
   border-color: #161616;
