@@ -71,31 +71,55 @@ input[type="submit"], input[type="button"], button, *[class *= 'btn-']
 		@extend %btn;
 	}
 
-input[type="checkbox"]
+input[type="checkbox"], input[type="radio"]
 	{
-		padding: 8px !important;
 		margin-right: 10px;
-		border-radius: $border-radius/2 !important;
-
 		position: relative;
 
-		@include icon('\EA014');
-		
-
 		&:before{
-			// content: "√";
 			position: absolute;
-			top: 2px;
-			left: 2px;
 			opacity: 0;
 			transition: 0.2s all ease;
-			font-size: 13px;
 		}
 
 		&:checked:before{
 			opacity: 1;
 		}
 	}
+
+input[type="checkbox"]
+	{
+		padding: 8px !important;
+		border-radius: $border-radius/2 !important;
+
+		@include icon('\EA014');
+		
+		&:before{
+			top: 2px;
+			left: 2px;
+			font-size: 13px;
+		}
+	}
+
+input[type="radio"]
+	{
+		width: 18px;
+		height: 18px;
+		border-radius: 9px !important;
+		padding: 0 !important;
+
+		&:before{
+			content:"";
+			width: 6px;
+			height: 6px;
+			border-radius: 3px;
+			top: calc(50% - 3px);
+			left: calc(50% - 3px);
+			border-width: 1px;
+			border-style: solid;
+		}
+	}
+
 
 select
 	{

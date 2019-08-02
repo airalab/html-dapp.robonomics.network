@@ -136,6 +136,8 @@
     }
 
     input[type="checkbox"]:before { color: $blue; }
+    input[type="radio"]:before { border-color: $blue; }
+
 
     .input-measure { color: lighten($body-textcolor, 15%); }
 
