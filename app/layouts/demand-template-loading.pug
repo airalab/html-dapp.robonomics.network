@@ -7,7 +7,7 @@ block html
 
 block content
 
-	+sidebar(1, true)
+	+sidebar(0, true)
 
 	.content
 		.content-in
@@ -16,37 +16,55 @@ block content
 				h2 Demand template form (progress)
 
 				form
-					.form-item.d-table
-						.d-table--cell
-							.i-check.m-r-15.green
-						.d-table--cell
-							| Вещаем сообщение
+					section
+						.form-item.d-table
+							.d-table--cell.align-vertical
+								.i-check.m-r-15.green
+							.d-table--cell.align-vertical
+								| Вещаем сообщение
 
-					.form-item.d-table
-						.d-table--cell
-							.i-check.m-r-15.green
-						.d-table--cell
-							| Cервис ответил на спрос
+						.form-item.d-table
+							.d-table--cell.align-vertical
+								.loader-ring.m-r-15
+							.d-table--cell.align-vertical
+								| Cервис ответил на спрос
 
-					.form-item.d-table
-						.d-table--cell
-							.i-check.m-r-15.green
-						.d-table--cell
-							| Провайдер Робономики отправил транзакцию в Ethereum
-
-
-					.form-item.d-table
-						.d-table--cell
-							.i-check.m-r-15.green
-						.d-table--cell
-							| Умный контракт создан, ожидаем исполнения сервиса роботом
+						.form-item.d-table.disabled
+							.d-table--cell.align-vertical
+								.i-stop.m-r-15
+							.d-table--cell
+								| Провайдер Робономики отправил транзакцию в Ethereum
 
 
-					.form-item.d-table
-						.d-table--cell
-							.loader-ring.m-r-15
-						.d-table--cell
-							| Умный контракт исполнен! Посмотреть результаты можно по 
-							a(href="#", target="_blank") ссылке
+						.form-item.d-table.disabled
+							.d-table--cell.align-vertical
+								.i-stop.m-r-15
+							.d-table--cell.align-vertical
+								| Умный контракт создан, ожидаем исполнения сервиса роботом
 
-					// button.container-full.btn-big Submit
+
+						.form-item.d-table.disabled
+							.d-table--cell.align-vertical
+								.i-stop.m-r-15
+							.d-table--cell.align-vertical
+								| Умный контракт исполнен!
+
+					section
+						.form-line-btns
+							button.btn-big.btn-green(disabled)
+								span.i-file
+								span Посмотреть результат
+							button.btn-big
+								span.i-app
+								span Вернуться к сервисам
+
+						.form-line-btns
+							button.btn-big.btn-green
+								span.i-file
+								span Посмотреть результат
+							button.btn-big
+								span.i-app
+								span Вернуться к сервисам
+
+						
+						

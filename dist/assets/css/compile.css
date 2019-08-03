@@ -2427,7 +2427,7 @@ table caption {
   font-weight: normal;
   font-style: normal;
 }
-.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
   font-family: 'iconfont' !important;
   speak: none;
   font-size: 100%;
@@ -2524,6 +2524,18 @@ table caption {
 
 .i-check:before {
   content: "󪀔";
+  display: block;
+  line-height: 1;
+}
+
+.i-stop:before {
+  content: "󪀕";
+  display: block;
+  line-height: 1;
+}
+
+.i-file:before {
+  content: "󪀖";
   display: block;
   line-height: 1;
 }
@@ -2683,6 +2695,14 @@ form section h4 {
 }
 .form-line-label label {
   display: block;
+}
+
+.form-line-btns input[type="submit"], .form-line-btns input[type="button"], .form-line-btns button, .form-line-btns *[class*='btn-'] {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.form-line-btns input[type="submit"]:last-child, .form-line-btns input[type="button"]:last-child, .form-line-btns button:last-child, .form-line-btns *[class*='btn-']:last-child {
+  margin-right: 0;
 }
 
 .input-measured {

@@ -216,6 +216,17 @@ form{
 		label { display: block; }
 	}
 
+.form-line-btns
+	{
+		input[type="submit"], input[type="button"], button, *[class *= 'btn-']
+			{
+				margin-right: 15px;
+				margin-bottom: 10px;
+
+				&:last-child { margin-right: 0; }
+			}
+	}
+
 
 
 .input-measured

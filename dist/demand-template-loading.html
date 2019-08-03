@@ -32,7 +32,7 @@
         <div class="sidebar-col-in"> 
           <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-text-blue.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-text.svg"/></a></section>
           <section>
-            <nav class="nav-vertical"><a href="#"><span class="i-app align-vertical"></span><span class="align-vertical">Services</span></a><a class="active" href="#"><span class="i-lighthouse align-vertical"></span><span class="align-vertical">Lighthouses</span></a><a href="#"><span class="i-piechart align-vertical"></span><span class="align-vertical">Statistics</span></a><a href="#"><span class="i-transfer align-vertical"></span><span class="align-vertical">AIRA to XRT</span></a>
+            <nav class="nav-vertical"><a class="active" href="#"><span class="i-app align-vertical"></span><span class="align-vertical">Services</span></a><a href="#"><span class="i-lighthouse align-vertical"></span><span class="align-vertical">Lighthouses</span></a><a href="#"><span class="i-piechart align-vertical"></span><span class="align-vertical">Statistics</span></a><a href="#"><span class="i-transfer align-vertical"></span><span class="align-vertical">AIRA to XRT</span></a>
             </nav>
           </section>
         </div>
@@ -64,37 +64,48 @@
         <section class="section-light section-centered">
           <h2>Demand template form (progress)</h2>
           <form>
-            <div class="form-item d-table">
-              <div class="d-table--cell">
-                <div class="i-check m-r-15 green"></div>
+            <section>
+              <div class="form-item d-table">
+                <div class="d-table--cell align-vertical">
+                  <div class="i-check m-r-15 green"></div>
+                </div>
+                <div class="d-table--cell align-vertical">Вещаем сообщение</div>
               </div>
-              <div class="d-table--cell">Вещаем сообщение</div>
-            </div>
-            <div class="form-item d-table">
-              <div class="d-table--cell">
-                <div class="i-check m-r-15 green"></div>
+              <div class="form-item d-table">
+                <div class="d-table--cell align-vertical">
+                  <div class="loader-ring m-r-15"></div>
+                </div>
+                <div class="d-table--cell align-vertical">Cервис ответил на спрос</div>
               </div>
-              <div class="d-table--cell">Cервис ответил на спрос</div>
-            </div>
-            <div class="form-item d-table">
-              <div class="d-table--cell">
-                <div class="i-check m-r-15 green"></div>
+              <div class="form-item d-table disabled">
+                <div class="d-table--cell align-vertical">
+                  <div class="i-stop m-r-15"></div>
+                </div>
+                <div class="d-table--cell">Провайдер Робономики отправил транзакцию в Ethereum</div>
               </div>
-              <div class="d-table--cell">Провайдер Робономики отправил транзакцию в Ethereum</div>
-            </div>
-            <div class="form-item d-table">
-              <div class="d-table--cell">
-                <div class="i-check m-r-15 green"></div>
+              <div class="form-item d-table disabled">
+                <div class="d-table--cell align-vertical">
+                  <div class="i-stop m-r-15"></div>
+                </div>
+                <div class="d-table--cell align-vertical">Умный контракт создан, ожидаем исполнения сервиса роботом</div>
               </div>
-              <div class="d-table--cell">Умный контракт создан, ожидаем исполнения сервиса роботом</div>
-            </div>
-            <div class="form-item d-table">
-              <div class="d-table--cell">
-                <div class="loader-ring m-r-15"></div>
+              <div class="form-item d-table disabled">
+                <div class="d-table--cell align-vertical">
+                  <div class="i-stop m-r-15"></div>
+                </div>
+                <div class="d-table--cell align-vertical">Умный контракт исполнен!</div>
               </div>
-              <div class="d-table--cell">Умный контракт исполнен! Посмотреть результаты можно по <a href="#" target="_blank">ссылке</a></div>
-            </div>
-            <!-- button.container-full.btn-big Submit-->
+            </section>
+            <section>
+              <div class="form-line-btns">
+                <button class="btn-big btn-green" disabled><span class="i-file"></span><span>Посмотреть результат</span></button>
+                <button class="btn-big"><span class="i-app"></span><span>Вернуться к сервисам</span></button>
+              </div>
+              <div class="form-line-btns">
+                <button class="btn-big btn-green"><span class="i-file"></span><span>Посмотреть результат</span></button>
+                <button class="btn-big"><span class="i-app"></span><span>Вернуться к сервисам</span></button>
+              </div>
+            </section>
           </form>
         </section>
       </div>
