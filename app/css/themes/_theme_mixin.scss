@@ -202,6 +202,20 @@
 
     form section h4 { color: rgba($body-textcolor, .5); }
 
+
+
+    .filepond--panel-root
+      {
+        background-color: lighten($body-background, 3%);
+        border-color: rgba($body-textcolor, .5);
+      }
+    .filepond--drop-label label { color: rgba($body-textcolor, .7); }
+    .filepond--label-action
+      {
+        -webkit-text-decoration-color: rgba($body-textcolor, .7);
+        text-decoration-color: rgba($body-textcolor, .7);
+      }
+
   }
 
 }

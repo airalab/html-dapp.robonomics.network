@@ -70,7 +70,21 @@ block content
 							input#radio2(type="radio", name="radio")
 							label(for="radio2") Some choose
 
+					section
+						.form-item
+							label(for="fileinput") Your file
+							input#fileinput.filepond(type="file")
+
 					button.container-full.btn-big Submit
+
+
+
+
+				link(href='https://unpkg.com/filepond/dist/filepond.css' rel='stylesheet')
+				script(src='https://unpkg.com/filepond/dist/filepond.js')
+				script.
+					FilePond.parse(document.body);
+
 
 				script.
 					var select = new SlimSelect({

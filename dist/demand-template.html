@@ -119,8 +119,21 @@
                 <label for="radio2">Some choose</label>
               </div>
             </section>
+            <section>
+              <div class="form-item">
+                <label for="fileinput">Your file</label>
+                <input class="filepond" id="fileinput" type="file">
+              </div>
+            </section>
             <button class="container-full btn-big">Submit</button>
           </form>
+          <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+          <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+          <script>
+            FilePond.parse(document.body);
+            
+            
+          </script>
           <script>
             var select = new SlimSelect({
             	select: '#select',

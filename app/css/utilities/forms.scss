@@ -202,6 +202,10 @@ form{
 		&:last-child { margin-bottom: 0; }
 	}
 
+section .form-item {
+	margin-bottom: $vertical-rythm * 0.6;
+	&:last-child { margin-bottom: 0; }
+}
 
 
 .form-line-label
