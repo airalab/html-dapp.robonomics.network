@@ -3,7 +3,7 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Robonomics Lighthouse'
-	- var bodyclass = 'flexcols theme-light'
+	- var bodyclass = 'flexcols theme-dark'
 
 block content
 
@@ -73,17 +73,34 @@ block content
 					section
 						.form-item
 							label(for="fileinput") Your file
-							input#fileinput.filepond(type="file")
+							input#fileinput.filepond(type="file", multiple)
+
+					section
+						.form-item.form-line-label
+							label(for="flatpickr") Select date (method 1)
+							input#flatpickr.flatpickr(type="text")
+
+					section
+						.form-item.form-line-label
+							label(for="flatpickr") Select date (method 2 for Chrome, Firefox)
+							input(type="date")
 
 					button.container-full.btn-big Submit
 
 
 
-
+				// file picker
 				link(href='https://unpkg.com/filepond/dist/filepond.css' rel='stylesheet')
 				script(src='https://unpkg.com/filepond/dist/filepond.js')
 				script.
 					FilePond.parse(document.body);
+
+
+				//datapicker, https://flatpickr.js.org/
+				//- link(href='https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css' rel='stylesheet')
+				script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+				script.
+					flatpickr('.flatpickr');
 
 
 				script.

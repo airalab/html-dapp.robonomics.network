@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
   </head>
-  <body class="flexcols theme-light">
+  <body class="flexcols theme-dark">
     <div class="sidebar flexcols">
       <div class="sidebar-col sidebar-col--sm">
         <div class="sidebar-col-in">
@@ -122,15 +122,35 @@
             <section>
               <div class="form-item">
                 <label for="fileinput">Your file</label>
-                <input class="filepond" id="fileinput" type="file">
+                <input class="filepond" id="fileinput" type="file" multiple>
+              </div>
+            </section>
+            <section>
+              <div class="form-item form-line-label">
+                <label for="flatpickr">Select date (method 1)</label>
+                <input class="flatpickr" id="flatpickr" type="text">
+              </div>
+            </section>
+            <section>
+              <div class="form-item form-line-label">
+                <label for="flatpickr">Select date (method 2 for Chrome, Firefox)</label>
+                <input type="date">
               </div>
             </section>
             <button class="container-full btn-big">Submit</button>
           </form>
+          <!-- file picker-->
           <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
           <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
           <script>
             FilePond.parse(document.body);
+            
+            
+          </script>
+          <!--datapicker, https://flatpickr.js.org/-->
+          <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+          <script>
+            flatpickr('.flatpickr');
             
             
           </script>
