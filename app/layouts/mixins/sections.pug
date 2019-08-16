@@ -19,7 +19,7 @@ mixin panelTop()
 		
 
 
-mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', logodark='assets/i/logo-dapp-sign.svg')
+mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', logodark='assets/i/logo-dapp-sign.svg', project='robonomics')
 	.sidebar.flexcols
 		.sidebar-col.sidebar-col--sm
 			.sidebar-col-in
@@ -39,6 +39,8 @@ mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', log
 						i.i-day
 
 				section.sidebar-col--bottom
+					a(href="javascript:;", on-toggle="#sidebar-user").sidebar-i--lg.js-sidebar-link
+						i.i-user
 					a(href="javascript:;", on-toggle="#sidebar-info").sidebar-i--lg.js-sidebar-link ?
 
 
@@ -149,25 +151,65 @@ mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', log
 							span.align-vertical Dark
 
 
-		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
+		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-user
 			.sidebar-col-in
 				section
-					nav.nav-vertical
-						a(href="#")
-							span.i-github.align-vertical
-							span.align-vertical Github
 
-						a(href="#")
-							span.i-reddit.align-vertical
-							span.align-vertical Reddit
+					a(href="#").nowrap
+						+avatar('avatar-small align-vertical m-r-10')
+						b 0x40c5...c8d3
 
-						a(href="#")
-							span.i-cursor.align-vertical
-							span.align-vertical robonomomics.network
+					.m-t-10.label.label-violet Sidechain
+					
 
-						a(href="#")
-							span.i-cursor.align-vertical
-							span.align-vertical aira.life
+				section
+					.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+						b.m-r-10 2,100
+						span.t-sm AIRA
+					hr/
+					.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+						b.m-r-10 0
+						span.t-sm AIRA ID
+					hr/
+					div
+						b.m-r-10 0
+						span.t-sm XRT
+						
+
+
+
+		if project == 'robonomics'
+			.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
+				.sidebar-col-in
+					section
+						nav.nav-vertical
+							a(href="https://github.com/airalab", target="_blank")
+								span.i-github.align-vertical
+								span.align-vertical Github
+
+							a(href="https://www.reddit.com/r/robonomics/", target="_blank")
+								span.i-reddit.align-vertical
+								span.align-vertical Reddit
+
+							a(href="https://robonomics.network/", target="_blank")
+								span.i-cursor.align-vertical
+								span.align-vertical robonomomics.network
+
+							a(href="https://aira.life/", target="_blank")
+								span.i-cursor.align-vertical
+								span.align-vertical aira.life
+
+		if project == 'ipci'
+			.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
+				.sidebar-col-in
+					section
+						p
+							a(href="https://ipci.io/", target="_blank") DAO IPCI
+							br/
+							| Blockchain technology for carbon markets, environmental assets and liabilities
+						p Works with 
+							a(href="https://robonomics.network/", target="_blank") Robonomomics.network
+
 
 		
 

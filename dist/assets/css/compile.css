@@ -2350,7 +2350,7 @@ table caption {
 }
 
 .label {
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 500;
   padding: 0 10px;
 }
@@ -2427,7 +2427,7 @@ table caption {
   font-weight: normal;
   font-style: normal;
 }
-.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, .i-user, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
   font-family: 'iconfont' !important;
   speak: none;
   font-size: 100%;
@@ -2536,6 +2536,12 @@ table caption {
 
 .i-file:before {
   content: "󪀖";
+  display: block;
+  line-height: 1;
+}
+
+.i-user:before {
+  content: "󪀗";
   display: block;
   line-height: 1;
 }
@@ -3126,10 +3132,10 @@ body {
   background-color: #f0f0f0;
   color: #656d76;
 }
-.theme-light .sidebar a {
+.theme-light .sidebar nav a, .theme-light .sidebar .sidebar-i--lg {
   color: #656d76;
 }
-.theme-light .sidebar a:not([class*='sidebar-i--lg']):not([class*='active']):hover {
+.theme-light .sidebar nav a:not([class*='sidebar-i--lg']):not([class*='active']):hover, .theme-light .sidebar .sidebar-i--lg:not([class*='sidebar-i--lg']):not([class*='active']):hover {
   color: #03A5ED;
 }
 .theme-light .sidebar-i--lg.active {
@@ -3148,7 +3154,7 @@ body {
   background-color: #ffffff;
   border-color: #ebebeb;
   color: #6c757e;
-  box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, 0.5);
+  box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, 0.2);
 }
 .theme-light .section-dark {
   background-color: #f6f6f6;
@@ -3345,10 +3351,10 @@ body {
   background-color: #202020;
   color: #eaeaea;
 }
-.theme-dark .sidebar a {
+.theme-dark .sidebar nav a, .theme-dark .sidebar .sidebar-i--lg {
   color: #eaeaea;
 }
-.theme-dark .sidebar a:not([class*='sidebar-i--lg']):not([class*='active']):hover {
+.theme-dark .sidebar nav a:not([class*='sidebar-i--lg']):not([class*='active']):hover, .theme-dark .sidebar .sidebar-i--lg:not([class*='sidebar-i--lg']):not([class*='active']):hover {
   color: #0282bb;
 }
 .theme-dark .sidebar-i--lg.active {
@@ -3502,19 +3508,19 @@ body {
   background-color: #494949;
 }
 .theme-dark .flatpickr-calendar.arrowTop:before {
-  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(189, 197, 209, 0.5);
 }
 .theme-dark .flatpickr-calendar.arrowTop:after {
   border-bottom-color: #494949;
 }
 .theme-dark .flatpickr-calendar.arrowBottom:before {
-  border-top-color: rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(189, 197, 209, 0.5);
 }
 .theme-dark .flatpickr-calendar.arrowBottom:after {
   border-top-color: #494949;
 }
 .theme-dark .flatpickr-calendar {
-  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1.2rem rgba(189, 197, 209, 0.5);
 }
 .theme-dark .flatpickr-months .flatpickr-prev-month, .theme-dark .flatpickr-months .flatpickr-next-month {
   color: #eaeaea;
