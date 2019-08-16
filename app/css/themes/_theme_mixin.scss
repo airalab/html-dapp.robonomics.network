@@ -156,7 +156,7 @@
 
 
 
-    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open, select
+    input:not([type='submit']):not([type='button']), .ss-main .ss-single-selected, .ss-content.ss-open, select, textarea
       {
         border-color: rgba($body-textcolor, .5);
         background-color: $section-background;
@@ -201,7 +201,11 @@
     .input-tip { color: $blue; }
     .input-msg { color: $red; }
 
-    form section h4 { color: rgba($body-textcolor, .5); }
+    .form-section-title
+      {
+        color: rgba($body-textcolor, .6);
+        background-color: rgba($body-textcolor, .1);
+      }
 
 
 
@@ -210,7 +214,8 @@
     // plugin filepond
     .filepond--panel-root
       {
-        background-color: lighten($body-background, 3%);
+        // background-color: lighten($body-background, 3%);
+        background-color: transparent;
         border-color: rgba($body-textcolor, .5);
       }
     .filepond--drop-label label { color: rgba($body-textcolor, .7); }
@@ -219,6 +224,14 @@
         -webkit-text-decoration-color: rgba($body-textcolor, .7);
         text-decoration-color: rgba($body-textcolor, .7);
       }
+
+      .filepond--file
+      {
+        color: rgba($body-textcolor, .6);
+        background-color: rgba($body-textcolor, .1);
+      }
+
+    .filepond--item-panel { background-color: transparent; }
 
 
 

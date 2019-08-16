@@ -58,7 +58,7 @@ $padding-side: 10px;
 }
 
 
-input:not([type='submit']):not([type='button']), select
+input:not([type='submit']):not([type='button']), select, textarea
 	{
 		@extend %inputs_base;
 		@extend %inputtext;	
@@ -145,12 +145,16 @@ label, .input-msg{
 form{
 	section{
 		margin: 50px 0 !important;
-
-		h4 {
-			margin-bottom: $vertical-rythm/2;
-		}
 	}
 }
+
+.form-section-title {
+		font-size: $font-size-title - 4 * 3;
+		line-height: 1;
+		@extend %text_uppercase;
+		margin-bottom: $vertical-rythm/2;
+		padding: 12px;
+	}
 
 
 
@@ -198,19 +202,19 @@ form{
 
 .form-item
 	{
-		margin-bottom: $vertical-rythm;
+		margin-bottom: $vertical-rythm * 0.6;
 		&:last-child { margin-bottom: 0; }
 	}
 
 section .form-item {
-	margin-bottom: $vertical-rythm * 0.6;
+	margin-bottom: $vertical-rythm;
 	&:last-child { margin-bottom: 0; }
 }
 
 
 .form-line-label
 	{
-		input:not([type='submit']):not([type='button']), select
+		input:not([type='submit']):not([type='button']), select, textarea
 			{
 				padding: 0 !important;
 				border-width: 0 0 1px !important;

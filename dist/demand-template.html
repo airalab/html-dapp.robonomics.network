@@ -112,6 +112,10 @@
               <!-- .input-tip Some tip here useful for user. Example: data example-->
             </div>
             <div class="form-item form-line-label">
+              <label for="textarea">Textarea (much info expected)</label>
+              <textarea class="container-full" id="textarea" placeholder="some placeholder"></textarea>
+            </div>
+            <div class="form-item form-line-label">
               <label for="input4">Error input value<span class="input-msg">Check if data correct, please. Example: INTCJ123-4567-890</span></label>
               <input class="error container-full" id="input4" type="text" placeholder="Example: INTCJ123-4567-890" value="abrakadabra">
             </div>
@@ -153,6 +157,129 @@
             </section>
             <button class="container-full btn-big">Submit</button>
           </form>
+        </section>
+        <section class="section-light section-centered">
+          <h2>Example of form with real data</h2>
+          <form>
+            <section>
+              <div class="form-section-title">Operator</div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-email">Contact e-mail *</label>
+                <input class="container-full" id="inputdata-email" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-fullname">Fullname *</label>
+                <input class="container-full" id="inputdata-fullname" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-id">Pilot ID *</label>
+                <input class="container-full" id="inputdata-id" type="text" required>
+              </div>
+            </section>
+            <section>
+              <div class="form-section-title">UAV</div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-serial">Serial number *</label>
+                <input class="container-full" id="inputdata-serial" type="text" placeholder="Example: INTCJ123-4567-890" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-model">Registration number *</label>
+                <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: FA123456789" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-type">Type *</label>
+                <input class="container-full" id="inputdata-type" type="text" placeholder="Example: VTOL" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-manufacturer">Manufacturer</label>
+                <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: DJI">
+              </div>
+              <div class="form-item form-line-label">
+                <label for="inputdata-model">Model</label>
+                <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: Matrice 100">
+              </div>
+            </section>
+            <section>
+              <div class="form-item">
+                <input id="inputdata-agreement" type="checkbox" checked>
+                <label for="inputdata-agreement">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
+              </div>
+            </section>
+            <section>
+              <button class="container-full btn-big">Send demand</button>
+            </section>
+          </form>
+        </section>
+        <section class="section-light section-centered">
+          <h2>Пилотная выдача зеленых сертификатов в Сколково</h2>
+          <form>
+            <section>
+              <div class="form-section-title">Владелец сертификата</div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-email">Контактый e-mail</label>
+                <input class="container-full" id="exmp2-email" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-info">Информация о владельце выпускаемого сертификата</label>
+                <textarea class="container-full" id="exmp2-info" rows="1" required></textarea>
+              </div>
+            </section>
+            <section>
+              <div class="form-section-title">Собранная информация</div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-log">Лог IoT счётчика</label>
+                <input class="filepond" id="exmp2-log" type="file">
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-date1">Период, в течение которого была произведена электроэнергия</label>
+                <input class="flatpickr-range" id="exmp2-date1" type="text">
+              </div>
+            </section>
+            <section>
+              <div class="form-section-title">Сведения об источнике энергии</div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-name">Наименование генерирующего объекта</label>
+                <input class="container-full" id="exmp2-name" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-object">Место нахождения (в том числе географические координаты)</label>
+                <textarea class="container-full" id="exmp2-object" rows="1" required></textarea>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-date2">Дата ввода генерирующего объекта в эксплуатацию</label>
+                <input class="flatpickr" id="exmp2-date2" type="text">
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-energytype">Вид возобновляемого источника энергии</label>
+                <input class="container-full" id="exmp2-energytype" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-object">Сведения, однозначно определяющие генерирующий объект</label>
+                <textarea class="container-full" id="exmp2-object" rows="1" required></textarea>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-vol">Установленная мощность генерирующего объекта</label>
+                <input id="exmp2-vol" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-koef">Коэффициенты (удельные объёмы) вредных выбросов, связываемых с генерацией</label>
+                <input id="exmp2-koef" type="text" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-id">Идентификатор генерирующего объекта</label>
+                <input id="exmp2-id" type="text" required>
+              </div>
+              <div class="form-item">
+                <input id="exmp2-checkbox" type="checkbox">
+                <label for="exmp2-checkbox">В отношении генерирующего объекта за период времени, в течение которого была осуществлена выработка электроэнергии, осуществлялась государственная поддержка</label>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-gosinfo">Опишите форму и объём этой поддержки</label>
+                <textarea class="container-full" id="exmp2-gosinfo" rows="1" required></textarea>
+              </div>
+            </section>
+            <button class="container-full btn-big">Подтвердить</button>
+          </form>
           <!-- file picker-->
           <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
           <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
@@ -164,7 +291,8 @@
           <!--datapicker, https://flatpickr.js.org/-->
           <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
           <script>
-            flatpickr('.flatpickr', { mode: "range", dateFormat: "d.m.y", locale: { rangeSeparator: ' – '} });
+            flatpickr('.flatpickr-range', { mode: "range", dateFormat: "d.m.y", locale: { rangeSeparator: ' – '} });
+            flatpickr('.flatpickr', { dateFormat: "d.m.y" });
             
             
           </script>
@@ -197,60 +325,8 @@
             
             
             
-            
+            	
           </script>
-        </section>
-        <section class="section-light section-centered">
-          <h2>Example of form with real data</h2>
-          <form>
-            <section>
-              <h4>Operator</h4>
-              <div class="form-item form-line-label">
-                <label for="inputdata-email">Contact e-mail *</label>
-                <input class="container-full" id="inputdata-email" type="text" required>
-              </div>
-              <div class="form-item form-line-label">
-                <label for="inputdata-fullname">Fullname *</label>
-                <input class="container-full" id="inputdata-fullname" type="text" required>
-              </div>
-              <div class="form-item form-line-label">
-                <label for="inputdata-id">Pilot ID *</label>
-                <input class="container-full" id="inputdata-id" type="text" required>
-              </div>
-            </section>
-            <section>
-              <h4>UAV</h4>
-              <div class="form-item form-line-label">
-                <label for="inputdata-serial">Serial number *</label>
-                <input class="container-full" id="inputdata-serial" type="text" placeholder="Example: INTCJ123-4567-890" required>
-              </div>
-              <div class="form-item form-line-label">
-                <label for="inputdata-model">Registration number *</label>
-                <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: FA123456789" required>
-              </div>
-              <div class="form-item form-line-label">
-                <label for="inputdata-type">Type *</label>
-                <input class="container-full" id="inputdata-type" type="text" placeholder="Example: VTOL" required>
-              </div>
-              <div class="form-item form-line-label">
-                <label for="inputdata-manufacturer">Manufacturer</label>
-                <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: DJI">
-              </div>
-              <div class="form-item form-line-label">
-                <label for="inputdata-model">Model</label>
-                <input class="container-full" id="inputdata-manufacturer" type="text" placeholder="Example: Matrice 100">
-              </div>
-            </section>
-            <section>
-              <div class="form-item">
-                <input id="inputdata-agreement" type="checkbox" checked>
-                <label for="inputdata-agreement">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
-              </div>
-            </section>
-            <section>
-              <button class="container-full btn-big">Send demand</button>
-            </section>
-          </form>
         </section>
       </div>
     </div>

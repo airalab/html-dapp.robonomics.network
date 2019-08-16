@@ -50,6 +50,10 @@ block content
 						// .input-tip Some tip here useful for user. Example: data example
 
 					.form-item.form-line-label
+						label(for="textarea") Textarea (much info expected)
+						textarea.container-full#textarea(placeholder="some placeholder")
+
+					.form-item.form-line-label
 						label(for="input4")
 							| Error input value
 							span.input-msg Check if data correct, please. Example: INTCJ123-4567-890
@@ -89,48 +93,6 @@ block content
 
 
 
-				// file picker
-				link(href='https://unpkg.com/filepond/dist/filepond.css' rel='stylesheet')
-				script(src='https://unpkg.com/filepond/dist/filepond.js')
-				script.
-					FilePond.parse(document.body);
-
-
-				//datapicker, https://flatpickr.js.org/
-				script(src='https://cdn.jsdelivr.net/npm/flatpickr')
-				script.
-					flatpickr('.flatpickr', { mode: "range", dateFormat: "d.m.y", locale: { rangeSeparator: ' – '} });
-
-
-				script.
-					var select = new SlimSelect({
-						select: '#select',
-						valuesUseText: false, // Use text instead of innerHTML for selected values - default false
-						data: [
-							{placeholder: true, text: 'Extended select (js required)'},
-							{innerHTML: '<b>a.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: 'a.lighthouse.5.robonomics.eth', value: 'select1'},
-							{innerHTML: '<b>airalab.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</span>', text: 'airalab.lighthouse.5.robonomics.eth', value: 'select2'},
-							{innerHTML: '<b>mobilerobotics.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x8165ad3d400bda2be5fe27254a5e55e0f393921f</span>', text: 'mobilerobotics.lighthouse.5.robonomics.eth', value: 'select3'},
-							{innerHTML: '<b>New lighthouse</b>', text: 'create new lighthouse', value: 'new', class:'type-new'}
-						],
-						onChange: (info) => {
-						    console.log(info);
-						    if(info.class == 'type-new'){
-								document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
-								+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
-								+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
-								// + '<br/><button class="btn-blue">Create and connect</button>';
-						    }
-						    else{
-						    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
-						    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
-						    }  	
-					  	}
-					});
-
-
-
-
 
 			section.section-light.section-centered
 				h2 Example of form with real data
@@ -138,7 +100,7 @@ block content
 				form
 
 					section
-						h4 Operator
+						.form-section-title Operator
 
 						.form-item.form-line-label
 							label(for="inputdata-email") Contact e-mail *
@@ -154,7 +116,7 @@ block content
 
 
 					section
-						h4 UAV
+						.form-section-title UAV
 
 						.form-item.form-line-label
 							label(for="inputdata-serial") Serial number *
@@ -187,5 +149,138 @@ block content
 
 					section
 						button.container-full.btn-big Send demand
+
+
+
+
+			section.section-light.section-centered
+				h2 Пилотная выдача зеленых сертификатов в Сколково
+
+				form
+
+					section
+						.form-section-title Владелец сертификата
+
+						.form-item.form-line-label
+							label(for="exmp2-email") Контактый e-mail
+							input.container-full#exmp2-email(type="text", required)
+
+						.form-item.form-line-label
+							label(for="exmp2-info") Информация о владельце выпускаемого сертификата
+							textarea.container-full#exmp2-info(rows="1", required)
+
+					section
+						.form-section-title Собранная информация
+
+						.form-item.form-line-label
+							label(for="exmp2-log") Лог IoT счётчика
+							input#exmp2-log.filepond(type="file")
+
+						.form-item.form-line-label
+							label(for="exmp2-date1") Период, в течение которого была произведена электроэнергия
+							input#exmp2-date1.flatpickr-range(type="text")
+
+					section
+						.form-section-title Сведения об источнике энергии
+
+						.form-item.form-line-label
+							label(for="exmp2-name") Наименование генерирующего объекта
+							input.container-full#exmp2-name(type="text", required)
+
+						.form-item.form-line-label
+							label(for="exmp2-object") Место нахождения (в том числе географические координаты)
+							textarea.container-full#exmp2-object(rows="1", required)
+
+						.form-item.form-line-label
+							label(for="exmp2-date2") Дата ввода генерирующего объекта в эксплуатацию
+							input#exmp2-date2.flatpickr(type="text")
+
+
+						.form-item.form-line-label
+							label(for="exmp2-energytype") Вид возобновляемого источника энергии
+							input.container-full#exmp2-energytype(type="text", required)
+
+
+						.form-item.form-line-label
+							label(for="exmp2-object") Сведения, однозначно определяющие генерирующий объект
+							textarea.container-full#exmp2-object(rows="1", required)
+
+						.form-item.form-line-label
+							label(for="exmp2-vol") Установленная мощность генерирующего объекта
+							input#exmp2-vol(type="text", required)
+
+
+						.form-item.form-line-label
+							label(for="exmp2-koef") Коэффициенты (удельные объёмы) вредных выбросов, связываемых с генерацией
+							input#exmp2-koef(type="text", required)
+
+
+						.form-item.form-line-label
+							label(for="exmp2-id") Идентификатор генерирующего объекта
+							input#exmp2-id(type="text", required)
+
+
+						.form-item
+							input#exmp2-checkbox(type="checkbox")
+							label(for="exmp2-checkbox") В отношении генерирующего объекта за период времени, в течение которого была осуществлена выработка электроэнергии, осуществлялась государственная поддержка
+
+						.form-item.form-line-label
+							label(for="exmp2-gosinfo") Опишите форму и объём этой поддержки
+							textarea.container-full#exmp2-gosinfo(rows="1", required)
+
+
+					button.container-full.btn-big Подтвердить
+
+						
+
+						
+
+
+
+
+
+
+				// file picker
+				link(href='https://unpkg.com/filepond/dist/filepond.css' rel='stylesheet')
+				script(src='https://unpkg.com/filepond/dist/filepond.js')
+				script.
+					FilePond.parse(document.body);
+
+
+				//datapicker, https://flatpickr.js.org/
+				script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+				script.
+					flatpickr('.flatpickr-range', { mode: "range", dateFormat: "d.m.y", locale: { rangeSeparator: ' – '} });
+					flatpickr('.flatpickr', { dateFormat: "d.m.y" });
+
+
+				script.
+					var select = new SlimSelect({
+						select: '#select',
+						valuesUseText: false, // Use text instead of innerHTML for selected values - default false
+						data: [
+							{placeholder: true, text: 'Extended select (js required)'},
+							{innerHTML: '<b>a.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: 'a.lighthouse.5.robonomics.eth', value: 'select1'},
+							{innerHTML: '<b>airalab.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1</span>', text: 'airalab.lighthouse.5.robonomics.eth', value: 'select2'},
+							{innerHTML: '<b>mobilerobotics.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x8165ad3d400bda2be5fe27254a5e55e0f393921f</span>', text: 'mobilerobotics.lighthouse.5.robonomics.eth', value: 'select3'},
+							{innerHTML: '<b>New lighthouse</b>', text: 'create new lighthouse', value: 'new', class:'type-new'}
+						],
+						onChange: (info) => {
+						    console.log(info);
+						    if(info.class == 'type-new'){
+								document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
+								+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
+								+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
+								// + '<br/><button class="btn-blue">Create and connect</button>';
+						    }
+						    else{
+						    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
+						    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
+						    }  	
+					  	}
+					});
+
+
+
 
 						
