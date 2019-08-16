@@ -19,7 +19,7 @@
   $section-background:        #ffffff,
   $section-textcolor:         #6c757e,
   $section-border:            darken($section-background, 8%),
-  $section-boxshadow:         rgba(189,197,209,.2),
+  $section-boxshadow:         rgba(189,197,209,.5),
 
   $section-background-mid:    darken($section-background, 2.5%),
   $section-textcolor-mid:     darken($section-textcolor, 3%),
@@ -203,6 +203,9 @@
     form section h4 { color: rgba($body-textcolor, .5); }
 
 
+
+
+
     // plugin filepond
     .filepond--panel-root
       {
@@ -215,6 +218,10 @@
         -webkit-text-decoration-color: rgba($body-textcolor, .7);
         text-decoration-color: rgba($body-textcolor, .7);
       }
+
+
+
+
 
 
     //plugin flatpickr
@@ -248,14 +255,36 @@
     .flatpickr-day:focus,
     .flatpickr-day.prevMonthDay:focus,
     .flatpickr-day.nextMonthDay:focus {
-      background-color: lighten($section-background, 15%);
-      border-color: lighten($section-background, 5%);
+      background-color: lighten($blue, 20%);
+      color: $btn-textcolor;
     }
 
-    .flatpickr-day.today, .flatpickr-day.today:hover, .flatpickr-day.today:focus{
-      background-color: lighten($section-background, 30%);
-      border-color: lighten($section-background, 10%);
+    .flatpickr-day.today{
+      background-color: $body-background;
     }
+
+    .flatpickr-day.selected,
+    .flatpickr-day.startRange,
+    .flatpickr-day.endRange,
+    .flatpickr-day.selected.inRange,
+    .flatpickr-day.startRange.inRange,
+    .flatpickr-day.endRange.inRange,
+    .flatpickr-day.selected:focus,
+    .flatpickr-day.startRange:focus,
+    .flatpickr-day.endRange:focus,
+    .flatpickr-day.selected:hover,
+    .flatpickr-day.startRange:hover,
+    .flatpickr-day.endRange:hover,
+    .flatpickr-day.selected.prevMonthDay,
+    .flatpickr-day.startRange.prevMonthDay,
+    .flatpickr-day.endRange.prevMonthDay,
+    .flatpickr-day.selected.nextMonthDay,
+    .flatpickr-day.startRange.nextMonthDay,
+    .flatpickr-day.endRange.nextMonthDay{
+      color: $btn-textcolor;
+      background-color: $blue;
+    }
+
 
   }
 
