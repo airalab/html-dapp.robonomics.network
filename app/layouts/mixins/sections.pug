@@ -20,6 +20,7 @@ mixin panelTop()
 
 
 mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', logodark='assets/i/logo-dapp-sign.svg', project='robonomics')
+	
 	.sidebar.flexcols
 		.sidebar-col.sidebar-col--sm
 			.sidebar-col-in
@@ -35,8 +36,36 @@ mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', log
 					if multilang
 						a(href="javascript:;", on-toggle="#sidebar-lang").sidebar-i--lg.js-sidebar-link EN
 
-					a(href="javascript:;", on-toggle="#sidebar-theme").sidebar-i--lg.js-sidebar-link
-						i.i-day
+					#themeMode
+						a(href="javascript:;", @click='toggleTheme()').sidebar-i--lg
+							i.i-day(v-show="!nightMode")
+							i.i-night(v-show="nightMode")
+
+
+					script(src='https://cdn.jsdelivr.net/npm/vue')
+
+					script.
+						new Vue({
+						    el: '#themeMode',
+						    data: {
+						        nightMode: false
+						    },
+						    methods:{
+						        toggleTheme: function(){
+						            this.nightMode = !this.nightMode;
+
+						            if ( this.nightMode ){
+						            	document.body.classList.remove('theme-light');
+						            	document.body.classList.add('theme-dark');
+						            }
+						            if ( !this.nightMode ){
+						            	document.body.classList.add('theme-light');
+						            	document.body.classList.remove('theme-dark');
+						            }
+
+						        }
+						    }
+						});
 
 				section.sidebar-col--bottom
 					a(href="javascript:;", on-toggle="#sidebar-user").sidebar-i--lg.js-sidebar-link
