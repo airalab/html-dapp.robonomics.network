@@ -13,6 +13,7 @@ body
 /*====== Set width of container ======*/
 .container-basic { @include secw($mq-desktop); }
 .container-full {  width: 100%; display: block; }
+table.container-full { display: table; }
 .container-padding { @include secw(100%); }
 /*====== end of Set width of container ======*/
 
