@@ -1901,7 +1901,7 @@ h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .form-section-tit
   vertical-align: middle;
 }
 
-.icon-round-sm, .sidebar-i--lg, .flex-center {
+.sidebar-i--lg, .flex-center {
   display: flex;
   text-align: center;
   align-items: center;
@@ -2336,7 +2336,13 @@ table caption {
   border-radius: 12px;
   width: 24px;
   height: 24px;
+  font-size: 14.4px;
   font-weight: 500;
+  text-align: center;
+}
+.icon-round-sm i {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @keyframes FadeOut {
@@ -2402,7 +2408,7 @@ table caption {
   font-weight: normal;
   font-style: normal;
 }
-.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, .i-user, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, .i-user, .i-alert, .i-info, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
   font-family: 'iconfont' !important;
   speak: none;
   font-size: 100%;
@@ -2517,6 +2523,18 @@ table caption {
 
 .i-user:before {
   content: "󪀗";
+  display: block;
+  line-height: 1;
+}
+
+.i-alert:before {
+  content: "󪀘";
+  display: block;
+  line-height: 1;
+}
+
+.i-info:before {
+  content: "󪀙";
   display: block;
   line-height: 1;
 }
@@ -2936,10 +2954,12 @@ section section {
   padding-bottom: 0;
   border-width: 0;
 }
-.item-bottom--line span {
+.item-bottom--line a, .item-bottom--line span {
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 10px;
 }
-.item-bottom--line span:last-child {
+.item-bottom--line a:last-child, .item-bottom--line span:last-child {
   margin-right: 0;
 }
 

@@ -42,7 +42,9 @@
     }
 
 
-    span{
+    a, span{
+      display: inline-block;
+      vertical-align: middle;
       margin-right: 10px;
 
       &:last-child { margin-right: 0; }

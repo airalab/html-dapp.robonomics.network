@@ -218,9 +218,14 @@ table
 		border-radius: $s/2;
 		width: $s;
 		height: $s;
-		// border-width: 1px;
-		// border-style: solid;
-		@extend %flex_center;
 
+		font-size: $font-size-base*0.9;
 		font-weight: 500;
+		text-align: center;
+
+		i
+			{
+				display: inline-block;
+				vertical-align: middle;
+			}
 	}

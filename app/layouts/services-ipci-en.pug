@@ -35,31 +35,11 @@ block content
 					unit_title,
 					true)
 
-
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-assets.png")
-					.item-content
-						h2: a(href="#") Environmental assets tokenization
-						.t-hyphen Emission of carbon units and green certificates based on data from renewable energy sources.
-						.item-bottom
-							.item-bottom--line Provider: 
-								span.item-bottom--info DAO IPCI IoT connection
-								// a.item-bottom--info.disabled(href="#") DAO IPCI IoT connection
-								a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
-							.item-bottom--line Payment token: 
-								span.item-bottom--info DAI
-
-
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/ipci-project-bambous-01.jpg")
-					.item-content
-						h2: a(href="#") Supporting First Solar Energy Project in Mauritius
-						.t-hyphen 15.2 MW solar photovoltaic power plant located in Mauritius, a country part of the Small Island Developing States (SIDS). It is the island first ever solar power plant.
-						.item-bottom
-							.item-bottom--line Provider: 
-								span.item-bottom--info Russian Carbon Fund, Aera Group
-								// a.item-bottom--info.disabled(href="#") Russian Carbon Fund, Aera Group
-								// a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
-							.item-bottom--line Available carbon units: 
-								span.item-bottom--info 396 VCU
-
+				+item(
+					'assets/i/services/ipci-project-bambous-01.jpg',
+					'Supporting First Solar Energy Project in Mauritius',
+					'15.2 MW solar photovoltaic power plant located in Mauritius, a country part of the Small Island Developing States (SIDS). It is the island first ever solar power plant.',
+					'Russian Carbon Fund, Aera Group',
+					'396 VCU',
+					provider_title,
+					'Available carbon units')
