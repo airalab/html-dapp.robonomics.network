@@ -44,43 +44,10 @@ b { font-weight: 500; }
 
 a 
 	{
-		color: $c-link;
 		@extend %link_noline;
+		transition: opacity 0.2s linear;
 
-		&:hover { color: lighten($c-link, 10%); }
-
-		&.a-noline { @extend %link_noline; }
-
-		&.a-icon, &.a-icon--border{
-			@extend %link_noline;
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			border-radius: 13px;
-			background-color: $c-violet;
-			color: #fff;
-			font-weight: 300;
-			text-transform: none;
-
-			& > span, & > b{
-				@extend %flex_center;
-				width: 20px;
-				height: 20px;
-			}
-		}
-
-		&.a-icon--border{
-			background-color: transparent;
-			border: 1px solid $c-blue;
-			color: $c-blue;
-			width: 26px;
-			height: 26px;
-
-			& > span, & > b{
-				width: 24px;
-				height: 24px;
-			}
-		}
+		&:hover { opacity: 0.8; }
 	}
 
 
@@ -242,6 +209,8 @@ table
 
 
 
+
+/* icons */
 .icon-round-sm
 	{
 		$s: $font-size-base*1.5;
@@ -249,7 +218,9 @@ table
 		border-radius: $s/2;
 		width: $s;
 		height: $s;
-		border-width: 1px;
-		border-style: solid;
+		// border-width: 1px;
+		// border-style: solid;
 		@extend %flex_center;
+
+		font-weight: 500;
 	}

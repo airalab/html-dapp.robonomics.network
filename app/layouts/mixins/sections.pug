@@ -1,21 +1,47 @@
-mixin panelTop()
-	.panel-top.section-light
-		.panel-top--cell
-			a(href="#")
-				+avatar('avatar-small align-vertical m-r-10')
-				b 0x40c5...c8d3
-		.panel-top--cell.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
-			b 2,100
-			span.t-sm AIRA
-		.panel-top--cell.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
-			b 0
-			span.t-sm AIRA ID
-		.panel-top--cell
-			b 0
-			span.t-sm XRT
-		.panel-top--cell
-			.label.label-violet Sidechain
+//- mixin panelTop()
+//- 	.panel-top.section-light
+//- 		.panel-top--cell
+//- 			a(href="#")
+//- 				+avatar('avatar-small align-vertical m-r-10')
+//- 				b 0x40c5...c8d3
+//- 		.panel-top--cell.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+//- 			b 2,100
+//- 			span.t-sm AIRA
+//- 		.panel-top--cell.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+//- 			b 0
+//- 			span.t-sm AIRA ID
+//- 		.panel-top--cell
+//- 			b 0
+//- 			span.t-sm XRT
+//- 		.panel-top--cell
+//- 			.label.label-violet Sidechain
 
+
+mixin item(avatar="assets/i/services/service-no-photo.png", title="Title for service", description, provider, unit, provider_title="Provider:", unit_title="Payment token:", unit_alert, unit_alert_text="You need to approve DAI tokens for Robonomics factory smart contract")
+	
+
+	.section-light.item
+		a.item-avatar(href="#")
+			span.item-avatar--image(style="background-image: url('"+avatar + " ')")
+		.item-content
+			h2
+				a(href="#")=title
+			if description
+				.t-hyphen=description
+
+			if provider || unit
+				.item-bottom
+					if provider
+						.item-bottom--line
+							span=provider_title
+							span.item-bottom--info=provider
+					if unit
+						.item-bottom--line
+							span=unit_title
+							span.item-bottom--info=unit
+
+							if unit_alert
+								a.js-tooltip.icon-round-sm.icon-alert(href="#", data-tooltip=unit_alert_text) !
 		
 
 

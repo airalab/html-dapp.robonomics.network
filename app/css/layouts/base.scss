@@ -200,7 +200,7 @@ table.container-full { display: table; }
 .close { @extend %hidden; }
 
 
-.disabled *
+.disabled *, .disabled
   {
     filter: grayscale(1);
     opacity: 0.5;

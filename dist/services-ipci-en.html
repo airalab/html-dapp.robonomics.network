@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Statistics of Robonomics | robonomics.network</title>
+    <title>Сервисы IPCI | robonomics.network</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all">
@@ -22,8 +22,8 @@
     <div class="sidebar flexcols">
       <div class="sidebar-col sidebar-col--sm">
         <div class="sidebar-col-in">
-          <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/></a></section>
-          <section><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-nav1"><i class="i-menu"></i></a>
+          <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-ipci-light.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-ipci-dark.svg"/></a></section>
+          <section><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-nav1"><i class="i-menu"></i></a><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-lang">EN</a>
             <div id="themeMode"><a class="sidebar-i--lg" href="javascript:;" @click="toggleTheme()"><i class="i-day" v-show="!nightMode"></i><i class="i-night" v-show="nightMode"></i></a></div>
             <script src="https://cdn.jsdelivr.net/npm/vue"></script>
             <script>
@@ -54,11 +54,10 @@
           <section class="sidebar-col--bottom"><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-user"><i class="i-user"></i></a><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-info">?</a></section>
         </div>
       </div>
-      <div class="sidebar-col js-sidebar-content" id="sidebar-nav1">
+      <div class="sidebar-col-padding sidebar-col js-sidebar-content" id="sidebar-nav1">
         <div class="sidebar-col-in"> 
-          <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-text-blue.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-text.svg"/></a></section>
           <section>
-            <nav class="nav-vertical"><a href="#"><span class="i-app align-vertical"></span><span class="align-vertical">Services</span></a><a href="#"><span class="i-lighthouse align-vertical"></span><span class="align-vertical">Lighthouses</span></a><a class="active" href="#"><span class="i-piechart align-vertical"></span><span class="align-vertical">Statistics</span></a><a href="#"><span class="i-transfer align-vertical"></span><span class="align-vertical">AIRA to XRT</span></a>
+            <nav class="nav-vertical"><a class="active" href="#"><span class="i-app align-vertical"></span><span class="align-vertical">Services</span></a><a href="#"><span class="i-lighthouse align-vertical"></span><span class="align-vertical">Lighthouses</span></a><a href="#"><span class="i-piechart align-vertical"></span><span class="align-vertical">Statistics</span></a><a href="#"><span class="i-transfer align-vertical"></span><span class="align-vertical">AIRA to XRT</span></a>
             </nav>
           </section>
         </div>
@@ -94,7 +93,8 @@
       <div class="sidebar-col sidebar-col-padding js-sidebar-content" id="sidebar-info">
         <div class="sidebar-col-in">
           <section>
-            <nav class="nav-vertical"><a href="https://github.com/airalab" target="_blank"><span class="i-github align-vertical"></span><span class="align-vertical">Github</span></a><a href="https://www.reddit.com/r/robonomics/" target="_blank"><span class="i-reddit align-vertical"></span><span class="align-vertical">Reddit</span></a><a href="https://robonomics.network/" target="_blank"><span class="i-cursor align-vertical"></span><span class="align-vertical">robonomomics.network</span></a><a href="https://aira.life/" target="_blank"><span class="i-cursor align-vertical"></span><span class="align-vertical">aira.life</span></a></nav>
+            <p><a href="https://ipci.io/" target="_blank">DAO IPCI</a><br/>Blockchain technology for carbon markets, environmental assets and liabilities</p>
+            <p>Works with <a href="https://robonomics.network/" target="_blank">Robonomomics.network</a></p>
           </section>
         </div>
       </div>
@@ -102,136 +102,60 @@
     <div class="content">
       <!-- +panelTop()-->
       <div class="content-in">
-        <section>
-          <h1><span class="d-block">Statistics of Robonomics network</span><span class="label label-green t-sm align-top">Connected</span></h1>
-        </section>
-        <section class="section-light">
-          <div class="row">
-            <div class="col-md-4">
-              <h3 class="m-b-0">Robotics under Ethereum control</h3><b class="t-gt">42</b>
-            </div>
-            <div class="col-md-4">
-              <h3 class="m-b-0">Amount of recycling gas</h3><b class="t-gt">40 140 384</b>
-            </div>
-            <div class="col-md-4">
-              <h3 class="m-b-0">Robonomics token, XRT</h3><b class="t-gt">0.15</b>
+        <h1>Services</h1>
+        <section class="flex-grid">
+          <div class="section-light item"><a class="item-avatar" href="#"><span class="item-avatar--image" style="background-image: url('assets/i/services/service-no-photo.png ')"></span></a>
+            <div class="item-content">
+              <h2><a href="#">Title for service</a></h2>
             </div>
           </div>
-          <hr/>
-          <div id="statistic" style="display:none">
-            <div class="row">
-              <div class="col-md-4">
-                <table class="container-full table-hover table-full">
-                  <caption>Total launched by Robonomics gen 5</caption>
-                  <tbody>
-                    <tr>
-                      <td>last 24 hours </td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last week</td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last month</td>
-                      <td>42</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="container-full table-hover table-full">
-                  <caption>Amount of finalized contract liabilities</caption>
-                  <tbody>
-                    <tr>
-                      <td>last 24 hours </td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last week</td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last month</td>
-                      <td>20</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-md-4">
-                <table class="container-full table-hover table-full">
-                  <caption>Full amount of utilized gas</caption>
-                  <tbody>
-                    <tr>
-                      <td>last 24 hours </td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last week</td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last month</td>
-                      <td>40 140 384</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="container-full table-hover table-full">
-                  <caption>Profit amount of utilized gas</caption>
-                  <tbody>
-                    <tr>
-                      <td>last 24 hours </td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last week</td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>last month</td>
-                      <td>21 824 362</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-md-4">
-                <section><a hred="#" target="_blank">xrt.5.robonomics.eth</a><br/><b>Token address: </b><code class="code-overflow-line">0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7</code></section>
-                <table class="container-full table-hover">
-                  <caption>Token statistics</caption>
-                  <tbody>
-                    <tr>
-                      <td>Total amount of XRT in circulation:</td>
-                      <td>1 003.13 XRT</td>
-                    </tr>
-                    <tr>
-                      <td>Providers reward per tx ~</td>
-                      <td>0.15 XRT</td>
-                    </tr>
-                  </tbody>
-                </table>
+          <div class="section-light item"><a class="item-avatar" href="#"><span class="item-avatar--image" style="background-image: url('assets/i/services/smart-buildings.png ')"></span></a>
+            <div class="item-content">
+              <h2><a href="#">Smart building offsetting</a></h2>
+              <div class="t-hyphen">Carbon footprint clearance for smart buildings based on geolocation and energy consumption information.</div>
+              <div class="item-bottom">
+                <div class="item-bottom--line"><span>Provider:</span><span class="item-bottom--info">DAO IPCI IoT connection</span></div>
+                <div class="item-bottom--line"><span>Payment token:</span><span class="item-bottom--info">DAI</span>
+                </div>
               </div>
             </div>
           </div>
-          <section class="t-align--center m-b-0"><a href="#" onclick="show(this, '#statistic', '&amp;uarr; Minimize &amp;uarr;', '&amp;darr; Expand &amp;darr;');return false;">&darr; Expand &darr;</a></section>
-        </section>
-        <section class="section-light">
-          <h2>Robonomics Telemetry</h2>
-          <table class="container-full table-hover">
-            <thead>
-              <tr>
-                <th>ipns</th>
-                <th>address eth</th>
-                <th>lighthouse</th>
-                <th>provider</th>
-                <th>peers</th>
-                <th>date</th>
-                <th>network</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="7">No data available</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="section-light item"><a class="item-avatar" href="#"><span class="item-avatar--image" style="background-image: url('assets/i/services/smart-assets.png ')"></span></a>
+            <div class="item-content">
+              <h2><a href="#">Environmental assets tokenization</a></h2>
+              <div class="t-hyphen">Emission of carbon units and green certificates based on data from renewable energy sources.</div>
+              <div class="item-bottom">
+                <div class="item-bottom--line"><span>Provider:</span><span class="item-bottom--info">DAO IPCI IoT connection</span></div>
+                <div class="item-bottom--line"><span>Payment token:</span><span class="item-bottom--info">DAI</span><a class="js-tooltip icon-round-sm icon-alert" href="#" data-tooltip="You need to approve DAI tokens for Robonomics factory smart contract">!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-light item"><a class="item-img" href="#"><img class="i-block" alt="" src="assets/i/services/smart-assets.png"></a>
+            <div class="item-content">
+              <h2><a href="#">Environmental assets tokenization</a></h2>
+              <div class="t-hyphen">Emission of carbon units and green certificates based on data from renewable energy sources.</div>
+              <div class="item-bottom">
+                <div class="item-bottom--line">Provider: <span class="item-bottom--info">DAO IPCI IoT connection</span>
+                  <!-- a.item-bottom--info.disabled(href="#") DAO IPCI IoT connection--><a class="js-tooltip icon-round-sm m-l-15" href="#" data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное">i</a>
+                </div>
+                <div class="item-bottom--line">Payment token: <span class="item-bottom--info">DAI</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="section-light item"><a class="item-img" href="#"><img class="i-block" alt="" src="assets/i/services/ipci-project-bambous-01.jpg"></a>
+            <div class="item-content">
+              <h2><a href="#">Supporting First Solar Energy Project in Mauritius</a></h2>
+              <div class="t-hyphen">15.2 MW solar photovoltaic power plant located in Mauritius, a country part of the Small Island Developing States (SIDS). It is the island first ever solar power plant.</div>
+              <div class="item-bottom">
+                <div class="item-bottom--line">Provider: <span class="item-bottom--info">Russian Carbon Fund, Aera Group</span>
+                  <!-- a.item-bottom--info.disabled(href="#") Russian Carbon Fund, Aera Group-->
+                  <!-- a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i-->
+                </div>
+                <div class="item-bottom--line">Available carbon units: <span class="item-bottom--info">396 VCU</span></div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
