@@ -2,7 +2,7 @@ extends extends/layout.pug
 include mixins/sections.pug
 
 block html
-	- var meta_title = 'Сервисы IPCI'
+	- var meta_title = 'Сервисы программы IPCI'
 	- var bodyclass = 'flexcols theme-light'
 
 block content
@@ -12,48 +12,52 @@ block content
 	.content
 		// +panelTop()
 		.content-in
-			h1 Services
+			h1 Сервисы
 			
 			section.flex-grid
-			
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-buildings.png")
-					.item-content
-						h2: a(href="#") Smart building offsetting
-						.t-hyphen Сервис погашения углеродного следа умных зданий на основе информации о геолокации и потреблении электроэнергии.
-						.item-bottom
-							.item-bottom--line Provider: 
-								span.item-bottom--info DAO IPCI IoT connection
-								// a.item-bottom--info.disabled(href="#") DAO IPCI IoT connection
-								// a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
-							.item-bottom--line Payment token: 
-								span.item-bottom--info DAI
+
+				+item(
+					'assets/i/services/smart-buildings.png',
+					'Погашение углеродного следа для умного здания',
+					'Сервис погашения углеродного следа умных зданий на основе информации о геолокации и потреблении электроэнергии.',
+					'DAO IPCI IoT connection',
+					'DAI',
+					'Провайдер:',
+					'Платёжный токен:')
+
+				+item(
+					'assets/i/services/smart-assets.png',
+					'Токенизация экологических активов',
+					'Сервис эмиссии углеродных единиц и зеленых сертификатов на основе данных от возобновляемого источника электроэнергии.',
+					'DAO IPCI IoT connection',
+					'DAI',
+					'Провайдер:',
+					'Платёжный токен:')
+
+				+item(
+					'assets/i/services/ipci-project-bambous-01.jpg',
+					'Погашение углеродного следа с помощью солнечной энергии на острове Маврикий',
+					'Солнечная фотоэлектрическая электростанция мощностью 15,2 МВт расположена на Маврикии, в стране, являющейся частью малых островных развивающихся государств (МОРАГ). Это первая в мире солнечная электростанция на острове.',
+					'Russian Carbon Fund, Aera Group',
+					'396 VCU',
+					'Провайдер:',
+					'Доступные углеродные единицы')
 
 
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-assets.png")
-					.item-content
-						h2: a(href="#") Environmental assets tokenization
-						.t-hyphen Сервис эмиссии углеродных единиц и зеленых сертификатов на основе данных от возобновляемого источника электроэнергии.
-						.item-bottom
-							.item-bottom--line Provider: 
-								span.item-bottom--info DAO IPCI IoT connection
-								// a.item-bottom--info.disabled(href="#") DAO IPCI IoT connection
-								// a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
-							.item-bottom--line Payment token: 
-								span.item-bottom--info DAI
+				+item(
+					'assets/i/services/ipci-project-himprom-02.jpg',
+					'Утилизация отработанного коксового газа, Кемерово, Россия',
+					'ООО «Химпром» завершило процедуру независимого заверения в соответствии с требованиями DAO IPCI в отношении сокращения выбросов ПГ, достигнутого в 2013–2016 годах, путем реализации проекта утилизации отработанного коксового газа с целью замещения выработки тепла природным газом в объеме 201 085 т CO2. Подтверждение выполнено KPMG (Россия)',
+					'DAO IPCI, Russian Carbon Fund',
+					'201083 TMU Khimprom',
+					'Провайдер:',
+					'Доступные углеродные единицы')
 
-
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/ipci-project-bambous-01.jpg")
-					.item-content
-						h2: a(href="#") Supporting First Solar Energy Project in Mauritius
-						.t-hyphen 15.2 MW solar photovoltaic power plant located in Mauritius, a country part of the Small Island Developing States (SIDS). It is the island first ever solar power plant.
-						.item-bottom
-							.item-bottom--line Provider: 
-								span.item-bottom--info Russian Carbon Fund, Aera Group
-								// a.item-bottom--info.disabled(href="#") Russian Carbon Fund, Aera Group
-								// a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
-							.item-bottom--line Available carbon credits: 
-								span.item-bottom--info 396 VCU
-
+				+item(
+					'assets/i/services/ipci-project-swisskrono-03.jpg',
+					'Древесные отходы для тепловой энергии, Шарья, Россия',
+					'Компания SWISS KRONO LLC завершила процедуру независимой гарантии в соответствии с требованиями DAO IPCI в отношении сокращения выбросов парниковых газов, достигнутого в 2013–2016 годах, выполнив «Древесные отходы для выработки тепловой энергии» с 1 января 2013 года по 30 июня 2017 года в объеме 1 419 861 тонн в эквиваленте CO2. Был выполнен KPMG (Россия)',
+					'DAO IPCI, Russian Carbon Fund',
+					'–',
+					'Провайдер:',
+					'Доступные углеродные единицы')

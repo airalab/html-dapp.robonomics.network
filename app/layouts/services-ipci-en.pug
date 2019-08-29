@@ -2,7 +2,7 @@ extends extends/layout.pug
 include mixins/sections.pug
 
 block html
-	- var meta_title = 'Сервисы IPCI'
+	- var meta_title = 'Services of IPCI program'
 	- var bodyclass = 'flexcols theme-light'
 
 block content
@@ -16,8 +16,6 @@ block content
 			
 			section.flex-grid
 
-				+item()
-
 				+item(
 					'assets/i/services/smart-buildings.png',
 					'Smart building offsetting',
@@ -30,10 +28,7 @@ block content
 					'Environmental assets tokenization',
 					'Emission of carbon units and green certificates based on data from renewable energy sources.',
 					'DAO IPCI IoT connection',
-					'DAI',
-					provider_title,
-					unit_title,
-					true)
+					'DAI')
 
 				+item(
 					'assets/i/services/ipci-project-bambous-01.jpg',
@@ -41,5 +36,24 @@ block content
 					'15.2 MW solar photovoltaic power plant located in Mauritius, a country part of the Small Island Developing States (SIDS). It is the island first ever solar power plant.',
 					'Russian Carbon Fund, Aera Group',
 					'396 VCU',
+					provider_title,
+					'Available carbon units')
+
+
+				+item(
+					'assets/i/services/ipci-project-himprom-02.jpg',
+					'Waste Coke Oven Gas Utilization, Kemerovo, Russia',
+					'Khimprom LLC has completed independent assurance procedure under the DAO IPCI requirements for GHG emission reductions achieved in 2013-2016 by performing Waste Coke Oven Gas Utilization Project to substitute natural gas heat generation in the amount of 201,085 tCO2. Assurance has been performed by KPMG (Russia)',
+					'DAO IPCI, Russian Carbon Fund',
+					'201083 TMU Khimprom',
+					provider_title,
+					'Available carbon units')
+
+				+item(
+					'assets/i/services/ipci-project-swisskrono-03.jpg',
+					'Wood waste to heat energy, Sharya, Russia',
+					'SWISS KRONO LLC has completed independent assurance procedure under the DAO IPCI requirements for GHG emission reductions achieved in 2013-2016 by performing “Wood waste to heat energy” from 1 January 2013 to 30 June 2017 in amount of 1,419,861 tons of CO2-equivalent. Assurance has been performed by KPMG (Russia)',
+					'DAO IPCI, Russian Carbon Fund',
+					'–',
 					provider_title,
 					'Available carbon units')

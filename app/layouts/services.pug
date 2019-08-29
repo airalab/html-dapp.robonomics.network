@@ -2,8 +2,8 @@ extends extends/layout.pug
 include mixins/sections.pug
 
 block html
-	- var meta_title = 'Сервисы для роботов'
-	- var bodyclass = 'flexcols theme-dark'
+	- var meta_title = 'Сервисы'
+	- var bodyclass = 'flexcols theme-light'
 
 block content
 
@@ -12,60 +12,50 @@ block content
 	.content
 		// +panelTop()
 		.content-in
-			h1 Сервисы для роботов
+			h1 Сервисы
 			
 			section.flex-grid
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/gaka-chu.png")
-					.item-content
-						h2: a(href="#") Gaka-chu
-						.t-hyphen Купите мысль робота на холсте с цифровой меткой права в публичном блокчейне.
-						.item-bottom
-							| By 
-							a(href="#") Airalab
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
 
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-buildings.png")
-					.item-content
-						h2: a(href="#") Smart building offsetting
-						.t-hyphen Сервис погашения углеродного следа умных зданий на основе информации о геолокации и потреблении электроэнергии.
-						.item-bottom
-							| By 
-							a(href="#") DAO IPCI IoT connection
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+				+item()
+
+				+item(
+					'assets/i/services/gaka-chu.png',
+					'Gaka-chu',
+					'Купите мысль робота на холсте с цифровой меткой права в публичном блокчейне.',
+					'Airalab',
+					'XRT')
 
 
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/smart-assets.png")
-					.item-content
-						h2: a(href="#") Environmental assets tokenization
-						.t-hyphen Сервис эмиссии углеродных единиц и зеленых сертификатов на основе данных от возобновляемого источника электроэнергии.
-						.item-bottom
-							| By 
-							a(href="#") DAO IPCI IoT connection
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+				+item(
+					'assets/i/services/smart-buildings.png',
+					'Smart building offsetting',
+					'Сервис погашения углеродного следа умных зданий на основе информации о геолокации и потреблении электроэнергии.',
+					'DAO IPCI IoT connection',
+					'DAI',
+					provider_title,
+					unit_title,
+					true)
 
 
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/drone-passport.png")
-					.item-content
-						h2: a(href="#") Drone passport registration
-						.t-hyphen Сервис глобальной регистрации дронов в Ethereum Blockchain.
-						.item-bottom
-							| By 
-							a(href="#") Distributed sky
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+				+item(
+					'assets/i/services/smart-assets.png',
+					'Environmental assets tokenization',
+					'Сервис эмиссии углеродных единиц и зеленых сертификатов на основе данных от возобновляемого источника электроэнергии.',
+					'DAO IPCI IoT connection',
+					'DAI')
 
+				+item(
+					'assets/i/services/drone-passport.png',
+					'Drone passport registration',
+					'Сервис глобальной регистрации дронов в Ethereum Blockchain.',
+					'Distributed sky',
+					'–')
 
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/drone-route.png")
-					.item-content
-						h2: a(href="#") Drone flight report
-						.t-hyphen Сервис публичных отчетов о выполненных полетах дронов.
-						.item-bottom
-							| By 
-							a(href="#") Distributed sky
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+				+item(
+					'assets/i/services/drone-route.png',
+					'Drone flight report',
+					'Сервис публичных отчетов о выполненных полетах дронов.',
+					'Distributed sky',
+					'–')
 
 
