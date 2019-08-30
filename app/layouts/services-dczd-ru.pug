@@ -1,0 +1,33 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Сервисы DCZD'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(0, true, 'assets/i/logo-dapp-dczd-light.svg', 'assets/i/logo-dapp-dczd-dark.svg')
+
+	.content
+		// +panelTop()
+		.content-in
+			h1 Сервисы проекта DCZD
+			
+			section.flex-grid
+
+				+item(
+					'assets/i/services/drone-passport.png',
+					'Регистрация паспорта дрона',
+					'Сервис глобальной регистрации дронов в Ethereum Blockchain.',
+					'Distributed sky',
+					false)
+
+				+item(
+					'assets/i/services/drone-route.png',
+					'Отчёт о полётах дронов',
+					'Сервис публичных отчётов о выполненных полётах дронов.',
+					'Distributed sky',
+					false)
+
+
