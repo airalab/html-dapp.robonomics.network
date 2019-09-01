@@ -216,9 +216,20 @@ section .form-item {
 	{
 		input:not([type='submit']):not([type='button']), select, textarea
 			{
-				padding: 0 !important;
 				border-width: 0 0 1px !important;
 				border-radius: 0 !important;
+			}
+
+		input:not([type='submit']):not([type='button']), textarea
+			{
+				padding: 0 !important;
+			}
+
+		select
+			{
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
 			}
 
 		label { display: block; }

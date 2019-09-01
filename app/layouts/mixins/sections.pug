@@ -218,19 +218,47 @@ mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', log
 					.m-t-10.label.label-violet Sidechain
 					
 
-				section
-					.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
-						b.m-r-10 2,100
-						span.t-sm AIRA
-					hr/
-					.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
-						b.m-r-10 0
-						span.t-sm AIRA ID
-					hr/
-					div
-						b.m-r-10 0
-						span.t-sm XRT
-						
+				if project == 'robonomics'
+					section
+						.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+							b.m-r-10 2,100
+							span.t-sm AIRA
+						hr/
+						.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+							b.m-r-10 0
+							span.t-sm AIRA ID
+						hr/
+						div
+							b.m-r-10 0
+							span.t-sm XRT
+
+
+				if project == 'ipci'
+					form#tmpvue-changeInterfaceType
+						.form-item.form-line-label
+							select(@change="showBtn('#btn-switchInterface')")
+								option Operator
+								option Issuer
+								option Independent Entity
+								option Complier
+								option User
+
+						.form-item
+							button#btn-switchInterface.container-full.close Switch interface
+
+						script.
+							new Vue({
+							    el: '#tmpvue-changeInterfaceType',
+							    methods:{
+							        showBtn: function(btn){
+							            
+							            document.querySelector(btn).classList.remove('close');
+							            document.querySelector(btn).classList.add('open');
+
+							        }
+							    }
+							});
+							
 
 
 
