@@ -2,7 +2,7 @@ extends extends/layout.pug
 include mixins/sections.pug
 
 block html
-	- var meta_title = 'Сервисы DCZD'
+	- var meta_title = 'Services of DCZD'
 	- var bodyclass = 'flexcols theme-light'
 
 block content
@@ -12,36 +12,22 @@ block content
 	.content
 		// +panelTop()
 		.content-in
-			h1 Сервисы проекта DCZD
-
-			+item(
-					'assets/i/services/smart-assets.png',
-					'Environmental assets tokenization',
-					'Emission of carbon units and green certificates based on data from renewable energy sources.',
-					'DAO IPCI IoT connection',
-					'DAI')
+			h1 Services of DCZD
 			
 			section.flex-grid
 
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/drone-passport.png")
-					.item-content
-						h2: a(href="#") Drone passport registration
-						.t-hyphen Сервис глобальной регистрации дронов в Ethereum Blockchain.
-						.item-bottom
-							| By 
-							a(href="#") Distributed sky
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+				+item(
+					'assets/i/services/drone-passport.png',
+					'Drone passport registration',
+					'Global drone registration service in the Ethereum Blockchain.',
+					'Distributed sky',
+					false)
 
-
-				.section-light.item
-					a(href="#").item-img: img.i-block(alt="", src="assets/i/services/drone-route.png")
-					.item-content
-						h2: a(href="#") Drone flight report
-						.t-hyphen Сервис публичных отчетов о выполненных полетах дронов.
-						.item-bottom
-							| By 
-							a(href="#") Distributed sky
-							a.js-tooltip.icon-round-sm.m-l-15(href="#", data-tooltip="Здесь инфо о том, что это провайдер. Общая для всех сервисов, наверное") i
+				+item(
+					'assets/i/services/drone-route.png',
+					'Drone flight report',
+					'Drone flight public reporting service.',
+					'Distributed sky',
+					false)
 
 

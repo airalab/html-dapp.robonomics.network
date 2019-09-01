@@ -2,7 +2,7 @@ extends extends/layout.pug
 include mixins/sections.pug
 
 block html
-	- var meta_title = 'Сервисы'
+	- var meta_title = 'Сервисы Робономики'
 	- var bodyclass = 'flexcols theme-light'
 
 block content
@@ -12,7 +12,7 @@ block content
 	.content
 		// +panelTop()
 		.content-in
-			h1 Сервисы
+			h1 Сервисы Робономики
 			
 			section.flex-grid
 
@@ -20,7 +20,7 @@ block content
 
 				+item(
 					'assets/i/services/gaka-chu.png',
-					'Gaka-chu',
+					'Гака-чу',
 					'Купите мысль робота на холсте с цифровой меткой права в публичном блокчейне.',
 					'Airalab',
 					'XRT')
@@ -28,34 +28,35 @@ block content
 
 				+item(
 					'assets/i/services/smart-buildings.png',
-					'Smart building offsetting',
+					'Погашение углеродного следа для умного здания',
 					'Сервис погашения углеродного следа умных зданий на основе информации о геолокации и потреблении электроэнергии.',
 					'DAO IPCI IoT connection',
 					'DAI',
 					provider_title,
 					unit_title,
-					true)
+					true,
+					"Вам необходимо подтвердить DAI токены для умного контракта Робономики")
 
 
 				+item(
 					'assets/i/services/smart-assets.png',
-					'Environmental assets tokenization',
+					'Токенизация экологических активов',
 					'Сервис эмиссии углеродных единиц и зеленых сертификатов на основе данных от возобновляемого источника электроэнергии.',
 					'DAO IPCI IoT connection',
 					'DAI')
 
 				+item(
 					'assets/i/services/drone-passport.png',
-					'Drone passport registration',
+					'Регистрация паспорта дрона',
 					'Сервис глобальной регистрации дронов в Ethereum Blockchain.',
 					'Distributed sky',
-					'–')
+					false)
 
 				+item(
 					'assets/i/services/drone-route.png',
-					'Drone flight report',
+					'Отчёт о полётах дронов',
 					'Сервис публичных отчетов о выполненных полетах дронов.',
 					'Distributed sky',
-					'–')
+					false)
 
 

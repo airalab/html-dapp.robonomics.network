@@ -1,0 +1,61 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Robonomics services'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(0, true)
+
+	.content
+		// +panelTop()
+		.content-in
+			h1 Robonomics services
+			
+			section.flex-grid
+
+				+item()
+
+				+item(
+					'assets/i/services/gaka-chu.png',
+					'Gaka-chu',
+					"Buy the robot's idea on a canvas with copyright digital mark stored in the public blockchain.",
+					'Airalab',
+					'XRT')
+
+
+				+item(
+					'assets/i/services/smart-buildings.png',
+					'Smart building offsetting',
+					'Carbon footprint clearance for smart buildings based on geolocation and energy consumption information.',
+					'DAO IPCI IoT connection',
+					'DAI',
+					provider_title,
+					unit_title,
+					true)
+
+
+				+item(
+					'assets/i/services/smart-assets.png',
+					'Environmental assets tokenization',
+					'Emission of carbon units and green certificates based on data from renewable energy sources.',
+					'DAO IPCI IoT connection',
+					'DAI')
+
+				+item(
+					'assets/i/services/drone-passport.png',
+					'Drone passport registration',
+					'Global drone registration service in the Ethereum Blockchain.',
+					'Distributed sky',
+					false)
+
+				+item(
+					'assets/i/services/drone-route.png',
+					'Drone flight report',
+					'Drone flight public reporting service.',
+					'Distributed sky',
+					false)
+
+
