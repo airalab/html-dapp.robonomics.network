@@ -1,0 +1,39 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Robonomics Lighthouse'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(0, true)
+
+	.content
+		.content-in
+
+			section.section-light.section-centered
+				h2 Carbon credits offsetting
+
+				form
+
+					section
+
+						.form-item
+							label(for="credits") How many units do you want to buy?
+							.input-measured.container-full
+								input.container-full(type="text", value="")
+								span.input-measure VPU
+					
+					.form-item.form-line-label
+						label(for="email") Your email:
+						input.container-full#email(type="text")
+
+					.form-item.form-line-label
+						label(for="custominfo") Your comment:
+						textarea.container-full#custominfo(placeholder="Place here any additional information, if you have it.", rows="1")
+
+					
+
+					section
+						button.container-full.btn-big Submit
