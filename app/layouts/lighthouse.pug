@@ -13,10 +13,77 @@ block content
 		// +panelTop()
 		.content-in
 			section
-				h2
-					a(href="#", title="Back to choose lighthouse").align-vertical.m-r-20
-						i.i-arrow-left
-					span.align-vertical.m-r-20.breakwords airalab.lighthouse.5.robonomics.eth
+				h2.breadcrumbs.m-b-0
+					a(href="#")
+						span.i-lighthouse
+						span Lighthouses
+					i /
+					span Devcon 50
+
+				.input-size--lg
+					select#select-lighthouseConnect
+
+				script.
+					var select = new SlimSelect({
+						select: '#select-lighthouseConnect',
+						// valuesUseText: false, // Use text instead of innerHTML for selected values - default false
+						data: [
+							{placeholder: true, text: 'Choose lighthouse'},
+							// {innerHTML: '<b>devcon50.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: '0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324', value: 'select0', selected: true},
+							{label: 'devcon50.lighthouse.5.robonomics.eth',
+								options: [{
+									innerHTML: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+									text: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+									value: 'select0',
+									selected: true
+									}]
+							},
+							{label: 'a.lighthouse.5.robonomics.eth',
+								options: [{
+									innerHTML: '0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324',
+									text: '0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324',
+									value: 'select1'
+									}]
+							},
+							{label: 'airalab.lighthouse.5.robonomics.eth',
+								options: [{
+									innerHTML: '0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1',
+									text: '0xD40AC7F1e5401e03D00F5aeC1779D8e5Af4CF9f1',
+									value: 'select2'
+									}]
+							},
+							{label: 'mobilerobotics.lighthouse.5.robonomics.eth',
+								options: [{
+									innerHTML: '0x8165ad3d400bda2be5fe27254a5e55e0f393921f',
+									text: '0x8165ad3d400bda2be5fe27254a5e55e0f393921f',
+									value: 'select3'
+									}]
+							},
+
+							{label: 'New lighthouse',
+								options: [{
+									innerHTML: 'create new lighthouse',
+									text: 'create new lighthouse',
+									value: 'new'
+									}]
+							}
+						],
+						onChange: (info) => {
+						    console.log(info);
+						    if(info.class == 'type-new'){
+								document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
+								+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
+								+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
+								// + '<br/><button class="btn-blue">Create and connect</button>';
+						    }
+						    else{
+						    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
+						    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
+						    }  	
+					  	}
+					});
+
+
 
 				.row
 					.col-lg-4.col-md-5.order-md-last
@@ -108,165 +175,5 @@ block content
 
 
 						section.m-t-40
-							h2 Test lighthouse
-							.row
-								.col-lg-4
-									.window
-										.window-head
-											span Demand
-											a(href="#").btn-green.input-sm Test
-										.window-content
-											.section-light.m-t-10
-												p
-													span.t-sm Sent from account:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0x40c5...C8d3
-													a(href="#", title="copy address").align-vertical.i-copy
-												p
-													span.t-sm Demand program description:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b QmfCcL...LjdW
-												p
-													span.t-sm Data for program execution:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b Qmbm3o...HKUm
-												p
-													a.t-sm(href="#",target="_blank") Payment token 
-													span.t-sm cost:
-													br/
-													b 0
-												p
-													span.t-sm Valid before:
-													br/
-													b 7841762 block
-												p
-													span.t-sm Status:
-													br/
-													b Without observing network
-
-											.section-light.m-t-10
-												p
-													span.t-sm Sent from account:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0x40c5...C8d3
-													a(href="#").align-vertical.i-copy
-												p
-													span.t-sm Demand program description:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b QmfCcL...LjdW
-												p
-													span.t-sm Data for program execution:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b Qmbm3o...HKUm
-												p
-													a.t-sm(href="#",target="_blank") Payment token 
-													span.t-sm cost:
-													br/
-													b 0
-												p
-													span.t-sm Valid before:
-													br/
-													b 7841762 block
-												p
-													span.t-sm Status:
-													br/
-													b Without observing network
-
-								.col-lg-4
-									.window
-										.window-head
-											span Offer
-											a(href="#").btn-green.input-sm Test
-										.window-content
-											.section-light.m-t-10
-												p
-													span.t-sm Sent from account:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0x40c5...C8d3
-													a(href="#").align-vertical.i-copy
-												p
-													span.t-sm Demand program description:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b QmfCcL...LjdW
-												p
-													span.t-sm Data for program execution:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b Qmbm3o...HKUm
-												p
-													a.t-sm(href="#",target="_blank") Payment token 
-													span.t-sm cost:
-													br/
-													b 0
-												p
-													span.t-sm Valid before:
-													br/
-													b 7841762 block
-												p
-													span.t-sm Status:
-													br/
-													b Without observing network
-
-								.col-lg-4
-									.window
-										.window-head
-											span Liabilities
-										.window-content
-											.section-light.m-t-10
-												p
-													span.t-sm Liability:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0xEcBA...fcCb
-													a(href="#", title="copy address").align-vertical.i-copy
-												p
-													span.t-sm Provider address:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0x4200...1680
-													a(href="#", title="copy address").align-vertical.i-copy
-												p
-													span.t-sm Program description:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b QmfCcL...LjdW
-												p
-													span.t-sm Data for program execution:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														b Qmbm3o...HKUm
-												p
-													a.t-sm(href="#",target="_blank") Payment token 
-													span.t-sm cost:
-													br/
-													b 0
-												p
-													span.t-sm Promisee:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0x40c5...C8d3
-													a(href="#", title="copy address").align-vertical.i-copy
-												p
-													span.t-sm Promisor:
-													br/
-													a(href="#", target="_blank").align-vertical.m-r-10
-														+avatar('avatar-small align-vertical m-r-10')
-														b 0x40c5...C8d3
-													a(href="#", title="copy address").align-vertical.i-copy
-												p
-													button.btn-green.input-sm.container-full Post result
-
+							h2 Send message to Robonomics.network
+							

@@ -3123,6 +3123,17 @@ table.container-full {
   border-radius: 4px;
 }
 
+.breadcrumbs span, .breadcrumbs a, .breadcrumbs i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.breadcrumbs i {
+  margin: 0 15px;
+}
+.breadcrumbs span, .breadcrumbs a {
+  font-weight: 500;
+}
+
 /* action states (1-actions.js) */
 .disabled *, .disabled {
   filter: grayscale(1);
@@ -3320,6 +3331,9 @@ table.container-full {
 .theme-light .form-section-title {
   color: rgba(101, 109, 118, 0.6);
   background-color: rgba(101, 109, 118, 0.1);
+}
+.theme-light .ss-option-selected {
+  background-color: #f6f6f6;
 }
 .theme-light .filepond--panel-root {
   background-color: transparent;
@@ -3563,6 +3577,9 @@ table.container-full {
 .theme-dark .form-section-title {
   color: rgba(234, 234, 234, 0.6);
   background-color: rgba(234, 234, 234, 0.1);
+}
+.theme-dark .ss-option-selected {
+  background-color: #262626;
 }
 .theme-dark .filepond--panel-root {
   background-color: transparent;

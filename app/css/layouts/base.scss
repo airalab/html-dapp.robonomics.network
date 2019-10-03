@@ -189,6 +189,21 @@ table.container-full { display: table; }
     border-width: 1px;
     border-radius: 4px;
   }
+
+
+.breadcrumbs
+  {
+    span, a, i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    i{
+      margin: 0 15px;
+    }
+
+    span, a { font-weight: 500; }
+  }
  
 // /*====== end of Random ======*/
 
