@@ -157,12 +157,12 @@
             	    if(info.class == 'type-new'){
             			document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
             			+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
-            			+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p><button>Create and connect</button>';
+            			+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p><button>Create and connect</button><a href="#" class="m-l-20">Cancel</a>';
             			// + '<br/><button class="btn-blue">Create and connect</button>';
             	    }
             	    else{
             	    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
-            	    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button>Connect</button>';
+            	    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button>Connect</button><a href="#" class="m-l-20">Cancel</a>';
             	    }  	
               	}
             });
