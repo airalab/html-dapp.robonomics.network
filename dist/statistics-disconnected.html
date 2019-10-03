@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/popper.js"></script>
     <script src="https://unpkg.com/tooltip.js"></script>
     <script src="assets/js/robonomics-html-init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
@@ -25,7 +26,6 @@
           <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/></a></section>
           <section><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-nav1"><i class="i-menu"></i></a>
             <div id="themeMode"><a class="sidebar-i--lg" href="javascript:;" @click="toggleTheme()"><i class="i-day" v-show="!nightMode"></i><i class="i-night" v-show="nightMode"></i></a></div>
-            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
             <script>
               new Vue({
                   el: '#themeMode',

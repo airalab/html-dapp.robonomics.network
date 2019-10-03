@@ -1,0 +1,114 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Statistics of Robonomics'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(2, false)
+
+
+	.content
+		// +panelTop()
+		.content-in
+		
+			section
+				h1
+					span Devcon50 moon base “Geek in space”
+					span.status-connected(title="connected")
+
+			section#devcon5-banner
+				| Time left: 44 devcons before community arriving
+				img#devcon5-banner-moon(alt="", src="assets/i/devcon5-moon.svg")
+				img#devcon5-banner-unicorn(alt="", src="assets/i/devcon5-unicorn.svg")
+
+			section.row
+				.col-md-4
+					.section-light
+						.statistic-item
+							.statistic-item-icon
+								.i-devcon5-construction
+							.statistic-item-title Сonstruction work
+						section
+							.progress
+								.progress-line
+								.progress-status(style="width:80%;")
+									.progress-done.js-tooltip(data-tooltip="Succeed robot launches", data-placement="top")
+										span 25
+										span.i-devcon5-construction.m-l-5
+								.progress-left.js-tooltip(data-tooltip="Executions left", data-placement="top") 30
+
+						p
+							b.t-sm The program's model:
+							br/
+							a(href="#", target="_blank").code-overflow-line QmewrYzhpr6fgXQ83LXHcF4mu2otXvAeZVadRXEz7xF5UN
+
+						b.t-sm List of robots connected to this task:
+						.avatarsGrid.m-t-10
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+
+
+				.col-md-4
+					.section-light
+						.statistic-item
+							.statistic-item-icon
+								.i-devcon5-life
+							.statistic-item-title Life support work
+						section
+							.progress
+								.progress-line
+								.progress-status(style="width:0%;")
+									// .progress-done.js-tooltip(data-tooltip="Succeed robot launches", data-placement="top")
+									// 	span 0
+									// 	span.i-devcon5-construction.m-l-5
+								.progress-left.js-tooltip(data-tooltip="Executions left", data-placement="top") 45
+
+						p
+							b.t-sm The program's model:
+							br/
+							a(href="#", target="_blank").code-overflow-line QmYHU1t7SkseAVvh2cGsVKd5Uh2D9SmUFXvLjw6iqPP5wb
+
+						b.t-sm List of robots connected to this task:
+						.avatarsGrid.m-t-10
+							i No one here  
+
+
+				.col-md-4
+					.section-light
+						.statistic-item
+							.statistic-item-icon
+								.i-devcon5-beer
+							.statistic-item-title Brewery work
+						section
+							.progress
+								.progress-line
+								.progress-status(style="width:33.3%;")
+									.progress-done.js-tooltip(data-tooltip="Succeed robot launches", data-placement="top")
+										span 5
+										span.i-devcon5-beer.m-l-5
+								.progress-left.js-tooltip(data-tooltip="Executions left", data-placement="top") 15
+
+						p
+							b.t-sm The program's model:
+							br/
+							a(href="#", target="_blank").code-overflow-line QmZ6m8YnQZYb1HaYR2AQpBhfPzMcGSBmTRK8kdnsd3Yvu4
+
+						b.t-sm List of robots connected to this task:
+						.avatarsGrid.m-t-10
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')
+							+avatar('avatar-md js-tooltip', '0x4h...56Gf1')

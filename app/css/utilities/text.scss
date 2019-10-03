@@ -7,7 +7,6 @@ body { @extend %font_base; }
 	{
 		@extend %text_uppercase;
 		line-height: 1.5;
-		font-weight: 500;
   		margin-top: $vertical-rythm;
   		margin-bottom: $vertical-rythm;
   		font-weight: 300;

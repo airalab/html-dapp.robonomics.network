@@ -53,7 +53,6 @@
     background-color: $body-background;
     color: $body-textcolor;
 
-
    .sidebar
      {
         nav a, .sidebar-i--lg{
@@ -182,6 +181,16 @@
     .icon-round-sm { background-color: $body-linkcolor; color: $btn-textcolor; }
     .icon-alert { background-color: $red; }
 
+    .status-connected { background-color: $green; }
+    .status-disconnected { background-color: $red; }
+
+
+    .progress-line { background-color: rgba($body-textcolor, .3); }
+    .progress-status { background-color: $green; }
+    .progress-done { color: $green; }
+
+
+    .statistic-item { background-color: darken($section-background, 6%); }
 
 
 

@@ -5,3 +5,122 @@
 		.content { max-width: 250px; margin: 0 auto; }
 		button { margin-top: 10px; }
 	}
+
+
+//statisctics
+h1
+	{
+		.status-connected, .status-disconnected {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+
+			vertical-align: super;
+			margin-left: 12px;
+		}
+	}
+
+
+.progress
+	{
+		position: relative;
+		padding-top: $vertical-rythm;
+	}
+
+
+
+.progress-line, .progress-status
+	{
+		height: 5px;
+		border-radius: 2px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+
+.progress-line
+	{
+		width: 100%;
+	}
+
+
+.progress-done, .progress-left
+	{
+		position: absolute;
+		bottom: 7px;
+		font-weight: 500;
+	}
+
+.progress-left { right: 0; }
+.progress-done { left: 0; }
+
+.avatarsGrid{
+	img[class*='avatar-']{
+		display: inline-block;
+
+		&:last-child { margin-right: 0; }
+	}
+
+	.avatar-md{
+		margin: 0 10px 10px 0;
+	}
+}
+
+
+.statistic-item
+	{
+		padding: $vertical-rythm;
+	}
+
+.statistic-item-icon
+	{
+		text-align: center;
+		font-size: 100px;
+		line-height: 1;
+	}
+
+.statistic-item-title
+	{
+		font-size: $font-size-title - 4 * 3;
+		@extend %text_uppercase;
+		line-height: 1.5;
+		font-weight: 500;
+  		text-align: center;
+	}
+
+
+
+
+#devcon5-banner
+	{
+		background: linear-gradient(90deg, #fca09a, #fcccd3, #ffcc9d, #98ddad, #81d7ec, #a0aaed);
+		color: #A40002;
+		padding: 10px;
+		text-align: center;
+		font-weight: 500;
+		font-size: 200%;
+		position: relative;
+
+		padding-right: 140px;
+		padding-left: 183px;
+	}
+
+#devcon5-banner-moon
+	{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: calc(50% - 50px);
+		right: 0;
+	}
+
+#devcon5-banner-unicorn
+	{
+		width: 143px;
+		height: 160px;
+		position: absolute;
+		top: calc(50% - 80px);
+		left: 0;
+	}
