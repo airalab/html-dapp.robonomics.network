@@ -22,14 +22,13 @@ block content
 
 				.input-size--lg
 					select#select-lighthouseConnect
+					#lighthouse-connection.m-t-5
 
 				script.
 					var select = new SlimSelect({
 						select: '#select-lighthouseConnect',
-						// valuesUseText: false, // Use text instead of innerHTML for selected values - default false
 						data: [
 							{placeholder: true, text: 'Choose lighthouse'},
-							// {innerHTML: '<b>devcon50.lighthouse.5.robonomics.eth</b>&nbsp;<br/><span class="t-small">0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324</span>', text: '0x28f95c484ee55E6aB8A2feF72EB51bC65cdd4324', value: 'select0', selected: true},
 							{label: 'devcon50.lighthouse.5.robonomics.eth',
 								options: [{
 									innerHTML: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
@@ -64,7 +63,8 @@ block content
 								options: [{
 									innerHTML: 'create new lighthouse',
 									text: 'create new lighthouse',
-									value: 'new'
+									value: 'new',
+									class:'type-new'
 									}]
 							}
 						],
@@ -73,12 +73,12 @@ block content
 						    if(info.class == 'type-new'){
 								document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<p><label class="t-sm">Name of the lighthouse</label><br/><input type="text" value="" class="input-size--lg"/></p>'
 								+ '<p><label class="t-sm">Minimal stake to get one quota (XRT)</label><br/><input type="number" value="0.000001" class="input-size--md"/></p>'
-								+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p>';
+								+ '<p><label class="t-sm">Silence timeout for provider in blocks</label><br/><input type="number" value="25" class="input-size--sm"/></p><button>Create and connect</button>';
 								// + '<br/><button class="btn-blue">Create and connect</button>';
 						    }
 						    else{
-						    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
-						    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button class="btn-green">Connect</button>';
+						    	// document.querySelectorAll('#lighthouse-connection')[0].innerHTML = info.innerHTML;
+						    	document.querySelectorAll('#lighthouse-connection')[0].innerHTML = '<button>Connect</button>';
 						    }  	
 					  	}
 					});
@@ -137,8 +137,82 @@ block content
 
 									
 					.col-lg-8.col-md-7
+
+						section.section-light
+							form
+								h3 Send message to the Robonomics.network
+
+								.form-item.form-line-label
+									label(for="input1")
+										span The program's model
+										a.js-tooltip.m-l-10(href="javascript:;", data-tooltip="'The CPSs behavioral model, or program, which takes into account the technical and economic parameters of its communication' - from Robonomics White Paper, 4 Liability of the machine")
+											i.i-info
+									input.container-full#input1(type="text", placeholder="Hash from IPFS")
+
+
+								.form-item#moreopts(style="display:none")
+									.form-item.form-line-label
+										label(for="input2")
+											span Price
+										input#input2(type="text", value="0")
+
+									.form-item.form-line-label
+										label(for="input3")
+											span Objective
+										input#input3(type="text", value="0x")
+
+									.form-item.form-line-label
+										label(for="input4")
+											span Token
+										select#input4
+											option(selected) XRT
+
+
+								.form-item.form-line-label
+									a.a-dashed(href="javascript:;", onclick="show(this, '#moreopts', 'Minimize', 'More options');return false;") More options
+
+								section.m-b-0
+									button.btn-green Broadcast signal to the network
+
+
+						section.section-light.window#window-lighthouse-messages
+							.window-head
+								span Messages from the Robonomics.network
+								a.window-head-toggle(href="#") –
+							.window-content
+								div
+									+avatar('avatar-small align-vertical m-r-10')
+									b [21:55:32] 
+									| Provider 
+									a(href="#") 0x2e...5041b7
+									| &nbsp;sent tx to Ethereum network
+
+								hr/
+
+								div
+									+avatar('avatar-small align-vertical m-r-10')
+									b [21:54:55] 
+									| New offer from Aira 
+									a(href="#") 0x2e...5041b7
+
+								hr/
+
+								div
+									+avatar('avatar-small align-vertical m-r-10')
+									b [21:53:01] 
+									| New demand from dapp account 
+									a(href="#") 0xe5...620e84
+
+								hr/
+
+								div
+									+avatar('avatar-small align-vertical m-r-10')
+									b [20:14:55] 
+									| New offer from Aira 
+									a(href="#") 0x4h...56Gf1
+
 						
-						section.section-light.window#window-developletter
+						section.section-light.window#window-lighthouse-providers
 							.window-head
 								span Providers
 								a.window-head-toggle(href="#") –
@@ -173,7 +247,3 @@ block content
 											td  0.005 ETH
 											td Sleeping
 
-
-						section.m-t-40
-							h2 Send message to Robonomics.network
-							

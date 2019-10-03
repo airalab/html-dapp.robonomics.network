@@ -1839,6 +1839,10 @@ sub {
   vertical-align: sub;
 }
 
+a {
+  display: inline-block;
+}
+
 /*====== Fonts ======*/
 /*====== Margins, paddings ======*/
 /*====== Bootstrap ======*/
@@ -1884,7 +1888,7 @@ a, input[type="submit"], input[type="button"], button, *[class*='btn-'], .nav-ve
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .form-section-title, .window-head, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table caption, .t-uppercase, .form-section-title, .window-head, .loading-logo:after {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -1914,17 +1918,15 @@ h1, h2, h3, h4, h5, h6, table th, table caption, .t-uppercase, .form-section-tit
 }
 
 .js-sidebar-content, .close, .theme-day, .theme-night {
+  display: none;
   visibility: hidden;
   opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .open, .theme-light .theme-day, .theme-dark .theme-night {
+  display: block;
   visibility: visible;
   opacity: 1;
-  width: auto;
-  height: auto;
 }
 
 .panel-top, .sidebar {
@@ -1998,6 +2000,10 @@ a {
 a:hover {
   opacity: 0.8;
 }
+a.a-dashed {
+  border-width: 0 0 1px;
+  border-style: dashed;
+}
 
 li, p, blockquote {
   margin-bottom: 24px;
@@ -2046,7 +2052,7 @@ table td, table th {
 }
 table th {
   text-align: left;
-  font-weight: 400;
+  font-weight: 500;
   border-width: 1px 0;
 }
 table caption {
@@ -2236,19 +2242,19 @@ table caption {
 }
 
 .m-b-sec {
-  margin-bottom: 45px;
+  margin-bottom: 72px;
 }
 
 .m-t-sec {
-  margin-top: 45px;
+  margin-top: 72px;
 }
 
 .m-b-half {
-  margin-bottom: 22.5px;
+  margin-bottom: 36px;
 }
 
 .m-t-half {
-  margin-top: 22.5px;
+  margin-top: 36px;
 }
 
 .p-0 {
@@ -2417,6 +2423,7 @@ table caption {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2643,10 +2650,6 @@ label, .input-msg {
   font-weight: 700;
 }
 
-form section {
-  margin: 50px 0 !important;
-}
-
 .form-section-title {
   font-size: 18px;
   line-height: 1;
@@ -2691,13 +2694,6 @@ form section {
   margin-bottom: 0;
 }
 
-section .form-item {
-  margin-bottom: 24px;
-}
-section .form-item:last-child {
-  margin-bottom: 0;
-}
-
 .form-line-label input:not([type='submit']):not([type='button']), .form-line-label select, .form-line-label textarea {
   border-width: 0 0 1px !important;
   border-radius: 0 !important;
@@ -2739,12 +2735,12 @@ section .form-item:last-child {
 
 section {
   position: relative;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 72px;
+  margin-bottom: 72px;
 }
 section section {
-  margin-top: 22.5px;
-  margin-bottom: 22.5px;
+  margin-top: 36px;
+  margin-bottom: 36px;
 }
 
 *[class^='section-'] {
@@ -2798,7 +2794,7 @@ section section {
 }
 
 .window-content {
-  margin-top: 22.5px;
+  margin-top: 36px;
 }
 
 .avatar-small {
@@ -2873,7 +2869,7 @@ section section {
 }
 
 .sidebar-col-padding {
-  padding-top: 96px;
+  padding-top: 123px;
 }
 .sidebar-col-padding section:first-child {
   padding-top: 0;
@@ -3216,6 +3212,9 @@ table.container-full {
 .theme-light a {
   color: #03A5ED;
 }
+.theme-light a.a-dashed {
+  border-color: #03A5ED;
+}
 .theme-light table td {
   border-color: #e6e6e6;
 }
@@ -3462,6 +3461,9 @@ table.container-full {
 .theme-dark a {
   color: #0282bb;
 }
+.theme-dark a.a-dashed {
+  border-color: #0282bb;
+}
 .theme-dark table td {
   border-color: #161616;
 }
@@ -3690,7 +3692,7 @@ table.container-full {
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
-  bottom: -5px;
+  bottom: -6px;
   left: calc(50% - 5px);
   margin-top: 0;
   margin-bottom: 0;
@@ -3707,7 +3709,7 @@ table.container-full {
   border-left-color: transparent;
   border-right-color: transparent;
   border-top-color: transparent;
-  top: -5px;
+  top: -4px;
   left: calc(50% - 5px);
   margin-top: 0;
   margin-bottom: 0;
@@ -3724,7 +3726,7 @@ table.container-full {
   border-left-color: transparent;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  left: -5px;
+  left: -4px;
   top: calc(50% - 5px);
   margin-left: 0;
   margin-right: 0;

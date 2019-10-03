@@ -126,7 +126,14 @@
 
 
 
-    a { color: $body-linkcolor; }
+    a
+      {
+        color: $body-linkcolor;
+
+        &.a-dashed{
+          border-color: $body-linkcolor;
+        }
+      }
     
     table
       {

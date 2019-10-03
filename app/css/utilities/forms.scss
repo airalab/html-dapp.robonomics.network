@@ -143,9 +143,9 @@ label, .input-msg{
 
 
 form{
-	section{
-		margin: 50px 0 !important;
-	}
+	// section{
+	// 	margin: 50px 0 !important;
+	// }
 }
 
 .form-section-title {
@@ -205,11 +205,6 @@ form{
 		margin-bottom: $vertical-rythm * 0.6;
 		&:last-child { margin-bottom: 0; }
 	}
-
-section .form-item {
-	margin-bottom: $vertical-rythm;
-	&:last-child { margin-bottom: 0; }
-}
 
 
 .form-line-label

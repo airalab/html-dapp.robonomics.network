@@ -8,7 +8,8 @@ $font-size-title: 30px; //h1
 
 /*====== Margins, paddings ======*/
 $vertical-rythm: $font-size-base * $scale;
-$margin-sec: 45px;
+$margin-sec: $vertical-rythm * 3;
+// $margin-sec: 45px;
 $padding-fields: 20px;
 $padding-fields-in: 10px;
 

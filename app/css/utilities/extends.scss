@@ -68,18 +68,20 @@
 
 %hidden
 	{
+		display: none;
 		visibility: hidden;
 		opacity: 0;
-		width: 0;
- 	 	height: 0;
+		// width: 0;
+ 	//  	height: 0;
 	}
 
 %visible
 	{
+		display: block;
 		visibility: visible;
   		opacity: 1;
-  		width: auto;
-  		height: auto;
+  // 		width: auto;
+  // 		height: auto;
 	}
 
 %position_sticky__top{
