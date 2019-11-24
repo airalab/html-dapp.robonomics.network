@@ -111,7 +111,7 @@ block content
 
 			section.section-light
 				h2 Robonomics Telemetry
-				table.container-full.table-hover
+				table.container-full.table-hover.table-responsive-wide
 					thead
 						tr
 							th ipns
@@ -123,4 +123,53 @@ block content
 							th network
 					tbody
 						tr
-							td(colspan="7") No data available
+							td(data-th="ipns")
+								a.nowrap(href="https://ipfs.io/ipns/QmQPnvYDdGBbE7kNsFvehcGL8P4jKf2Dy6XK54y5bKewGs" target="_blank")
+									+avatar('avatar-micro align-vertical m-r-10')
+									span QmQPnv...ewGs
+
+							td(data-th="address eth")
+								a.nowrap(href="https://etherscan.io/address/0x2158c4f129f083bdec44fffb7784aa0e5802c45b" target="_blank")
+									+avatar('avatar-micro align-vertical m-r-10')
+									span 0x2158c...c45b
+
+							td(data-th="lighthouse")
+								<span>airalab.lighthouse.5.robonomics.eth</span>
+
+							td(data-th="provider")
+								<span>-</span>
+
+							td(data-th="peers")
+								<span>7</span>
+
+							td(data-th="date")
+								<span>24.11.2019 11:03:59</span>
+
+							td(data-th="network")
+								<span>mainnet</span>
+
+						tr
+							td(data-th="ipns")
+								a.nowrap(href="https://ipfs.io/ipns/QmQPnvYDdGBbE7kNsFvehcGL8P4jKf2Dy6XK54y5bKewGs" target="_blank")
+									+avatar('avatar-micro align-vertical m-r-10')
+									span QmQPnv...ewGs
+
+							td(data-th="address eth")
+								a.nowrap(href="https://etherscan.io/address/0x2158c4f129f083bdec44fffb7784aa0e5802c45b" target="_blank")
+									+avatar('avatar-micro align-vertical m-r-10')
+									span 0x2158c...c45b
+
+							td(data-th="lighthouse")
+								<span>airalab.lighthouse.5.robonomics.eth</span>
+
+							td(data-th="provider")
+								<span>-</span>
+
+							td(data-th="peers")
+								<span>7</span>
+
+							td(data-th="date")
+								<span>24.11.2019 11:03:59</span>
+
+							td(data-th="network")
+								<span>mainnet</span>

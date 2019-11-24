@@ -128,6 +128,7 @@ table
 	}
 
 .table-responsive { @include responsiveTable($mq-tablet); }
+.table-responsive-wide { @include responsiveTable($mq-menuhide); }
 
 .table-space--10 { border-spacing: 10px; }
 .table-fixed { table-layout: fixed }
@@ -195,10 +196,12 @@ table
 
 .code-overflow-line
 	{
-		max-width: 100%;
 		overflow-x: auto;
 		display: inline-block;
 		white-space: nowrap;
+
+		max-width: 150px;
+		
 	}
 
 .i-block { @extend %i-block; }

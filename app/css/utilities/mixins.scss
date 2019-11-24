@@ -27,15 +27,15 @@
       display: block;
       background-color: transparent !important;
 
-
-      // &:first-child{
-      // 	background-color: $c-gray !important;
-      // }
       
       &:before{
         display: inline-block;
       }
+
+      &:first-child { margin-top: $vertical-rythm * 2; }
     }
+
+    tr:first-child td:first-child { margin-top: 0; }
   }
 }
 
