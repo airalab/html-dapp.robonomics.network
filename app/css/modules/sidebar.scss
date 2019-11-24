@@ -1,3 +1,20 @@
+@mixin sidebar_paddings($col_pad_v, $col_pad_g){
+  .content-in { padding: $col_pad_v $col_pad_g; }
+  .sidebar-col .sidebar-col-in { padding: $col_pad_v $col_pad_g; }
+  .sidebar-col-padding { padding-top: $col_pad_v + 11px + $margin-sec; }
+}
+
+// $col_pad_v: 40px;
+// $col_pad_g: 20px;
+
+@include sidebar_paddings(40px, 20px);
+
+@media screen and (max-width: $mq-tablet){
+  @include sidebar_paddings(40px, 10px);
+  .dapplogo-sign img { max-width: 100%; }
+}
+
+
 .sidebar
   {
     height: 100vh;
@@ -10,7 +27,7 @@
   }
 
 .content { width: 100%; }
-.content-in { padding: 40px 20px; }
+// .content-in { padding: $col_pad_v $col_pad_g; }
 
 .sidebar-col
   {
@@ -20,7 +37,7 @@
     border-width: 0 1px 0 0;
     border-style: solid;
     
-    .sidebar-col-in { padding: 40px 20px; }
+    // .sidebar-col-in { padding: $col_pad_v $col_pad_g; }
     section:first-child { margin-top: 0; }
   }
 
@@ -32,7 +49,7 @@
 
 .sidebar-col-padding
   {
-    padding-top: 41px + 10px + $margin-sec;
+    // padding-top: 41px + 10px + $margin-sec;
 
     section:first-child { padding-top: 0; }
   }

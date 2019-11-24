@@ -2888,6 +2888,35 @@ section section {
   margin-right: 0;
 }
 
+.content-in {
+  padding: 40px 20px;
+}
+
+.sidebar-col .sidebar-col-in {
+  padding: 40px 20px;
+}
+
+.sidebar-col-padding {
+  padding-top: 123px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-in {
+    padding: 40px 10px;
+  }
+
+  .sidebar-col .sidebar-col-in {
+    padding: 40px 10px;
+  }
+
+  .sidebar-col-padding {
+    padding-top: 123px;
+  }
+
+  .dapplogo-sign img {
+    max-width: 100%;
+  }
+}
 .sidebar {
   height: 100vh;
 }
@@ -2906,18 +2935,11 @@ section section {
   width: 100%;
 }
 
-.content-in {
-  padding: 40px 20px;
-}
-
 .sidebar-col {
   transition: opacity .4s ease-out;
   position: relative;
   border-width: 0 1px 0 0;
   border-style: solid;
-}
-.sidebar-col .sidebar-col-in {
-  padding: 40px 20px;
 }
 .sidebar-col section:first-child {
   margin-top: 0;
@@ -2928,9 +2950,6 @@ section section {
   bottom: 0;
 }
 
-.sidebar-col-padding {
-  padding-top: 123px;
-}
 .sidebar-col-padding section:first-child {
   padding-top: 0;
 }
