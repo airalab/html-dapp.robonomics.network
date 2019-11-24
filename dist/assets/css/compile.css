@@ -2381,6 +2381,26 @@ table caption {
   vertical-align: middle;
 }
 
+.icons-line {
+  font-size: 24px;
+}
+.icons-line a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+.icons-line a:first-child {
+  margin-left: 0;
+}
+
+.statuscircle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+
 @keyframes FadeOut {
   0% {
     visibility: visible;
@@ -2399,14 +2419,10 @@ table caption {
   0% {
     visibility: hidden;
     opacity: 0;
-    width: 0;
-    height: 0;
   }
   100% {
     visibility: visible;
     opacity: 1;
-    width: auto;
-    height: auto;
   }
 }
 @keyframes ScaleIn {
@@ -2436,6 +2452,44 @@ table caption {
     background-position: 125% 50%;
   }
 }
+@keyframes GlitchFade {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  20% {
+    visibility: visible;
+    opacity: 1;
+  }
+  40% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  60% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.animation-glitchfade {
+  visibility: hidden;
+  opacity: 0;
+  animation: 0.8s 0.2s ease GlitchFade forwards;
+}
+
+.animation-fadein {
+  opacity: 0;
+  visibility: hidden;
+  animation: 0.4s 0.8s FadeIn ease-in forwards;
+}
+
 /* Icons */
 @font-face {
   font-family: 'iconfont';
@@ -2444,7 +2498,7 @@ table caption {
   font-weight: normal;
   font-style: normal;
 }
-.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, .i-user, .i-alert, .i-info, .i-devcon5-construction, .i-devcon5-life, .i-devcon5-beer, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
+.i-arrow-left, .i-arrow-right, .i-copy, .i-cursor, .i-github, .i-reddit, .i-lighthouse, .i-piechart, .i-transfer, .i-day, .i-night, .i-menu, .i-app, .i-arrowhead, .i-check, .i-stop, .i-file, .i-user, .i-alert, .i-info, .i-devcon5-construction, .i-devcon5-life, .i-devcon5-beer, .i-signal, .i-favorite, .i-share, .i-twitter, input[type="checkbox"], .ss-main .ss-single-selected .ss-arrow span {
   font-family: 'iconfont' !important;
   speak: none;
   font-size: 100%;
@@ -2590,6 +2644,30 @@ table caption {
 
 .i-devcon5-beer:before {
   content: "󪀢";
+  display: block;
+  line-height: 1;
+}
+
+.i-signal:before {
+  content: "󪀣";
+  display: block;
+  line-height: 1;
+}
+
+.i-favorite:before {
+  content: "󪀤";
+  display: block;
+  line-height: 1;
+}
+
+.i-share:before {
+  content: "󪀥";
+  display: block;
+  line-height: 1;
+}
+
+.i-twitter:before {
+  content: "󪀦";
   display: block;
   line-height: 1;
 }
@@ -3311,6 +3389,10 @@ table.container-full {
   pointer-events: none;
 }
 
+.ss-main.disabled * {
+  opacity: 1;
+}
+
 .loading-logo {
   position: relative;
   padding-top: 16px;
@@ -3445,11 +3527,11 @@ table.container-full {
 .theme-light .icon-alert {
   background-color: #E84004;
 }
-.theme-light .status-connected {
+.theme-light .connected {
   background-color: #54CE63;
 }
-.theme-light .status-disconnected {
-  background-color: #E84004;
+.theme-light .disconnected {
+  background-color: #656d76;
 }
 .theme-light .progress-line {
   background-color: rgba(101, 109, 118, 0.3);
@@ -3712,11 +3794,11 @@ table.container-full {
 .theme-dark .icon-alert {
   background-color: #b63203;
 }
-.theme-dark .status-connected {
+.theme-dark .connected {
   background-color: #30a63e;
 }
-.theme-dark .status-disconnected {
-  background-color: #b63203;
+.theme-dark .disconnected {
+  background-color: #eaeaea;
 }
 .theme-dark .progress-line {
   background-color: rgba(234, 234, 234, 0.3);

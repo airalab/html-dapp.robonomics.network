@@ -221,3 +221,7 @@ table.container-full { display: table; }
     opacity: 0.5;
     pointer-events: none;
   }
+
+.ss-main.disabled{
+  * { opacity: 1; }
+}

@@ -1,0 +1,141 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Robonomics Sensor network'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(4, false)
+
+	.content
+		// +panelTop()
+		.content-in
+			section
+				h2.breadcrumbs.m-b-0
+					span
+						span.i-signal.m-r-10
+						span Sensor networks
+					i /
+					span Greenhouse
+
+				.input-size--md
+					select#select-networkConnect.disabled
+					#network-connection.m-t-5
+
+				script.
+					var select = new SlimSelect({
+						select: '#select-networkConnect',
+						data: [
+							{placeholder: true, text: 'Choose network'},
+							{label: 'Greenhouse',
+								options: [{
+									innerHTML: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+									text: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+									value: 'select0',
+									selected: true
+									}]
+							},
+
+							{label: 'New network',
+								options: [{
+									innerHTML: 'Create new sensor network',
+									text: 'Create new sensor network',
+									value: 'new',
+									class:'type-new'
+									}]
+							}
+						],
+						onChange: (info) => {
+						    if(info.class == 'type-new'){
+								document.querySelectorAll('#network-connection')[0].innerHTML = '<p><label class="t-sm">Name of the network</label><br/><input type="text" value="" class="input-size--lg"/></p><button>Create and connect</button><a href="#" class="m-l-20">Cancel</a>';
+						    }
+						    else{
+						    	document.querySelectorAll('#network-connection')[0].innerHTML = '<button>Connect</button><a href="#" class="m-l-20">Cancel</a>';
+						    }  	
+					  	}
+					});
+
+
+				section
+					form
+						.input-size--md
+							button.container-full Request current values
+							button.btn-green.container-full Requested
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Your requests
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3.animation-glitchfade Request at 13:13:43 21.11.2019
+
+							.animation-fadein
+								p
+									span.loader-ring.align-vertical.m-r-15
+									b.align-vertical 1. Waiting for a response from the agent
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Your requests
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3 Request at 13:13:43 21.11.2019
+
+							p
+								b.align-vertical 1. Received response from agent
+								br/
+								span IPFS data hash:
+								br/
+								a.align-vertical(href="#", target="_blank") 0xf3210...DE79
+								a.align-vertical.i-copy.m-l-10(href="#", title="copy to clipboard")
+
+
+							p
+								span.loader-ring.align-vertical.m-r-15
+								b.align-vertical 2. We are requesting JSON data
+
+
+							p.icons-line
+								a(href="#", target="_blank").i-favorite
+								a(href="#", target="_blank").i-share
+								a(href="#", target="_blank").i-twitter
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Your requests
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3 Request at 13:13:43 21.11.2019
+
+							p
+								b.align-vertical 1. Received response from agent
+								br/
+								span IPFS data hash:
+								br/
+								a.align-vertical(href="#", target="_blank") 0xf3210...DE79
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+
+
+							p
+								b.align-vertical 2. JSON received
+								a.align-vertical.i-copy.m-l-10(href="#")
+								br/
+								code {
+									| "temp_c":33.312,
+									| "temp_f":91.9616,
+									| "hum_%":24
+									| }
+
+							p.icons-line
+								a(href="#", target="_blank").i-favorite
+								a(href="#", target="_blank").i-share
+								a(href="#", target="_blank").i-twitter
+

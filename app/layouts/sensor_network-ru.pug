@@ -1,0 +1,208 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Robonomics Сенсорная сеть'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(4, false)
+
+	.content
+		// +panelTop()
+		.content-in
+			section
+				h2.breadcrumbs.m-b-0
+					span
+						span.i-signal.m-r-10
+						span Сенсорные сети
+					i /
+					span Теплица
+
+				.input-size--md
+					select#select-networkConnect.disabled
+					#network-connection.m-t-5
+
+				script.
+					var select = new SlimSelect({
+						select: '#select-networkConnect',
+						data: [
+							{placeholder: true, text: 'Выберите сеть'},
+							{label: 'Теплица',
+								options: [{
+									innerHTML: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+									text: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+									value: 'select0',
+									selected: true
+									}]
+							},
+
+							{label: 'Новая сеть',
+								options: [{
+									innerHTML: 'Создать новую сенсорную сеть',
+									text: 'Создать новую сенсорную сеть',
+									value: 'new',
+									class:'type-new'
+									}]
+							}
+						],
+						onChange: (info) => {
+						    if(info.class == 'type-new'){
+								document.querySelectorAll('#network-connection')[0].innerHTML = '<p><label class="t-sm">Имя сети</label><br/><input type="text" value="" class="input-size--lg"/></p><button>Создать и подключить</button><a href="#" class="m-l-20">Отмена</a>';
+						    }
+						    else{
+						    	document.querySelectorAll('#network-connection')[0].innerHTML = '<button>Connect</button><a href="#" class="m-l-20">Отмена</a>';
+						    }  	
+					  	}
+					});
+
+
+				section
+					form
+						.input-size--md
+							button.container-full Запросить текущие значения
+							button.btn-green.container-full Запрошено
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Ваши запросы
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3.animation-glitchfade Запрос от 13:13:43 21.11.2019
+
+							.animation-fadein
+								p
+									span.loader-ring.align-vertical.m-r-15
+									b.align-vertical 1. Ждём ответа от агента
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Ваши запросы
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3 Запрос от 13:13:43 21.11.2019
+
+							p
+								b.align-vertical 1. Получен ответ от агента
+								br/
+								span IPFS хэш данных:
+								br/
+								a.align-vertical(href="#", target="_blank") 0xf3210...DE79
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+
+
+							p
+								span.loader-ring.align-vertical.m-r-15
+								b.align-vertical 2. Запрашиваем JSON данные
+
+
+							p.icons-line
+								a(href="#", target="_blank").i-favorite
+								a(href="#", target="_blank").i-share
+								a(href="#", target="_blank").i-twitter
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Ваши запросы
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3 Запрос от 13:13:43 21.11.2019
+
+							p
+								b.align-vertical 1. Получен ответ от агента
+								br/
+								span IPFS хэш данных:
+								br/
+								a.align-vertical(href="#", target="_blank") 0xf3210...DE79
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+
+
+							p
+								b.align-vertical 2. JSON данные получены
+								a.align-vertical.i-copy.m-l-10(href="#")
+								br/
+								code {
+									| "temp_c":33.312,
+									| "temp_f":91.9616,
+									| "hum_%":24
+									| }
+
+							p.icons-line
+								a(href="#", target="_blank").i-favorite
+								a(href="#", target="_blank").i-share
+								a(href="#", target="_blank").i-twitter
+
+
+
+
+				section.section-light.window#window-sensornetwork-requests
+					.window-head
+						span Ваши запросы
+						a.window-head-toggle(href="#") –
+					.window-content
+						section.section-light
+							h3 Запрос от 13:13:43 21.11.2019
+
+							p
+								b.align-vertical 1. Получен ответ от агента
+								br/
+								span IPFS хэш данных:
+								br/
+								a.align-vertical(href="#", target="_blank") 0xf3210...DE79
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+
+
+							p
+								b.align-vertical 2. JSON данные получены
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+								br/
+								code {
+									| "temp_c":33.312,
+									| "temp_f":91.9616,
+									| "hum_%":24
+									| }
+
+							p.icons-line
+								a(href="#", target="_blank").i-favorite
+								a(href="#", target="_blank").i-share
+								a(href="#", target="_blank").i-twitter
+
+
+						section.section-light
+							h3 Запрос от 13:13:43 19.11.2019
+
+							p
+								b.align-vertical 1. Получен ответ от агента
+								br/
+								span IPFS хэш данных:
+								br/
+								a.align-vertical(href="#", target="_blank") 0xf3210...DE79
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+
+
+							p
+								b.align-vertical 2. JSON данные получены
+								a.align-vertical.i-copy.m-l-10(href="#", title="сохранить данные в буфер обмена")
+								br/
+								code {
+									| "temp_c":33.312,
+									| "temp_f":91.9616,
+									| "hum_%":24
+									| }
+
+							p.icons-line
+								a(href="#", target="_blank").i-favorite
+								a(href="#", target="_blank").i-share
+								a(href="#", target="_blank").i-twitter
+
+
+							
+
+

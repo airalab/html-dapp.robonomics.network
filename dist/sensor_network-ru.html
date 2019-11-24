@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Loading dApp | robonomics.network</title>
+    <title>Robonomics Сенсорная сеть | robonomics.network</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all">
@@ -24,7 +24,7 @@
       <div class="sidebar-col sidebar-col--sm">
         <div class="sidebar-col-in">
           <section><a class="dapplogo-sign" href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-sign.svg"/></a></section>
-          <section><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-nav1"><i class="i-menu"></i></a><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-lang">EN</a>
+          <section><a class="sidebar-i--lg js-sidebar-link" href="javascript:;" on-toggle="#sidebar-nav1"><i class="i-menu"></i></a>
             <div id="themeMode"><a class="sidebar-i--lg" href="javascript:;" @click="toggleTheme()"><i class="i-day" v-show="!nightMode"></i><i class="i-night" v-show="nightMode"></i></a></div>
             <script>
               new Vue({
@@ -58,7 +58,7 @@
         <div class="sidebar-col-in"> 
           <section><a href="/"><img class="theme-day" alt="dApp logo" src="assets/i/logo-dapp-text-blue.svg"/><img class="theme-night" alt="dApp logo" src="assets/i/logo-dapp-text.svg"/></a></section>
           <section>
-            <nav class="nav-vertical"><a href="#"><span class="i-app align-vertical"></span><span class="align-vertical">Services</span></a><a href="#"><span class="i-lighthouse align-vertical"></span><span class="align-vertical">Lighthouses</span></a><a href="#"><span class="i-piechart align-vertical"></span><span class="align-vertical">Statistics</span></a><a class="active" href="#"><span class="i-transfer align-vertical"></span><span class="align-vertical">AIRA to XRT</span></a><a href="#"><span class="i-signal align-vertical"></span><span class="align-vertical">Sensor networks</span></a>
+            <nav class="nav-vertical"><a href="#"><span class="i-app align-vertical"></span><span class="align-vertical">Services</span></a><a href="#"><span class="i-lighthouse align-vertical"></span><span class="align-vertical">Lighthouses</span></a><a href="#"><span class="i-piechart align-vertical"></span><span class="align-vertical">Statistics</span></a><a href="#"><span class="i-transfer align-vertical"></span><span class="align-vertical">AIRA to XRT</span></a><a class="active" href="#"><span class="i-signal align-vertical"></span><span class="align-vertical">Sensor networks</span></a>
             </nav>
           </section>
         </div>
@@ -103,10 +103,116 @@
       <!-- +panelTop()-->
       <div class="content-in">
         <section>
-          <div class="loader">
-            <div class="loader-ring align-vertical m-r-15"></div>
-            <!-- b.align-vertical.t-style_uppercase Loading-->
+          <h2 class="breadcrumbs m-b-0"><span><span class="i-signal m-r-10"></span><span>Сенсорные сети</span></span><i>/</i><span>Теплица</span></h2>
+          <div class="input-size--md">
+            <select class="disabled" id="select-networkConnect"></select>
+            <div class="m-t-5" id="network-connection"></div>
           </div>
+          <script>
+            var select = new SlimSelect({
+            	select: '#select-networkConnect',
+            	data: [
+            		{placeholder: true, text: 'Выберите сеть'},
+            		{label: 'Теплица',
+            			options: [{
+            				innerHTML: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+            				text: '0xf3210eAbEB11FF1389722b2910B9256042d9DE79',
+            				value: 'select0',
+            				selected: true
+            				}]
+            		},
+            
+            		{label: 'Новая сеть',
+            			options: [{
+            				innerHTML: 'Создать новую сенсорную сеть',
+            				text: 'Создать новую сенсорную сеть',
+            				value: 'new',
+            				class:'type-new'
+            				}]
+            		}
+            	],
+            	onChange: (info) => {
+            	    if(info.class == 'type-new'){
+            			document.querySelectorAll('#network-connection')[0].innerHTML = '<p><label class="t-sm">Имя сети</label><br/><input type="text" value="" class="input-size--lg"/></p><button>Создать и подключить</button><a href="#" class="m-l-20">Отмена</a>';
+            	    }
+            	    else{
+            	    	document.querySelectorAll('#network-connection')[0].innerHTML = '<button>Connect</button><a href="#" class="m-l-20">Отмена</a>';
+            	    }  	
+              	}
+            });
+            
+            
+          </script>
+          <section>
+            <form>
+              <div class="input-size--md">
+                <button class="container-full">Запросить текущие значения</button>
+                <button class="btn-green container-full">Запрошено</button>
+              </div>
+            </form>
+          </section>
+          <section class="section-light window" id="window-sensornetwork-requests">
+            <div class="window-head"><span>Ваши запросы</span><a class="window-head-toggle" href="#">–</a></div>
+            <div class="window-content">
+              <section class="section-light">
+                <h3 class="animation-glitchfade">Запрос от 13:13:43 21.11.2019</h3>
+                <div class="animation-fadein">
+                  <p><span class="loader-ring align-vertical m-r-15"></span><b class="align-vertical">1. Ждём ответа от агента</b></p>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="section-light window" id="window-sensornetwork-requests">
+            <div class="window-head"><span>Ваши запросы</span><a class="window-head-toggle" href="#">–</a></div>
+            <div class="window-content">
+              <section class="section-light">
+                <h3>Запрос от 13:13:43 21.11.2019</h3>
+                <p><b class="align-vertical">1. Получен ответ от агента</b><br/><span>IPFS хэш данных:</span><br/><a class="align-vertical" href="#" target="_blank">0xf3210...DE79</a><a class="align-vertical i-copy m-l-10" href="#" title="сохранить данные в буфер обмена"></a></p>
+                <p><span class="loader-ring align-vertical m-r-15"></span><b class="align-vertical">2. Запрашиваем JSON данные</b></p>
+                <p class="icons-line"><a class="i-favorite" href="#" target="_blank"></a><a class="i-share" href="#" target="_blank"></a><a class="i-twitter" href="#" target="_blank"></a></p>
+              </section>
+            </div>
+          </section>
+          <section class="section-light window" id="window-sensornetwork-requests">
+            <div class="window-head"><span>Ваши запросы</span><a class="window-head-toggle" href="#">–</a></div>
+            <div class="window-content">
+              <section class="section-light">
+                <h3>Запрос от 13:13:43 21.11.2019</h3>
+                <p><b class="align-vertical">1. Получен ответ от агента</b><br/><span>IPFS хэш данных:</span><br/><a class="align-vertical" href="#" target="_blank">0xf3210...DE79</a><a class="align-vertical i-copy m-l-10" href="#" title="сохранить данные в буфер обмена"></a></p>
+                <p><b class="align-vertical">2. JSON данные получены</b><a class="align-vertical i-copy m-l-10" href="#"></a><br/><code>
+                    {"temp_c":33.312,
+                    "temp_f":91.9616,
+                    "hum_%":24
+                    }</code></p>
+                <p class="icons-line"><a class="i-favorite" href="#" target="_blank"></a><a class="i-share" href="#" target="_blank"></a><a class="i-twitter" href="#" target="_blank"></a></p>
+              </section>
+            </div>
+          </section>
+          <section class="section-light window" id="window-sensornetwork-requests">
+            <div class="window-head"><span>Ваши запросы</span><a class="window-head-toggle" href="#">–</a></div>
+            <div class="window-content">
+              <section class="section-light">
+                <h3>Запрос от 13:13:43 21.11.2019</h3>
+                <p><b class="align-vertical">1. Получен ответ от агента</b><br/><span>IPFS хэш данных:</span><br/><a class="align-vertical" href="#" target="_blank">0xf3210...DE79</a><a class="align-vertical i-copy m-l-10" href="#" title="сохранить данные в буфер обмена"></a></p>
+                <p><b class="align-vertical">2. JSON данные получены</b><a class="align-vertical i-copy m-l-10" href="#" title="сохранить данные в буфер обмена"></a><br/><code>
+                    {"temp_c":33.312,
+                    "temp_f":91.9616,
+                    "hum_%":24
+                    }</code></p>
+                <p class="icons-line"><a class="i-favorite" href="#" target="_blank"></a><a class="i-share" href="#" target="_blank"></a><a class="i-twitter" href="#" target="_blank"></a></p>
+              </section>
+              <section class="section-light">
+                <h3>Запрос от 13:13:43 19.11.2019</h3>
+                <p><b class="align-vertical">1. Получен ответ от агента</b><br/><span>IPFS хэш данных:</span><br/><a class="align-vertical" href="#" target="_blank">0xf3210...DE79</a><a class="align-vertical i-copy m-l-10" href="#" title="сохранить данные в буфер обмена"></a></p>
+                <p><b class="align-vertical">2. JSON данные получены</b><a class="align-vertical i-copy m-l-10" href="#" title="сохранить данные в буфер обмена"></a><br/><code>
+                    {"temp_c":33.312,
+                    "temp_f":91.9616,
+                    "hum_%":24
+                    }</code></p>
+                <p class="icons-line"><a class="i-favorite" href="#" target="_blank"></a><a class="i-share" href="#" target="_blank"></a><a class="i-twitter" href="#" target="_blank"></a></p>
+              </section>
+            </div>
+          </section>
         </section>
       </div>
     </div>

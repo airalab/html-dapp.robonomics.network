@@ -20,14 +20,14 @@
 	  0% {
 	    visibility: hidden;
 		opacity: 0;
-		width: 0;
- 	 	height: 0;
+		// width: 0;
+ 	//  	height: 0;
 	  }
 	  100% {
 	    visibility: visible;
 		opacity: 1;
-		width: auto;
-  		height: auto;
+		// width: auto;
+  // 		height: auto;
 	  }
 	}
 
@@ -64,3 +64,47 @@
     50%{background-position:100% 50%}
     100%{background-position:125% 50%}
   }
+
+@keyframes GlitchFade {
+	0% {
+    	visibility: hidden;
+		opacity: 0;
+  	}
+  	20% {
+    	visibility: visible;
+		opacity: 1;
+  	}
+  	40% {
+	    visibility: hidden;
+		opacity: 0;
+  	}
+  	60% {
+    	visibility: visible;
+		opacity: 1;
+  	}
+  	80% {
+	    visibility: hidden;
+		opacity: 0;
+  	}
+  	100% {
+	    visibility: visible;
+		opacity: 1;
+  	}
+}
+
+
+
+ .animation-glitchfade
+ 	{
+ 		visibility: hidden;
+		opacity: 0;
+
+		animation: 0.8s 0.2s ease GlitchFade forwards;
+ 	}
+
+ .animation-fadein
+ 	{
+ 		opacity: 0;
+ 		visibility: hidden;
+    	animation: 0.4s 0.8s FadeIn ease-in forwards;
+ 	}

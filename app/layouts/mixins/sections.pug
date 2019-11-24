@@ -143,6 +143,15 @@ mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', log
 								a(href="#")
 									span.i-transfer.align-vertical
 									span.align-vertical AIRA to XRT
+
+							if navActive == 4
+								a(href="#").active
+									span.i-signal.align-vertical
+									span.align-vertical Sensor networks
+							else
+								a(href="#")
+									span.i-signal.align-vertical
+									span.align-vertical Sensor networks
 		else
 			.sidebar-col-padding.sidebar-col.js-sidebar-content#sidebar-nav1
 				.sidebar-col-in 

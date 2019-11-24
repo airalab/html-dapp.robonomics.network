@@ -181,8 +181,8 @@
     .icon-round-sm { background-color: $body-linkcolor; color: $btn-textcolor; }
     .icon-alert { background-color: $red; }
 
-    .status-connected { background-color: $green; }
-    .status-disconnected { background-color: $red; }
+    .connected { background-color: $green; }
+    .disconnected { background-color: $section-textcolor-mid; }
 
 
     .progress-line { background-color: rgba($body-textcolor, .3); }

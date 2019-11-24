@@ -236,3 +236,28 @@ table
 				vertical-align: middle;
 			}
 	}
+
+.icons-line
+	{
+		font-size: $font-size-base + 8;
+
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 20px;
+
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+	}
+
+
+.statuscircle{
+	display: inline-block;
+	vertical-align: middle;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+}
+
