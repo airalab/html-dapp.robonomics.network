@@ -306,6 +306,34 @@
             </section>
             <button class="container-full btn-big">Подтвердить</button>
           </form>
+        </section>
+        <section class="section-light section-centered">
+          <h2>Регистрация цифрового паспорта</h2>
+          <form>
+            <section>
+              <div class="form-section-title">Информация о производителе</div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-email">E-mail</label>
+                <input class="container-full" id="exmp2-email" type="email" required>
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-info">Информация о производителе</label>
+                <textarea class="container-full" id="exmp2-info" rows="2" required></textarea>
+              </div>
+            </section>
+            <section>
+              <div class="form-section-title">Собранная информация о продукте</div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-log">Прикрепите файл с информацией (json)</label>
+                <input class="filepond" id="exmp2-log" type="file">
+              </div>
+              <div class="form-item form-line-label">
+                <label for="exmp2-log">Прикрепите фотографии, если есть (jpg, png)</label>
+                <input class="filepond" id="exmp2-log" type="file">
+              </div>
+            </section>
+            <button class="container-full btn-big">Запросить цену</button>
+          </form>
           <!-- file picker-->
           <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
           <script src="https://unpkg.com/filepond/dist/filepond.js"></script>

@@ -231,6 +231,36 @@ block content
 
 					button.container-full.btn-big Подтвердить
 
+
+			section.section-light.section-centered
+				h2 Регистрация цифрового паспорта
+
+				form
+
+					section
+						.form-section-title Информация о производителе
+
+						.form-item.form-line-label
+							label(for="exmp2-email") E-mail
+							input.container-full#exmp2-email(type="email", required)
+
+						.form-item.form-line-label
+							label(for="exmp2-info") Информация о производителе
+							textarea.container-full#exmp2-info(rows="2", required)
+
+					section
+						.form-section-title Собранная информация о продукте
+
+						.form-item.form-line-label
+							label(for="exmp2-log") Прикрепите файл с информацией (json)
+							input#exmp2-log.filepond(type="file")
+
+						.form-item.form-line-label
+							label(for="exmp2-log") Прикрепите фотографии, если есть (jpg, png)
+							input#exmp2-log.filepond(type="file")
+
+					button.container-full.btn-big Запросить цену
+
 						
 
 						
