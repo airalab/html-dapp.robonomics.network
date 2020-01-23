@@ -259,7 +259,73 @@ block content
 							label(for="exmp2-log") Прикрепите фотографии, если есть (jpg, png)
 							input#exmp2-log.filepond(type="file")
 
-					button.container-full.btn-big Запросить цену
+					section
+						.form-section-title Заказ паспорта
+
+						
+						.t-align--center
+							div Стоимость цифрового паспорта составит:
+							b.t-gt 0.0000001 XRT
+							p: a(href="#", onclick="show(this, '#info', 'Minimize details', 'Show more details');return false;") Show more details
+
+						#info(style="display:none; max-width: 600px; margin: 0 auto;")
+							.row
+								.col-sm-6
+									div.m-b-5
+										+avatar('avatar-small align-vertical m-r-10')
+										span Agent 
+										a(href="#") 0x2e...5041b7
+
+									div.m-b-5
+										+avatar('avatar-small align-vertical m-r-10')
+										span Token 
+										a(href="#") 0x2e...5041b7
+
+									div.m-b-5
+										span Objective 
+										a(href="#") 0x2e...5041b7
+
+								.col-sm-6
+									div.m-b-5 Ваш баланс: 0.7998996 XRT
+									div.m-b-5 Одобрено: 0.6999999 XRT
+
+						hr/
+
+						.form-item.d-table
+							.d-table--cell
+								.i-check.m-r-15.green
+							.d-table--cell
+								span Умный контракт создан. 
+								a(href="#", target="_blank") Посмотреть контракт
+
+						.form-item.d-table
+							.d-table--cell
+								.loader-ring.m-r-15
+							.d-table--cell
+								| Ждём исполнения обязательства роботом
+
+
+						hr/
+
+						.form-item.d-table
+							.d-table--cell
+								.i-check.m-r-15.green
+							.d-table--cell
+								span Умный контракт создан. 
+								a(href="#", target="_blank") Посмотреть контракт
+
+						.form-item.d-table
+							.d-table--cell
+								.i-check.m-r-15.green
+							.d-table--cell
+								span Умный контракт исполнен. Цифровой паспорт готов. 
+								a(href="#", target="_blank") Посмотреть паспорт
+
+
+
+
+					button.container-full.btn-big Заказать цифровой паспорт
+					button.container-full.btn-big.btn-green Перейти на страницу паспорта
 
 						
 

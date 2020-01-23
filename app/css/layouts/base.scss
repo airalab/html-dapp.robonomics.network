@@ -71,8 +71,8 @@ table.container-full { display: table; }
 .d-inlineblock { display: inline-block !important; }
 .d-block { display: block !important; }
 
-.align-vertical { display: inline-block; vertical-align: middle; }
-.align-top { display: inline-block; vertical-align: top; }
+.align-vertical { vertical-align: middle; }
+.align-top { vertical-align: top; }
 
 .flexcols { @extend %flex_columns; }
 .flex-center { @extend %flex_center; }
@@ -218,7 +218,7 @@ table.container-full { display: table; }
 .disabled *, .disabled
   {
     filter: grayscale(1);
-    opacity: 0.5;
+    opacity: 0.8;
     pointer-events: none;
   }
 
