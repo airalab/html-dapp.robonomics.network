@@ -133,6 +133,8 @@
           border-color: $body-linkcolor;
         }
       }
+
+    blockquote { border-color: $body-linkcolor }
     
     table
       {
@@ -173,6 +175,8 @@
 
 
     hr { background-color: darken($section-background, 15%); }
+
+    .pre__overflow { border-color: darken($section-background, 15%); }
 
     .red, a.red { color: $red; }
     .green, a.green { color: $green; }

@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Robonomics Lighthouse | robonomics.network</title>
+    <title>Цифровой паспорт продукта 0X3140F61D5B27279FE1846A8D9EDE2BBD4874783A | robonomics.network</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all">
@@ -102,51 +102,59 @@
     <div class="content">
       <div class="content-in">
         <section class="section-light section-centered">
-          <h2>Demand template form (progress)</h2>
-          <form>
-            <section>
-              <div class="form-item d-table">
-                <div class="d-table--cell align-vertical">
-                  <div class="i-check m-r-15 green"></div>
-                </div>
-                <div class="d-table--cell align-vertical">Вещаем сообщение</div>
-              </div>
-              <div class="form-item d-table">
-                <div class="d-table--cell align-vertical">
-                  <div class="loader-ring m-r-15"></div>
-                </div>
-                <div class="d-table--cell align-vertical">Cервис ответил на спрос</div>
-              </div>
-              <div class="form-item d-table disabled">
-                <div class="d-table--cell align-vertical">
-                  <div class="i-stop m-r-15"></div>
-                </div>
-                <div class="d-table--cell">Провайдер Робономики отправил транзакцию в Ethereum</div>
-              </div>
-              <div class="form-item d-table disabled">
-                <div class="d-table--cell align-vertical">
-                  <div class="i-stop m-r-15"></div>
-                </div>
-                <div class="d-table--cell align-vertical">Умный контракт создан, ожидаем исполнения сервиса роботом</div>
-              </div>
-              <div class="form-item d-table disabled">
-                <div class="d-table--cell align-vertical">
-                  <div class="i-stop m-r-15"></div>
-                </div>
-                <div class="d-table--cell align-vertical">Умный контракт исполнен!</div>
-              </div>
-            </section>
-            <section>
-              <div class="form-line-btns">
-                <button class="btn-big btn-green" disabled><span class="i-file"></span><span>Посмотреть результат</span></button>
-                <button class="btn-big"><span class="i-app"></span><span>Вернуться к сервисам</span></button>
-              </div>
-              <div class="form-line-btns">
-                <button class="btn-big btn-green"><span class="i-file"></span><span>Посмотреть результат</span></button>
-                <button class="btn-big"><span class="i-app"></span><span>Вернуться к сервисам</span></button>
+          <h2>Цифровой паспорт продукта</h2><span class="t-sm">Контракт обязательства</span>
+          <blockquote><a class="t-lg content-overflow" href="#" target="_blank">0X3140F61D5B27279FE1846A8D9EDE2BBD4874783A</a></blockquote>
+          <section>
+            <div class="form-section-title">Информация о производителе</div>
+            <section><span class="t-sm">E-mail:</span><br/><span>vadim.manaenko@aira.life</span></section>
+            <hr/>
+            <section><span class="t-sm">Информация о производителе:</span><br/><span>Lorem</span></section>
+          </section>
+          <section>
+            <div class="form-section-title">Собранная информация о продукте</div>
+            <section><span class="t-sm">Файл с информацией:</span><br/><a class="ptint-hidden" href="#" target="_blank" onclick="show(this, '#info1', 'QmcKD7...VfRo', 'QmcKD7...VfRo');return false;">QmcKD7...VfRo</a>
+              <div class="content-hidden" id="info1">
+                <pre class="pre__overflow">{ stdenv
+	, mkRosPackage
+	, robonomics_comm
+	, python3Packages
+	}:
+
+	mkRosPackage rec {
+	  name = "${pname}-${version}";
+	  pname = "digital_passport_agent";
+	  version = "0.1.0";
+
+	  src = ./.;
+
+	  propagatedBuildInputs = [
+	    robonomics_comm
+	    python3Packages.pinatapy
+	  ];
+
+	  meta = with stdenv.lib; {
+	    description = "Issues a digital passport based on objective data";
+	    homepage = http://github.com/vourhey/digital_passport_agent;
+	    license = licenses.bsd3;
+	    maintainers = with maintainers; [ vourhey ];
+	  };
+	}
+</pre><a class="btn-blue btn-sm ptint-hidden" href="#" target="_blank">Открыть в IPFS</a>
+                <div class="print-show">Link in IPFS: https://ipfs.io/ipfs/QmcKD72xnRwpNag2kLkcefK5jffpGXdxaWQVEkfkMpVfRo</div>
               </div>
             </section>
-          </form>
+            <hr/>
+            <section><span class="t-sm">Прикреплённые фотографии:</span><br/><a class="ptint-hidden" href="#" target="_blank" onclick="show(this, '#info2', 'QmcKD7...VfRo', 'QmcKD7...VfRo');return false;">QmToTk...Lxw3</a>
+              <div class="content-hidden" id="info2"><img class="i-block" alt="" src="assets/i/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3.jpg"><a class="btn-blue btn-sm ptint-hidden" href="#" target="_blank">Открыть в IPFS</a>
+                <div class="print-show">Link in IPFS: https://ipfs.io/ipfs/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3</div>
+              </div><br/><a class="ptint-hidden" href="#" target="_blank" onclick="show(this, '#info3', ' QmToTk...Lxw3', ' QmToTk...Lxw3');return false;">QmToTk...Lxw3</a>
+              <div class="content-hidden" id="info3"><img class="i-block" alt="" src="assets/i/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3.jpg"><a class="btn-blue btn-sm ptint-hidden" href="#" target="_blank">Открыть в IPFS</a>
+                <div class="print-show">Link in IPFS: https://ipfs.io/ipfs/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3</div>
+              </div>
+            </section>
+          </section>
+          <hr class="ptint-hidden">
+          <div class="icons-line ptint-hidden"><a class="i-print" href="#" title="Print Passport" onclick="window.print();return false;"></a><a class="i-favorite" href="#" title="Add link to Favorites"></a><a class="i-twitter" href="#" title="Tweet"></a><a class="i-share" href="#" title="Share the link"></a></div>
         </section>
       </div>
     </div>

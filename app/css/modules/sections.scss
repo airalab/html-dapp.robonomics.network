@@ -9,7 +9,8 @@ section
     @include sectionMargins($margin-sec);
 
     section{
-      @include sectionMargins($margin-sec/2);
+      @include sectionMargins($vertical-rythm);
+      // @include sectionMargins($margin-sec/2);
     }
   }
 

@@ -1,0 +1,102 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Цифровой паспорт продукта 0X3140F61D5B27279FE1846A8D9EDE2BBD4874783A'
+	- var bodyclass = 'flexcols theme-light'
+
+block content
+
+	+sidebar(0, true)
+
+	.content
+		.content-in
+
+			section.section-light.section-centered
+				h2 Цифровой паспорт продукта
+
+
+				span.t-sm Контракт обязательства
+				blockquote
+					a(href="#", target="_blank").t-lg.content-overflow 0X3140F61D5B27279FE1846A8D9EDE2BBD4874783A
+
+				section
+					.form-section-title Информация о производителе
+
+					section
+						span.t-sm E-mail:
+						br/
+						span vadim.manaenko@aira.life
+					hr/
+
+					section
+						span.t-sm Информация о производителе:
+						br/
+						span Lorem
+
+
+				section
+					.form-section-title Собранная информация о продукте
+
+					section
+						span.t-sm Файл с информацией:
+						br/
+						a.ptint-hidden(href="#", target="_blank", onclick="show(this, '#info1', 'QmcKD7...VfRo', 'QmcKD7...VfRo');return false;") QmcKD7...VfRo
+						#info1.content-hidden
+							pre.pre__overflow.
+								{ stdenv
+									, mkRosPackage
+									, robonomics_comm
+									, python3Packages
+									}:
+
+									mkRosPackage rec {
+									  name = "${pname}-${version}";
+									  pname = "digital_passport_agent";
+									  version = "0.1.0";
+
+									  src = ./.;
+
+									  propagatedBuildInputs = [
+									    robonomics_comm
+									    python3Packages.pinatapy
+									  ];
+
+									  meta = with stdenv.lib; {
+									    description = "Issues a digital passport based on objective data";
+									    homepage = http://github.com/vourhey/digital_passport_agent;
+									    license = licenses.bsd3;
+									    maintainers = with maintainers; [ vourhey ];
+									  };
+									}
+
+							a(href="#", target="_blank").btn-blue.btn-sm.ptint-hidden Открыть в IPFS
+							.print-show Link in IPFS: https://ipfs.io/ipfs/QmcKD72xnRwpNag2kLkcefK5jffpGXdxaWQVEkfkMpVfRo
+
+					hr/
+
+					section
+						span.t-sm Прикреплённые фотографии:
+						br/
+						a.ptint-hidden(href="#", target="_blank", onclick="show(this, '#info2', 'QmcKD7...VfRo', 'QmcKD7...VfRo');return false;") QmToTk...Lxw3
+						#info2.content-hidden
+							img.i-block(alt="", src="assets/i/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3.jpg")
+							a(href="#", target="_blank").btn-blue.btn-sm.ptint-hidden Открыть в IPFS
+							.print-show Link in IPFS: https://ipfs.io/ipfs/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3
+						br/
+						a.ptint-hidden(href="#", target="_blank", onclick="show(this, '#info3', ' QmToTk...Lxw3', ' QmToTk...Lxw3');return false;") QmToTk...Lxw3
+						#info3.content-hidden
+							img.i-block(alt="", src="assets/i/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3.jpg")
+							a(href="#", target="_blank").btn-blue.btn-sm.ptint-hidden Открыть в IPFS
+							.print-show Link in IPFS: https://ipfs.io/ipfs/QmToTkBFJcRKf8fkW6ra3jwwS9gLvWGFUhrdJCyw1XLxw3
+
+
+				hr.ptint-hidden
+
+				.icons-line.ptint-hidden
+					a(href="#", title="Print Passport", onclick="window.print();return false;").i-print
+					a(href="#", title="Add link to Favorites").i-favorite
+					a(href="#", title="Tweet").i-twitter
+					a(href="#", title="Share the link").i-share
+
+				

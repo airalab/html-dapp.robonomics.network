@@ -225,3 +225,34 @@ table.container-full { display: table; }
 .ss-main.disabled{
   * { opacity: 1; }
 }
+
+
+
+
+.content-overflow{
+  display: inline-block;
+  box-sizing: content-box;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+
+.content-hidden{ display: none; }
+
+
+@media print{
+  body{
+    &.theme-light, &.theme-dark { background-color: none !important; }
+    &.flexcols { display: block; }
+  }
+
+  .sidebar, .ptint-hidden { display: none; }
+  .content-hidden, .print-show { display: block; }
+
+  .pre__overflow { max-height: 100%; }
+
+  .form-section-title{
+    padding: 0;
+    background-color: transparent !important;
+  }
+}

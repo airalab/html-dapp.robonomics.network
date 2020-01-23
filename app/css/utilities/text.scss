@@ -55,7 +55,7 @@ a
 	}
 
 
-li, p, blockquote
+li, p, blockquote, pre
 	{
 	  margin-bottom: $vertical-rythm;
 
@@ -259,5 +259,19 @@ table
 	width: 8px;
 	height: 8px;
 	border-radius: 4px;
+}
+
+
+.pre__overflow {
+	font-family: monospace;
+	font-size: $font-size-base - 3;
+
+	box-sizing: border-box;
+	padding: 15px;
+	max-height: 150px;
+	overflow-y: scroll;
+
+	border-style: solid;
+	border-width: 1px;
 }
 
