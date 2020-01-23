@@ -49,6 +49,11 @@ $padding-side: 10px;
   		font-size: $font-size-base*1.2;
   		padding: $padding-side $padding-side*2;
   	}
+
+  	&.btn-sm{
+  		font-size: $font-size-base*0.8;
+  		padding: $padding-side/1.5;
+  	}
 }
 
 %inputtext

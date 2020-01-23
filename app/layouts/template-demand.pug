@@ -265,7 +265,83 @@ block content
 						
 						.t-align--center
 							div Стоимость цифрового паспорта составит:
-							b.t-gt 0.0000001 XRT
+							b.t-gt 0.1 XRT
+							p: a(href="#", onclick="show(this, '#info', 'Minimize details', 'Show more details');return false;") Show more details
+
+						#info(style="display:none; max-width: 600px; margin: 10px auto;")
+							.row
+								.col-sm-6
+									div.m-b-5
+										+avatar('avatar-small align-vertical m-r-10')
+										span Agent 
+										a(href="#") 0x2e...5041b7
+
+									div.m-b-5
+										+avatar('avatar-small align-vertical m-r-10')
+										span Token 
+										a(href="#") 0x2e...5041b7
+
+									div.m-b-5
+										span Objective 
+										a(href="#") 0x2e...5041b7
+
+								.col-sm-6
+									div.m-b-5 Ваш баланс: 0.7998996 XRT
+									div.m-b-5 Одобрено: 0.002 XRT
+
+
+					button.container-full.btn-big Заказать цифровой паспорт
+
+
+					section
+						.form-section-title Заказ паспорта
+
+						
+						.t-align--center
+							div Стоимость цифрового паспорта составит:
+							b.t-gt 0.1 XRT
+							p: a(href="#", onclick="show(this, '#info2', 'Minimize details', 'Show more details');return false;") Minimize details
+
+						#info2(style="max-width: 600px; margin: 0 auto;")
+							.row
+								.col-sm-6
+									div.m-b-5
+										+avatar('avatar-small align-vertical m-r-10')
+										span Agent 
+										a(href="#") 0x2e...5041b7
+
+									div.m-b-5
+										+avatar('avatar-small align-vertical m-r-10')
+										span Token 
+										a(href="#") 0x2e...5041b7
+
+									div.m-b-5
+										span Objective 
+										a(href="#") 0x2e...5041b7
+
+								.col-sm-6
+									div.m-b-5 Ваш баланс: 0.7998996 XRT
+									div.m-b-5.red Одобрено: 0.00001 XRT
+
+						section.section-light
+							div: b Вам нужно одобрить дополнительную сумму для покупки паспорта
+							.form-item.form-line-label
+								select#input1
+									option(selected) 0.09999
+								button.btn-sm.m-l-10 Одобрить XRT
+
+
+					button.container-full.btn-big.disabled Заказать цифровой паспорт
+
+
+
+					section
+						.form-section-title Заказ паспорта
+
+						
+						.t-align--center
+							div Стоимость цифрового паспорта составит:
+							b.t-gt 0.1 XRT
 							p: a(href="#", onclick="show(this, '#info', 'Minimize details', 'Show more details');return false;") Show more details
 
 						#info(style="display:none; max-width: 600px; margin: 0 auto;")
@@ -322,9 +398,6 @@ block content
 								a(href="#", target="_blank") Посмотреть паспорт
 
 
-
-
-					button.container-full.btn-big Заказать цифровой паспорт
 					button.container-full.btn-big.btn-green Перейти на страницу паспорта
 
 						

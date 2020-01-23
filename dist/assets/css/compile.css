@@ -2704,6 +2704,10 @@ input.btn-big[type="submit"], input.btn-big[type="button"], button.btn-big, .btn
   font-size: 19.2px;
   padding: 10px 20px;
 }
+input.btn-sm[type="submit"], input.btn-sm[type="button"], button.btn-sm, .btn-sm[class*='btn-'] {
+  font-size: 12.8px;
+  padding: 6.66667px;
+}
 
 input:not([type='submit']):not([type='button']), select, textarea, .ss-main .ss-single-selected {
   border-width: 1px;
