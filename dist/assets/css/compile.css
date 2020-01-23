@@ -3420,7 +3420,7 @@ table.container-full {
   overflow-y: hidden;
 }
 
-.content-hidden {
+.content-hidden, .print-show {
   display: none;
 }
 

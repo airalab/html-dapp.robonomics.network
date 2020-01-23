@@ -237,7 +237,7 @@ table.container-full { display: table; }
 }
 
 
-.content-hidden{ display: none; }
+.content-hidden, .print-show{ display: none; }
 
 
 @media print{
