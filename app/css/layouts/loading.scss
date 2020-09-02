@@ -1,18 +1,30 @@
+@keyframes AnimateTitle {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.loading-screen {
+  text-align: center;
+
+  h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: 0.8s AnimateTitle 1s linear forwards;
+  }
+}
+
 .loading-logo {
   position: relative;
   @extend %d-inlineblock;
   padding-top: $font-size-base;
-
-  &:after{
-    content:"DAPP";
-
-    position: absolute;
-    right: - 80px;
-    top: 0;
-
-    font-size: 30px;
-    @extend %text_uppercase;
-  }
+  margin-top: 25vh;
 }
 
 .loader-ring
@@ -29,8 +41,88 @@
  }
 
 
- .loading-container
+
+  $c-blue: #03A5ED;
+  $c-violet-dark: #282B38;
+  $c-violet-mid: #535974;
+  $c-violet-light: #B5C0F1;
+
+@keyframes DrawSvgPath
+	{
+	 to {
+	    stroke-dashoffset: 0;
+	  }
+	}
+
+@keyframes logo-triangle-1
   {
-    margin-top: 150px;
-    text-align: center;
+    0% { fill: $c-blue; }
+    25% { fill: $c-blue; }
+    50% { fill: $c-blue; }
+    75% { fill: $c-violet-light; }
+    100% { fill: $c-blue; }
+  }
+
+@keyframes logo-triangle-2
+  {
+    0% { fill: $c-violet-light; }
+    25% { fill: #E0BDED; }
+    50% { fill: $c-blue; }
+    75% { fill: $c-blue; }
+    100% { fill: $c-violet-light; }
+  }
+
+@keyframes logo-triangle-3
+  {
+    0% { fill: $c-violet-mid; }
+    25% { fill: $c-violet-light; }
+    50% { fill: $c-violet-light; }
+    75% { fill: $c-violet-dark; }
+    100% { fill: $c-violet-mid; }
+  }
+
+$delay: 0.1s;
+$duration: 5s;
+
+
+  .logo-robonomics
+  {
+
+    .dot
+      {
+        fill: $c-blue;
+
+        visibility: visible;
+		    opacity: 1;
+        animation: 0.5s FadeIn 4s ease forwards;
+      }
+
+    .line
+      {
+        fill: transparent;
+        stroke: #03A5ED;
+        stroke-miterlimit:10;
+
+        stroke-dasharray: 700;
+        stroke-dashoffset: 700;
+        animation: 1s DrawSvgPath 0.5s ease-in-out forwards; 
+      }
+
+    .triangle-1
+      {
+        fill: $c-blue;
+        animation: $duration logo-triangle-1 $delay linear infinite;
+      }
+
+    .triangle-2
+      {
+        fill: $c-violet-light;
+        animation: $duration logo-triangle-2 $delay linear infinite;
+      }
+
+    .triangle-3
+      {
+        fill: $c-violet-mid;
+        animation: $duration logo-triangle-3 $delay linear infinite;
+      }
   }

@@ -1911,7 +1911,7 @@ a, input[type="submit"], input[type="button"], button, *[class*='btn-'], .nav-ve
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, table caption, .t-uppercase, .form-section-title, .window-head, .statistic-item-title, .loading-logo:after {
+h1, h2, h3, h4, h5, h6, table caption, .t-uppercase, .form-section-title, .window-head, .statistic-item-title {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -3646,16 +3646,29 @@ table.container-full {
     background-color: transparent !important;
   }
 }
+@keyframes AnimateTitle {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.loading-screen {
+  text-align: center;
+}
+.loading-screen h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: 0.8s AnimateTitle 1s linear forwards;
+}
+
 .loading-logo {
   position: relative;
   padding-top: 16px;
-}
-.loading-logo:after {
-  content: "DAPP";
-  position: absolute;
-  right: -80px;
-  top: 0;
-  font-size: 30px;
+  margin-top: 25vh;
 }
 
 .loader-ring {
@@ -3669,9 +3682,87 @@ table.container-full {
   animation: 0.8s Rotate ease-in-out infinite;
 }
 
-.loading-container {
-  margin-top: 150px;
-  text-align: center;
+@keyframes DrawSvgPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes logo-triangle-1 {
+  0% {
+    fill: #03A5ED;
+  }
+  25% {
+    fill: #03A5ED;
+  }
+  50% {
+    fill: #03A5ED;
+  }
+  75% {
+    fill: #B5C0F1;
+  }
+  100% {
+    fill: #03A5ED;
+  }
+}
+@keyframes logo-triangle-2 {
+  0% {
+    fill: #B5C0F1;
+  }
+  25% {
+    fill: #E0BDED;
+  }
+  50% {
+    fill: #03A5ED;
+  }
+  75% {
+    fill: #03A5ED;
+  }
+  100% {
+    fill: #B5C0F1;
+  }
+}
+@keyframes logo-triangle-3 {
+  0% {
+    fill: #535974;
+  }
+  25% {
+    fill: #B5C0F1;
+  }
+  50% {
+    fill: #B5C0F1;
+  }
+  75% {
+    fill: #282B38;
+  }
+  100% {
+    fill: #535974;
+  }
+}
+.logo-robonomics .dot {
+  fill: #03A5ED;
+  visibility: visible;
+  opacity: 1;
+  animation: 0.5s FadeIn 4s ease forwards;
+}
+.logo-robonomics .line {
+  fill: transparent;
+  stroke: #03A5ED;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: 1s DrawSvgPath 0.5s ease-in-out forwards;
+}
+.logo-robonomics .triangle-1 {
+  fill: #03A5ED;
+  animation: 5s logo-triangle-1 0.1s linear infinite;
+}
+.logo-robonomics .triangle-2 {
+  fill: #B5C0F1;
+  animation: 5s logo-triangle-2 0.1s linear infinite;
+}
+.logo-robonomics .triangle-3 {
+  fill: #535974;
+  animation: 5s logo-triangle-3 0.1s linear infinite;
 }
 
 .theme-light {
