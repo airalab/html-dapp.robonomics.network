@@ -12,7 +12,7 @@ $padding-side: 10px;
   	appearance: none;
   	-webkit-appearance: none;
 
-  	transition: 0.2s all ease;
+  	transition: 0.1s all linear;
 
   	&, &::placeholder {
   		@extend %font_base;
@@ -53,7 +53,15 @@ $padding-side: 10px;
   	&.btn-sm{
   		font-size: $font-size-base*0.8;
   		padding: $padding-side/1.5;
-  	}
+	  }
+	  
+	.dynamictext { display: none; }
+	@media screen and (min-width: 414px) {
+		&:hover {
+			.dynamictext { display: inline; }
+		}
+	}
+	
 }
 
 %inputtext
@@ -147,10 +155,28 @@ label, .input-msg{
 }
 
 
-form{
-	// section{
-	// 	margin: 50px 0 !important;
-	// }
+button {
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 0.5rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.btn-outline {
+	border: 2px solid var(--color-blue) !important;
+	color: var(--color-blue) !important;
+	background-color: transparent !important;
+	padding: 0.2rem 0.5rem !important;
+
+	&:hover {
+		background-color: var(--color-blue) !important;
+		color: var(--color-button) !important;
+	}
 }
 
 .form-section-title {

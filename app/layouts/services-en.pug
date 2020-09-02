@@ -3,18 +3,18 @@ include mixins/sections.pug
 
 block html
 	- var meta_title = 'Robonomics services'
-	- var bodyclass = 'flexcols theme-light'
+	- var bodyclass = 'theme-light'
+	- var header = true
 
 block content
 
 	+sidebar(0, true)
 
 	.content
-		// +panelTop()
 		.content-in
 			h1 Robonomics services
 			
-			section.flex-grid
+			.flex-grid
 
 				+item(
 					'assets/i/services/digital-passport.png',

@@ -45,6 +45,36 @@ $c-sidebar-background: darken($c-background, 5%);
 
 
 
+body {
+    --color-text: #6c757e;
+    --color-text-accent: #434b52;
+
+    --color-sectionback: #ffffff;
+    --color-separate-mid: #b0b9c2;
+    --color-subtitles: #8796a5;
+    --color-button: #ffffff;
+
+    --color-green: #54CE63;
+    --color-orange: #F15A24;
+    --color-blue: #03A5ED;
+    --color-gray-light: #99a6b3;
+}
+
+
+body.theme-dark {
+    --color-text: #f2f2f2;
+    --color-text-accent: #ffffff;
+
+    --color-sectionback: #2f2f2f;
+    --color-separate-mid: #6c757e;
+
+    --color-green: #40a04b;
+    --color-orange: #ca3d09;
+    --color-blue: #0280b6;
+}
+
+
+
 /*====== Classes ======*/
 // $class-nightmode: '.night';
 

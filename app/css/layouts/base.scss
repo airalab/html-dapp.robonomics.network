@@ -1,12 +1,250 @@
-html, body { position: relative; height: 100%; height: auto; }
+html, body { position: relative; height: 100%; }
 
 body
   {
     opacity: 0;
     animation: 0.4s FadeIn ease-in forwards;
 
-    min-height: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 70px 1fr;
   }
+
+
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  overflow: hidden;
+}
+
+
+.header {
+  background-color: var(--color-sectionback);
+  border-bottom: 1px solid var(--color-separate-mid);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: $padding-fields;
+  padding-right: $padding-fields;
+
+  &__logo {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    align-items: center;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    span {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      @media screen and (max-width: 720px) {
+        display: none;
+      }
+    }
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin-left: 1.5rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__settings {
+      color: var(--color-text) !important;
+      border-color: var(--color-text) !important;
+
+      &:hover {
+        color: var(--color-text-accent) !important;
+        border-color: var(--color-text-accent) !important;
+        background-color: transparent !important;
+      }
+    }
+
+    .nav {
+      & > * {
+        display: inline-block;
+        margin-right: 0.3rem;
+
+        &:last-child {
+          margin-right: 0;;
+        }
+      }
+    }
+  }
+}
+
+#mobile-menutoggle {
+  display: none;
+}
+
+
+/* SIDEBAR mobile */
+
+@media screen and (max-width: 720px) {
+  main {
+    display: block;
+    overflow-y: scroll;
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    border-left: 1px solid var(--color-separate-mid);
+    min-width: 250px;
+
+    @include closeOpen();
+  }
+
+  #mobile-menutoggle {
+    display: inline-block;
+  }
+}
+
+
+.outback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: var(--color-sectionback);
+  
+  @include closeOpen(0.8);
+}
+
+/* end of SIDEBAR mobile */
+
+.account {
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+
+    &:first-child {margin-left: 0;}
+  }
+
+  font-size: $font-size-base - 3;
+  line-height: 1.2;
+  font-weight: 500;
+
+  &.on {
+    .account__avatar{
+      img {
+        opacity: 1;
+      }
+
+      &:before {
+        background-color: var(--color-green);
+      }
+    }
+
+    .status {
+      color: var(--color-green);
+    }
+  }
+
+  &__avatar {
+    position: relative;
+
+    &:before {
+      content:"";
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: var(--color-gray-light);
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      border: 1px solid var(--color-sectionback);
+    }
+
+    img {
+      display: block;
+      width: 25px;
+      height: 25px;
+      opacity: 0.5;
+    }
+  }
+
+}
+
+
+.sidebar {
+  background-color: var(--color-sectionback);
+  overflow-y: scroll;
+  
+  section {
+    margin: $padding-fields*2 $padding-fields;
+  }
+
+  &__title{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-subtitles);
+    font-weight: 100;
+    margin-bottom: 0.8rem;
+  }
+
+  &__nav {
+    a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--color-text) !important;
+
+      &:hover {
+         opacity: 1;
+         color: var(--color-text-accent) !important;
+      }
+
+      &.active {
+       cursor: default;
+       color: var(--color-orange) !important;
+
+       &:hover {
+          color: var(--color-orange) !important;
+       }
+      }
+    }
+  }
+}
+
+
+main > .content {
+  padding: $padding-fields*2;
+  overflow: scroll;
+}
+
+
+
+
+
+
+
+
 
 
 

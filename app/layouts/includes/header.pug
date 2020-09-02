@@ -1,23 +1,26 @@
-if !header_container
-	- var header_container = 'container-basic'
+header.header(role='banner')
+	.header__logo
+		a(href="/"): img(alt="dApp logo", src="assets/i/logo-dapp.svg")
+		span Robonomics.Network dApp
 
-header(role='banner', class=header_class)
-	div(class=header_container)
-		.d-table.container-full
-			.align-vertical
-				a(href="/").header-logo: img(alt="dApp logo", src="assets/i/logo-dapp.svg")
-				.header-title.title-pale
-					| dApp 
-					b #{logo_title}
+	.header__panel
+		.account.on
+			.account__avatar
+				+avatar()
+			.account__info
+				.address 0x40c5...c8d3
+				.status connected
+			.account__actions
+				button.btn-outline
+					span.i-switch
+					span.dynamictext Disconnect
 
-			.align-vertical.t-align_right
-				nav.nav-g
-					.dropdown
-						a(href="javascript:;").a-noline: span.sprite-basic-flag-en
-						.dropdown-content.dropdown-content-color
-							.inside
-								nav
-									a(href="#").a-noline: span.sprite-basic-flag-ru
-									a(href="#").a-noline: span.sprite-basic-flag-de
-									a(href="#").a-noline: span.sprite-basic-flag-zh
-									a(href="#").a-noline: span.sprite-basic-flag-jp
+		//- button
+		//- 	span.i-switch
+		//- 	span Connect account
+
+		//- a(href="#").header__panel__settings: span.i-settings
+
+		.nav
+			//- button.header__panel__settings.btn-outline: span.i-settings
+			button#mobile-menutoggle.header__panel__settings.btn-outline: span.i-menu

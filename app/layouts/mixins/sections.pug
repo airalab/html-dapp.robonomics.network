@@ -47,263 +47,291 @@ mixin item(avatar="assets/i/services/service-no-photo.png", title="Title for ser
 
 
 mixin sidebar(navActive, multilang, logolight='assets/i/logo-dapp-sign.svg', logodark='assets/i/logo-dapp-sign.svg', project='robonomics')
+
+	.sidebar#mobile-sidebarmenu.popup
+		section
+			.sidebar__title dApp
+			nav.sidebar__nav
+				a(href="#").active Services
+				a(href="#") Lighthouses
+				a(href="#") Telemetry
+				a(href="#") Parachain
+				a(href="#") Uniswap
+				a(href="#") AIRA → XRT
+				a(href="#") RWS
+
+		section
+			.sidebar__title Info
+			nav.sidebar__nav
+				a(href="https://robonomics.network/", target="_blank") robonomics.network
+				a(href="https://www.robonomics.events/#/", target="_blank") rewards
+
+		section
+			.sidebar__title Help
+			nav.sidebar__nav
+				a(href="https://riot.im/app/#/room/#robonomics:matrix.org", target="_blank") Riot chat
+				a(href="https://t.me/robonomics", target="_blank") Telegram EN
+				a(href="https://t.me/joinchat/A6wE1FiSPStvVN4MKmZDyg", target="_blank") Telegram Trade EN
+				a(href="https://t.me/robonomicsru", target="_blank") Telegram RU
+				
+
 	
-	.sidebar.flexcols
-		.sidebar-col.sidebar-col--sm
-			.sidebar-col-in
-				section
-					a.dapplogo-sign(href="/")
-						img.theme-day(alt="dApp logo", src=logolight)
-						img.theme-night(alt="dApp logo", src=logodark)
+	//- .sidebar.flexcols
+	//- 	.sidebar-col.sidebar-col--sm
+	//- 		.sidebar-col-in
+	//- 			//- section
+	//- 			//- 	a.dapplogo-sign(href="/")
+	//- 			//- 		img.theme-day(alt="dApp logo", src=logolight)
+	//- 			//- 		img.theme-night(alt="dApp logo", src=logodark)
 
-				section
-					a(href="javascript:;", on-toggle="#sidebar-nav1").sidebar-i--lg.js-sidebar-link
-						i.i-menu
+	//- 			section
+	//- 				a(href="javascript:;", on-toggle="#sidebar-nav1").sidebar-i--lg.js-sidebar-link
+	//- 					i.i-menu
 
-					if multilang
-						a(href="javascript:;", on-toggle="#sidebar-lang").sidebar-i--lg.js-sidebar-link EN
+	//- 				if multilang
+	//- 					a(href="javascript:;", on-toggle="#sidebar-lang").sidebar-i--lg.js-sidebar-link EN
 
-					#themeMode
-						a(href="javascript:;", @click='toggleTheme()').sidebar-i--lg
-							i.i-day(v-show="!nightMode")
-							i.i-night(v-show="nightMode")
+	//- 				#themeMode
+	//- 					a(href="javascript:;", @click='toggleTheme()').sidebar-i--lg
+	//- 						i.i-day(v-show="!nightMode")
+	//- 						i.i-night(v-show="nightMode")
 
-					script.
-						new Vue({
-						    el: '#themeMode',
-						    data: {
-						        nightMode: false
-						    },
-						    methods:{
-						        toggleTheme: function(){
-						            this.nightMode = !this.nightMode;
+	//- 				script.
+	//- 					new Vue({
+	//- 					    el: '#themeMode',
+	//- 					    data: {
+	//- 					        nightMode: false
+	//- 					    },
+	//- 					    methods:{
+	//- 					        toggleTheme: function(){
+	//- 					            this.nightMode = !this.nightMode;
 
-						            if ( this.nightMode ){
-						            	document.body.classList.remove('theme-light');
-						            	document.body.classList.add('theme-dark');
-						            }
-						            if ( !this.nightMode ){
-						            	document.body.classList.add('theme-light');
-						            	document.body.classList.remove('theme-dark');
-						            }
+	//- 					            if ( this.nightMode ){
+	//- 					            	document.body.classList.remove('theme-light');
+	//- 					            	document.body.classList.add('theme-dark');
+	//- 					            }
+	//- 					            if ( !this.nightMode ){
+	//- 					            	document.body.classList.add('theme-light');
+	//- 					            	document.body.classList.remove('theme-dark');
+	//- 					            }
 
-						        }
-						    }
-						});
+	//- 					        }
+	//- 					    }
+	//- 					});
 
-				section.sidebar-col--bottom
-					a(href="javascript:;", on-toggle="#sidebar-user").sidebar-i--lg.js-sidebar-link
-						i.i-user
-					a(href="javascript:;", on-toggle="#sidebar-info").sidebar-i--lg.js-sidebar-link ?
+	//- 			section.sidebar-col--bottom
+	//- 				a(href="javascript:;", on-toggle="#sidebar-user").sidebar-i--lg.js-sidebar-link
+	//- 					i.i-user
+	//- 				a(href="javascript:;", on-toggle="#sidebar-info").sidebar-i--lg.js-sidebar-link ?
 
 
 		
-		if logolight == 'assets/i/logo-dapp-sign.svg'
-			.sidebar-col.js-sidebar-content#sidebar-nav1
-				.sidebar-col-in 
-					section
-						a(href="/")
-							img.theme-day(alt="dApp logo", src="assets/i/logo-dapp-text-blue.svg")
-							img.theme-night(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
+	//- 	if logolight == 'assets/i/logo-dapp-sign.svg'
+	//- 		.sidebar-col.js-sidebar-content#sidebar-nav1
+	//- 			.sidebar-col-in 
+	//- 				section
+	//- 					a(href="/")
+	//- 						img.theme-day(alt="dApp logo", src="assets/i/logo-dapp-text-blue.svg")
+	//- 						img.theme-night(alt="dApp logo", src="assets/i/logo-dapp-text.svg")
 
-					section
-						nav.nav-vertical
-							if navActive == 0
-								a(href="#").active
-									span.i-app.align-vertical
-									span.align-vertical Services
-							else
-								a(href="#")
-									span.i-app.align-vertical
-									span.align-vertical Services
+	//- 				section
+	//- 					nav.nav-vertical
+	//- 						if navActive == 0
+	//- 							a(href="#").active
+	//- 								span.i-app.align-vertical
+	//- 								span.align-vertical Services
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-app.align-vertical
+	//- 								span.align-vertical Services
 
-							if navActive == 1
-								a(href="#").active
-									span.i-lighthouse.align-vertical
-									span.align-vertical Lighthouses
-							else
-								a(href="#")
-									span.i-lighthouse.align-vertical
-									span.align-vertical Lighthouses
+	//- 						if navActive == 1
+	//- 							a(href="#").active
+	//- 								span.i-lighthouse.align-vertical
+	//- 								span.align-vertical Lighthouses
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-lighthouse.align-vertical
+	//- 								span.align-vertical Lighthouses
 
-							if navActive == 2
-								a(href="#").active
-									span.i-piechart.align-vertical
-									span.align-vertical Statistics
-							else
-								a(href="#")
-									span.i-piechart.align-vertical
-									span.align-vertical Statistics
+	//- 						if navActive == 2
+	//- 							a(href="#").active
+	//- 								span.i-piechart.align-vertical
+	//- 								span.align-vertical Statistics
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-piechart.align-vertical
+	//- 								span.align-vertical Statistics
 
-							if navActive == 3
-								a(href="#").active
-									span.i-transfer.align-vertical
-									span.align-vertical AIRA to XRT
-							else
-								a(href="#")
-									span.i-transfer.align-vertical
-									span.align-vertical AIRA to XRT
+	//- 						if navActive == 3
+	//- 							a(href="#").active
+	//- 								span.i-transfer.align-vertical
+	//- 								span.align-vertical AIRA to XRT
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-transfer.align-vertical
+	//- 								span.align-vertical AIRA to XRT
 
-							if navActive == 4
-								a(href="#").active
-									span.i-signal.align-vertical
-									span.align-vertical Sensor networks
-							else
-								a(href="#")
-									span.i-signal.align-vertical
-									span.align-vertical Sensor networks
-		else
-			.sidebar-col-padding.sidebar-col.js-sidebar-content#sidebar-nav1
-				.sidebar-col-in 
-					section
-						nav.nav-vertical
-							if navActive == 0
-								a(href="#").active
-									span.i-app.align-vertical
-									span.align-vertical Services
-							else
-								a(href="#")
-									span.i-app.align-vertical
-									span.align-vertical Services
+	//- 						if navActive == 4
+	//- 							a(href="#").active
+	//- 								span.i-signal.align-vertical
+	//- 								span.align-vertical Sensor networks
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-signal.align-vertical
+	//- 								span.align-vertical Sensor networks
+	//- 	else
+	//- 		.sidebar-col-padding.sidebar-col.js-sidebar-content#sidebar-nav1
+	//- 			.sidebar-col-in 
+	//- 				section
+	//- 					nav.nav-vertical
+	//- 						if navActive == 0
+	//- 							a(href="#").active
+	//- 								span.i-app.align-vertical
+	//- 								span.align-vertical Services
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-app.align-vertical
+	//- 								span.align-vertical Services
 
-							if navActive == 1
-								a(href="#").active
-									span.i-lighthouse.align-vertical
-									span.align-vertical Lighthouses
-							else
-								a(href="#")
-									span.i-lighthouse.align-vertical
-									span.align-vertical Lighthouses
+	//- 						if navActive == 1
+	//- 							a(href="#").active
+	//- 								span.i-lighthouse.align-vertical
+	//- 								span.align-vertical Lighthouses
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-lighthouse.align-vertical
+	//- 								span.align-vertical Lighthouses
 
-							if navActive == 2
-								a(href="#").active
-									span.i-piechart.align-vertical
-									span.align-vertical Statistics
-							else
-								a(href="#")
-									span.i-piechart.align-vertical
-									span.align-vertical Statistics
+	//- 						if navActive == 2
+	//- 							a(href="#").active
+	//- 								span.i-piechart.align-vertical
+	//- 								span.align-vertical Statistics
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-piechart.align-vertical
+	//- 								span.align-vertical Statistics
 
-							if navActive == 3
-								a(href="#").active
-									span.i-transfer.align-vertical
-									span.align-vertical AIRA to XRT
-							else
-								a(href="#")
-									span.i-transfer.align-vertical
-									span.align-vertical AIRA to XRT
+	//- 						if navActive == 3
+	//- 							a(href="#").active
+	//- 								span.i-transfer.align-vertical
+	//- 								span.align-vertical AIRA to XRT
+	//- 						else
+	//- 							a(href="#")
+	//- 								span.i-transfer.align-vertical
+	//- 								span.align-vertical AIRA to XRT
 
-		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-lang
-			.sidebar-col-in
-				section
-					nav.nav-vertical
-						a(href="#").active EN - English
-						a(href="#") RU - Русский
+	//- 	.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-lang
+	//- 		.sidebar-col-in
+	//- 			section
+	//- 				nav.nav-vertical
+	//- 					a(href="#").active EN - English
+	//- 					a(href="#") RU - Русский
 
-		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-theme
-			.sidebar-col-in
-				section
-					nav.nav-vertical
-						a(href="#").active
-							span.i-day.align-vertical
-							span.align-vertical Light
+	//- 	.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-theme
+	//- 		.sidebar-col-in
+	//- 			section
+	//- 				nav.nav-vertical
+	//- 					a(href="#").active
+	//- 						span.i-day.align-vertical
+	//- 						span.align-vertical Light
 
-						a(href="#")
-							span.i-night.align-vertical
-							span.align-vertical Dark
+	//- 					a(href="#")
+	//- 						span.i-night.align-vertical
+	//- 						span.align-vertical Dark
 
 
-		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-user
-			.sidebar-col-in
-				section
+	//- 	.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-user
+	//- 		.sidebar-col-in
+	//- 			section
 
-					a(href="#").nowrap
-						+avatar('avatar-small align-vertical m-r-10')
-						b 0x40c5...c8d3
+	//- 				a(href="#").nowrap
+	//- 					+avatar('avatar-small align-vertical m-r-10')
+	//- 					b 0x40c5...c8d3
 
-					.m-t-10.label.label-violet Sidechain
+	//- 				.m-t-10.label.label-violet Sidechain
 					
 
-				if project == 'robonomics'
-					section
-						.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
-							b.m-r-10 2,100
-							span.t-sm AIRA
-						hr/
-						.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
-							b.m-r-10 0
-							span.t-sm AIRA ID
-						hr/
-						div
-							b.m-r-10 0
-							span.t-sm XRT
+	//- 			if project == 'robonomics'
+	//- 				section
+	//- 					.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+	//- 						b.m-r-10 2,100
+	//- 						span.t-sm AIRA
+	//- 					hr/
+	//- 					.disabled.js-tooltip(data-tooltip="Not available for Sidechain")
+	//- 						b.m-r-10 0
+	//- 						span.t-sm AIRA ID
+	//- 					hr/
+	//- 					div
+	//- 						b.m-r-10 0
+	//- 						span.t-sm XRT
 
 
-				if project == 'ipci'
-					form#tmpvue-changeInterfaceType
-						.form-item.form-line-label
-							select(@change="showBtn('#btn-switchInterface')")
-								option Operator
-								option Issuer
-								option Independent Entity
-								option Complier
-								option User
+	//- 			if project == 'ipci'
+	//- 				form#tmpvue-changeInterfaceType
+	//- 					.form-item.form-line-label
+	//- 						select(@change="showBtn('#btn-switchInterface')")
+	//- 							option Operator
+	//- 							option Issuer
+	//- 							option Independent Entity
+	//- 							option Complier
+	//- 							option User
 
-						.form-item
-							button#btn-switchInterface.container-full.close Switch interface
+	//- 					.form-item
+	//- 						button#btn-switchInterface.container-full.close Switch interface
 
-						script.
-							new Vue({
-							    el: '#tmpvue-changeInterfaceType',
-							    methods:{
-							        showBtn: function(btn){
+	//- 					script.
+	//- 						new Vue({
+	//- 						    el: '#tmpvue-changeInterfaceType',
+	//- 						    methods:{
+	//- 						        showBtn: function(btn){
 							            
-							            document.querySelector(btn).classList.remove('close');
-							            document.querySelector(btn).classList.add('open');
+	//- 						            document.querySelector(btn).classList.remove('close');
+	//- 						            document.querySelector(btn).classList.add('open');
 
-							        }
-							    }
-							});
+	//- 						        }
+	//- 						    }
+	//- 						});
 							
 
 
 
-		if project == 'robonomics'
-			.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
-				.sidebar-col-in
-					section
-						nav.nav-vertical
-							a(href="https://github.com/airalab", target="_blank")
-								span.i-github.align-vertical
-								span.align-vertical Github
+	//- 	if project == 'robonomics'
+	//- 		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
+	//- 			.sidebar-col-in
+	//- 				section
+	//- 					nav.nav-vertical
+	//- 						a(href="https://github.com/airalab", target="_blank")
+	//- 							span.i-github.align-vertical
+	//- 							span.align-vertical Github
 
-							a(href="https://www.reddit.com/r/robonomics/", target="_blank")
-								span.i-reddit.align-vertical
-								span.align-vertical Reddit
+	//- 						a(href="https://www.reddit.com/r/robonomics/", target="_blank")
+	//- 							span.i-reddit.align-vertical
+	//- 							span.align-vertical Reddit
 
-							a(href="https://robonomics.network/", target="_blank")
-								span.i-cursor.align-vertical
-								span.align-vertical robonomomics.network
+	//- 						a(href="https://robonomics.network/", target="_blank")
+	//- 							span.i-cursor.align-vertical
+	//- 							span.align-vertical robonomomics.network
 
-							a(href="https://aira.life/", target="_blank")
-								span.i-cursor.align-vertical
-								span.align-vertical aira.life
+	//- 						a(href="https://aira.life/", target="_blank")
+	//- 							span.i-cursor.align-vertical
+	//- 							span.align-vertical aira.life
 
-		if project == 'ipci'
-			.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
-				.sidebar-col-in
-					section
-						p
-							a(href="https://ipci.io/", target="_blank") DAO IPCI
-							br/
-							| Blockchain technology for carbon markets, environmental assets and liabilities
-						p Works with 
-							a(href="https://robonomics.network/", target="_blank") Robonomomics.network
+	//- 	if project == 'ipci'
+	//- 		.sidebar-col.sidebar-col-padding.js-sidebar-content#sidebar-info
+	//- 			.sidebar-col-in
+	//- 				section
+	//- 					p
+	//- 						a(href="https://ipci.io/", target="_blank") DAO IPCI
+	//- 						br/
+	//- 						| Blockchain technology for carbon markets, environmental assets and liabilities
+	//- 					p Works with 
+	//- 						a(href="https://robonomics.network/", target="_blank") Robonomomics.network
 
-						p
-							b Disclaimer: 
-							| DApp IPCI has started in the summer of 2016 and is in the stage of development. If you found bugs or have questions, please contact 
-							a(href="mailto:help@ipci.io") help@ipci.io
+	//- 					p
+	//- 						b Disclaimer: 
+	//- 						| DApp IPCI has started in the summer of 2016 and is in the stage of development. If you found bugs or have questions, please contact 
+	//- 						a(href="mailto:help@ipci.io") help@ipci.io
 
 
 		

@@ -107,4 +107,15 @@
  		opacity: 0;
  		visibility: hidden;
     	animation: 0.4s 0.8s FadeIn ease-in forwards;
- 	}
+	 }
+
+
+@mixin closeOpen($opacity: 1){
+	transition: 0.2s linear all;
+    opacity: 0;
+    visibility: hidden;
+    &.open {
+      visibility: visible;
+      opacity: $opacity;
+    }
+}

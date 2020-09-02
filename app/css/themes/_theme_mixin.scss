@@ -53,36 +53,36 @@
     background-color: $body-background;
     color: $body-textcolor;
 
-   .sidebar
-     {
-        nav a, .sidebar-i--lg{
-            color: $body-textcolor;
+  //  .sidebar
+  //    {
+  //       nav a, .sidebar-i--lg{
+  //           color: $body-textcolor;
 
-            &:not([class *= 'sidebar-i--lg']):not([class *= 'active']):hover { color: $blue; }
-          }
-      }
+  //           &:not([class *= 'sidebar-i--lg']):not([class *= 'active']):hover { color: $blue; }
+  //         }
+  //     }
 
-    .sidebar-i--lg.active
-      {
-        background-color: $section-background-dark;
-        border-color: $section-textcolor;
-      }
+  //   .sidebar-i--lg.active
+  //     {
+  //       background-color: $section-background-dark;
+  //       border-color: $section-textcolor;
+  //     }
 
 
-    .sidebar-col
-      {
-        @include fullcoloring($section-background, $section-border, $section-textcolor);
-      }
+  //   .sidebar-col
+  //     {
+  //       @include fullcoloring($section-background, $section-border, $section-textcolor);
+  //     }
 
     
 
 
 
 
-    .panel-top
-      {
-        .panel-top--cell { border-color: $section-border-dark; }
-      }
+    // .panel-top
+    //   {
+    //     .panel-top--cell { border-color: $section-border-dark; }
+    //   }
 
 
 
@@ -344,7 +344,6 @@
       color: $btn-textcolor;
       background-color: $blue;
     }
-
 
   }
 

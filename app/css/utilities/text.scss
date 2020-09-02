@@ -1,6 +1,12 @@
 /*====== Text sizes & Headers ======*/
 
-html { font-size: 100%; }
+html {
+	font-size: 100%;
+	
+	@media screen and (max-width: 375px) {
+		font-size: 80%;
+	}
+}
 body { @extend %font_base; }
 
 #{headings()}
