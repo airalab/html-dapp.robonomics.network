@@ -142,7 +142,7 @@ function sidebar(){
 	});
 }
 
-window.addEventListener('load', sidebar, false);
+// window.addEventListener('load', sidebar, false);
 
 
 // var 
