@@ -33,7 +33,7 @@ body {
 
 /* GRID */
 
-.grid-1-2, .grid-1-3 {
+.grid-1-2, .grid-1-3, .grid-3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: calc(var(--space)*2);
@@ -44,14 +44,18 @@ body {
     grid-template-columns: 1fr 3fr;
 }
 
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 @media screen and (max-width: 1024px) {
-    .grid-1-2.layout-wide, .grid-1-3.layout-wide {
+    .grid-1-2.layout-wide, .grid-1-3.layout-wide, .grid-3.layout-wide {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .grid-1-2, .grid-1-3 {
+    .grid-1-2, .grid-1-3, .grid-3 {
         grid-template-columns: 1fr;
     }
 }
@@ -111,6 +115,7 @@ b {
 .account-balance {
     display: inline-block;
     white-space: nowrap;
+    padding: 5px 10px !important;
 }
 
 .account-balance > * {
@@ -125,13 +130,13 @@ b {
 
 .account-balance-pic {
     max-width: 30px;
+    border-radius: 20px;
 }
 
 .strong {
     font-weight: bold;
     font-family: var(--font-mono);
 }
-
 /* end of FORM */
 
 
@@ -214,7 +219,12 @@ button.lg, input[type="submit"].lg {
     color: var(--color-orange)
 }
 
-.error input, .error select {
+.error .account-balance {
+    border-width: 0 0 1px;
+    border-style: solid;
+}
+
+.error input, .error select, .error .account-balance {
     border-color: var(--color-orange) !important;
 }
 
