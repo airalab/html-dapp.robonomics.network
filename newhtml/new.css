@@ -245,3 +245,7 @@ table tr:last-child td {
     border-color: var(--color-blue) !important;
     margin: 0;
 }
+
+section:first-child {
+    margin-top: 0;
+}
