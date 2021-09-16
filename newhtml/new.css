@@ -255,37 +255,6 @@ b {
 /* end of FORM */
 
 
-
-
-
-.window {
-    display: grid;
-    grid-template-columns: 1.5fr 3fr;
-    gap: calc(var(--space)*2);
-    align-items: start;
-    padding: 0;
-    overflow: hidden;
-}
-
-@media screen and (max-width: 400px) {
-    .window {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* .window > div {
-    padding: var(--space)
-} */
-
-.window-left {
-    text-align: right;
-}
-
-.window-right {
-    background-color: #fff;
-    padding: var(--space);
-}
-
 /* .bonding-table td:nth-child(1), .bonding-table td:nth-child(2) {
     width: 20%;
 } */
