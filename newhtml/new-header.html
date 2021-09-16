@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Header / Robonomics Dapp</title>
+        <meta name="description" content="" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    
+        <link rel="stylesheet" href="../dist/assets/css/compile.css" />
+        <link rel="stylesheet" href="../dist/assets/css/robonomics.min.css" />
+        <link rel="stylesheet" href="new.css" />
+    </head>
+</html>
+
+<body class="theme-light">
+
+    <header role="banner">
+        <div class="layout-page grid-auto-1">
+            <a href="/" class="logo-w-text">
+                <svg version="1.1" class="logo-robonomics-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 46.9 40.6" style="enable-background:new 0 0 46.9 40.6;" xml:space="preserve"> <ellipse id="Ellipse_1" class="st0" cx="45.4" cy="39" rx="1.6" ry="1.6"/> <ellipse id="Ellipse_2" class="st0" cx="1.6" cy="38.9" rx="1.6" ry="1.6"/> <ellipse id="Ellipse_3" class="st0" cx="23.6" cy="1.6" rx="1.6" ry="1.6"/> <path id="Path_1" class="st1" d="M1.6,38.8l43.9,0.1L23.6,1.3L1.6,38.8z"/> <path id="Path_2" class="st0" d="M12.6,32.6l21.9,0.1L23.6,13.8L12.6,32.6z"/> <path id="Path_3" class="st2" d="M23.5,32.6l11,0L23.6,13.8L23.5,32.6z"/> <path id="Path_4" class="st3" d="M12.6,32.6l21.9,0.1l-11-4.8L12.6,32.6z"/> </svg>
+                <span>Robonomics DAPP</span>
+            </a>
+
+            <div class="flexline">
+                <!-- Ethereum Если нет Метамаск -->
+                <!-- <div class="techstatus" title="Ethereum">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-ethereum" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 12.2 20" style="enable-background:new 0 0 12.2 20;" xml:space="preserve"> <g> <polygon class="st0" points="6.1,0 0,10.1 6.1,7.4 	"/> <polygon class="st1" points="6.1,0 12.2,10.1 6.1,7.4 	"/> <polygon class="st1" points="0,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st2" points="12.2,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st0" points="0,11.4 6.1,15 6.1,20 	"/> <polygon class="st1" points="12.2,11.4 6.1,15 6.1,20 	"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <a href="https://metamask.io" target="_blank">Metamask</a> not found
+                    </div>
+                </div> -->
+
+                <!-- Ethereum Если не та сеть -->
+                <!-- <div class="techstatus" title="Ethereum">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-ethereum" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 12.2 20" style="enable-background:new 0 0 12.2 20;" xml:space="preserve"> <g> <polygon class="st0" points="6.1,0 0,10.1 6.1,7.4 	"/> <polygon class="st1" points="6.1,0 12.2,10.1 6.1,7.4 	"/> <polygon class="st1" points="0,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st2" points="12.2,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st0" points="0,11.4 6.1,15 6.1,20 	"/> <polygon class="st1" points="12.2,11.4 6.1,15 6.1,20 	"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <div class="tip">Please, switch to Mainnet</div>
+                        <a href="">Connect account</a>
+                    </div>
+                </div> -->
+
+                <!-- Ethereum Если не подключен аккаунт -->
+                <!-- <div class="techstatus" title="Ethereum">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-ethereum" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 12.2 20" style="enable-background:new 0 0 12.2 20;" xml:space="preserve"> <g> <polygon class="st0" points="6.1,0 0,10.1 6.1,7.4 	"/> <polygon class="st1" points="6.1,0 12.2,10.1 6.1,7.4 	"/> <polygon class="st1" points="0,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st2" points="12.2,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st0" points="0,11.4 6.1,15 6.1,20 	"/> <polygon class="st1" points="12.2,11.4 6.1,15 6.1,20 	"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <div class="tip">Mainnet</div>
+                        <a href="">Connect account</a>
+                    </div>
+                </div> -->
+
+                <!-- Ethereum Все ок -->
+                <div class="techstatus on" title="Ethereum">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-ethereum" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 12.2 20" style="enable-background:new 0 0 12.2 20;" xml:space="preserve"> <g> <polygon class="st0" points="6.1,0 0,10.1 6.1,7.4 	"/> <polygon class="st1" points="6.1,0 12.2,10.1 6.1,7.4 	"/> <polygon class="st1" points="0,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st2" points="12.2,10.1 6.1,7.4 6.1,13.8 	"/> <polygon class="st0" points="0,11.4 6.1,15 6.1,20 	"/> <polygon class="st1" points="12.2,11.4 6.1,15 6.1,20 	"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <div class="tip">Mainnet</div>
+                        <div class="flexline flexline-smallgap">
+                            <b>0x00a5...8C69</b>
+                            <a href="#" title="copy address">
+                                <svg version="1.1" class="icon icon-small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 16.8 20" style="enable-background:new 0 0 16.8 20;" xml:space="preserve">
+                           <path d="M10.6,20H3.1C1.4,20,0,18.6,0,16.9V6.3c0-1.7,1.4-3.1,3.1-3.1h7.5c1.7,0,3.1,1.4,3.1,3.1v10.6C13.7,18.6,12.3,20,10.6,20z
+                                M3.1,4.7c-0.9,0-1.6,0.7-1.6,1.6v10.6c0,0.9,0.7,1.6,1.6,1.6h7.5c0.9,0,1.6-0.7,1.6-1.6V6.3c0-0.9-0.7-1.6-1.6-1.6
+                               C10.6,4.7,3.1,4.7,3.1,4.7z M16.8,14.9V3.1c0-1.7-1.4-3.1-3.1-3.1H5C4.6,0,4.3,0.3,4.3,0.8S4.6,1.6,5,1.6h8.7c0.9,0,1.6,0.7,1.6,1.6
+                               V15c0,0.4,0.3,0.8,0.8,0.8S16.8,15.4,16.8,14.9z"/>
+                           </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Polkadot Нет расширения -->
+                <!-- <div class="techstatus" title="Polkadot">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-polkadot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 15 20" style="enable-background:new 0 0 15 20;" xml:space="preserve"> <g> <path class="st0" d="M7.6,0C3.4,0,0,3.4,0,7.6C0,8.4,0.1,9.2,0.4,10c0.2,0.5,0.8,0.8,1.3,0.7c0.5-0.2,0.8-0.8,0.6-1.3 c-0.1-0.6-0.2-1.3-0.2-2c0.1-3,2.6-5.4,5.6-5.3s5.4,2.6,5.3,5.6c-0.1,2.8-2.3,5.1-5.1,5.3c0,0-1.1,0.1-1.6,0.1 c-0.2,0-0.4,0.1-0.6,0.1H5.6l0,0v-0.1l0.2-0.9l1-4.5c0.1-0.4-0.3-1-0.8-1.1S4.9,6.8,4.7,7.4c0,0-2.4,11-2.4,11.1 C2.2,19,2.5,19.6,3,19.7l0,0h0.1c0.5,0.1,1.1-0.2,1.2-0.7l0,0l0,0c0-0.1,0.3-1.6,0.3-1.6c0.2-1.1,1.1-2,2.2-2.1 C7,15.3,8,15.2,8,15.2c4.2-0.4,7.2-4.1,6.8-8.3C14.5,3,11.4,0.1,7.6,0z"/> <path class="st1" d="M8,17.5c-0.7-0.1-1.4,0.3-1.5,1l0,0c-0.1,0.7,0.3,1.3,1,1.5l0,0l0,0c0.7,0.2,1.3-0.2,1.5-0.9l0,0V19 C9.2,18.3,8.7,17.6,8,17.5z"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <a href="https://polkadot.js.org/extension/" target="_blank">Polkadot.js extension</a> not found
+                    </div>
+                </div> -->
+
+                <!-- Polkadot аккаунт не подключен -->
+                <!-- <div class="techstatus" title="Polkadot">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-polkadot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 15 20" style="enable-background:new 0 0 15 20;" xml:space="preserve"> <g> <path class="st0" d="M7.6,0C3.4,0,0,3.4,0,7.6C0,8.4,0.1,9.2,0.4,10c0.2,0.5,0.8,0.8,1.3,0.7c0.5-0.2,0.8-0.8,0.6-1.3 c-0.1-0.6-0.2-1.3-0.2-2c0.1-3,2.6-5.4,5.6-5.3s5.4,2.6,5.3,5.6c-0.1,2.8-2.3,5.1-5.1,5.3c0,0-1.1,0.1-1.6,0.1 c-0.2,0-0.4,0.1-0.6,0.1H5.6l0,0v-0.1l0.2-0.9l1-4.5c0.1-0.4-0.3-1-0.8-1.1S4.9,6.8,4.7,7.4c0,0-2.4,11-2.4,11.1 C2.2,19,2.5,19.6,3,19.7l0,0h0.1c0.5,0.1,1.1-0.2,1.2-0.7l0,0l0,0c0-0.1,0.3-1.6,0.3-1.6c0.2-1.1,1.1-2,2.2-2.1 C7,15.3,8,15.2,8,15.2c4.2-0.4,7.2-4.1,6.8-8.3C14.5,3,11.4,0.1,7.6,0z"/> <path class="st1" d="M8,17.5c-0.7-0.1-1.4,0.3-1.5,1l0,0c-0.1,0.7,0.3,1.3,1,1.5l0,0l0,0c0.7,0.2,1.3-0.2,1.5-0.9l0,0V19 C9.2,18.3,8.7,17.6,8,17.5z"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <a href="">Connect account</a>
+                    </div>
+                </div> -->
+
+                <!-- Polkadot Аккаунт подключен -->
+                <div class="techstatus on" title="Polkadot">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-polkadot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 15 20" style="enable-background:new 0 0 15 20;" xml:space="preserve"> <g> <path class="st0" d="M7.6,0C3.4,0,0,3.4,0,7.6C0,8.4,0.1,9.2,0.4,10c0.2,0.5,0.8,0.8,1.3,0.7c0.5-0.2,0.8-0.8,0.6-1.3 c-0.1-0.6-0.2-1.3-0.2-2c0.1-3,2.6-5.4,5.6-5.3s5.4,2.6,5.3,5.6c-0.1,2.8-2.3,5.1-5.1,5.3c0,0-1.1,0.1-1.6,0.1 c-0.2,0-0.4,0.1-0.6,0.1H5.6l0,0v-0.1l0.2-0.9l1-4.5c0.1-0.4-0.3-1-0.8-1.1S4.9,6.8,4.7,7.4c0,0-2.4,11-2.4,11.1 C2.2,19,2.5,19.6,3,19.7l0,0h0.1c0.5,0.1,1.1-0.2,1.2-0.7l0,0l0,0c0-0.1,0.3-1.6,0.3-1.6c0.2-1.1,1.1-2,2.2-2.1 C7,15.3,8,15.2,8,15.2c4.2-0.4,7.2-4.1,6.8-8.3C14.5,3,11.4,0.1,7.6,0z"/> <path class="st1" d="M8,17.5c-0.7-0.1-1.4,0.3-1.5,1l0,0c-0.1,0.7,0.3,1.3,1,1.5l0,0l0,0c0.7,0.2,1.3-0.2,1.5-0.9l0,0V19 C9.2,18.3,8.7,17.6,8,17.5z"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <div class="tip">
+                            <select class="small">
+                            <option>Robonomics</option>
+                            <option>IPCI</option>
+                            <option>Kusama</option>
+                            </select>
+                            <span>chain format</span>
+                        </div>
+                        <div class="flexline flexline-smallgap">
+                            <b>0x00a5...7E8C69</b>
+                            <a href="#" title="copy address">
+                                <svg version="1.1" class="icon icon-small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 16.8 20" style="enable-background:new 0 0 16.8 20;" xml:space="preserve">
+                           <path d="M10.6,20H3.1C1.4,20,0,18.6,0,16.9V6.3c0-1.7,1.4-3.1,3.1-3.1h7.5c1.7,0,3.1,1.4,3.1,3.1v10.6C13.7,18.6,12.3,20,10.6,20z
+                                M3.1,4.7c-0.9,0-1.6,0.7-1.6,1.6v10.6c0,0.9,0.7,1.6,1.6,1.6h7.5c0.9,0,1.6-0.7,1.6-1.6V6.3c0-0.9-0.7-1.6-1.6-1.6
+                               C10.6,4.7,3.1,4.7,3.1,4.7z M16.8,14.9V3.1c0-1.7-1.4-3.1-3.1-3.1H5C4.6,0,4.3,0.3,4.3,0.8S4.6,1.6,5,1.6h8.7c0.9,0,1.6,0.7,1.6,1.6
+                               V15c0,0.4,0.3,0.8,0.8,0.8S16.8,15.4,16.8,14.9z"/>
+                           </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- IPFS Pubsub disconnected -->
+                <!-- <div class="techstatus" title="IPFS">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-ipfs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 17.3 20" style="enable-background:new 0 0 17.3 20;" xml:space="preserve"> <g> <path class="st0" d="M0,14.9l8.6,5l8.6-5V5L8.6,0L0,5V14.9z"/> <path class="st1" d="M7.7,1.2L1.5,4.8c0,0.1,0,0.2,0,0.3l6.3,3.6c0.5-0.4,1.2-0.4,1.8,0l6.3-3.6c0-0.1,0-0.2,0-0.3L9.5,1.2 C9,1.6,8.3,1.6,7.7,1.2z M16.4,6.1l-6.3,3.7c0.1,0.7-0.3,1.3-0.9,1.5v7.2c0.1,0,0.2,0.1,0.3,0.2l6.3-3.6c-0.1-0.7,0.3-1.3,0.9-1.5 V6.3C16.6,6.3,16.5,6.2,16.4,6.1z M0.9,6.2c-0.1,0-0.2,0.1-0.3,0.1v7.2c0.6,0.3,1,0.9,0.9,1.5l6.3,3.6c0.1-0.1,0.2-0.1,0.3-0.2 v-7.2c-0.6-0.3-1-0.9-0.9-1.5C7.1,9.8,0.9,6.2,0.9,6.2z"/> <path class="st0" d="M8.6,1.1l7.7,4.5v8.9L8.6,19l-7.7-4.5v-9L8.6,1.1 M8.6,0L0,5v10l8.6,5l8.6-5V5C17.3,5,8.6,0,8.6,0z"/> <path class="st0" d="M8.7,11.7L8.7,11.7c-1,0-1.7-0.7-1.7-1.6l0,0V9.9C7,9,7.7,8.3,8.6,8.3l0,0h0.1c0.9,0,1.6,0.7,1.6,1.6l0,0V10 C10.3,10.9,9.6,11.7,8.7,11.7L8.7,11.7z M8.7,18.3L8.7,18.3c-0.7,0-1.2,0.3-1.5,0.8l1.5,0.8l1.5-0.8C9.8,18.6,9.3,18.3,8.7,18.3z M17.3,13.3L17.3,13.3c-1,0-1.7,0.7-1.7,1.6l0,0V15c0,0.3,0.1,0.5,0.2,0.8l1.5-0.9V13.3z M15.8,4.2c-0.1,0.2-0.2,0.5-0.2,0.8v0.1 c0,0.9,0.7,1.6,1.6,1.6l0,0h0.1V5L15.8,4.2L15.8,4.2z M8.6,0L7.2,0.9C7.4,1.4,8,1.7,8.6,1.7h0.1c0.6,0,1.1-0.3,1.4-0.8L8.6,0z M1.5,4.1L0,5v1.7h0.1C1,6.7,1.7,6,1.7,5.1l0,0V4.9C1.7,4.7,1.6,4.4,1.5,4.1z M0.1,13.3L0.1,13.3L0,15l1.5,0.9 c0.1-0.2,0.2-0.5,0.2-0.8V15C1.7,14,1,13.3,0.1,13.3L0.1,13.3z"/> <path class="st2" d="M8.6,20V10L0,5v10L8.6,20z"/> <path class="st3" d="M17.3,14.9V5l-8.6,5v10L17.3,14.9z"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <div class="tip">IPFS services</div>
+                        Pubsub disconnected
+                    </div>
+                </div> -->
+
+                <!-- IPFS Pubsub connected -->
+                <div class="techstatus on" title="IPFS">
+                    <div class="techstatus-logo">
+                        <svg version="1.1" class="logo-ipfs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 17.3 20" style="enable-background:new 0 0 17.3 20;" xml:space="preserve"> <g> <path class="st0" d="M0,14.9l8.6,5l8.6-5V5L8.6,0L0,5V14.9z"/> <path class="st1" d="M7.7,1.2L1.5,4.8c0,0.1,0,0.2,0,0.3l6.3,3.6c0.5-0.4,1.2-0.4,1.8,0l6.3-3.6c0-0.1,0-0.2,0-0.3L9.5,1.2 C9,1.6,8.3,1.6,7.7,1.2z M16.4,6.1l-6.3,3.7c0.1,0.7-0.3,1.3-0.9,1.5v7.2c0.1,0,0.2,0.1,0.3,0.2l6.3-3.6c-0.1-0.7,0.3-1.3,0.9-1.5 V6.3C16.6,6.3,16.5,6.2,16.4,6.1z M0.9,6.2c-0.1,0-0.2,0.1-0.3,0.1v7.2c0.6,0.3,1,0.9,0.9,1.5l6.3,3.6c0.1-0.1,0.2-0.1,0.3-0.2 v-7.2c-0.6-0.3-1-0.9-0.9-1.5C7.1,9.8,0.9,6.2,0.9,6.2z"/> <path class="st0" d="M8.6,1.1l7.7,4.5v8.9L8.6,19l-7.7-4.5v-9L8.6,1.1 M8.6,0L0,5v10l8.6,5l8.6-5V5C17.3,5,8.6,0,8.6,0z"/> <path class="st0" d="M8.7,11.7L8.7,11.7c-1,0-1.7-0.7-1.7-1.6l0,0V9.9C7,9,7.7,8.3,8.6,8.3l0,0h0.1c0.9,0,1.6,0.7,1.6,1.6l0,0V10 C10.3,10.9,9.6,11.7,8.7,11.7L8.7,11.7z M8.7,18.3L8.7,18.3c-0.7,0-1.2,0.3-1.5,0.8l1.5,0.8l1.5-0.8C9.8,18.6,9.3,18.3,8.7,18.3z M17.3,13.3L17.3,13.3c-1,0-1.7,0.7-1.7,1.6l0,0V15c0,0.3,0.1,0.5,0.2,0.8l1.5-0.9V13.3z M15.8,4.2c-0.1,0.2-0.2,0.5-0.2,0.8v0.1 c0,0.9,0.7,1.6,1.6,1.6l0,0h0.1V5L15.8,4.2L15.8,4.2z M8.6,0L7.2,0.9C7.4,1.4,8,1.7,8.6,1.7h0.1c0.6,0,1.1-0.3,1.4-0.8L8.6,0z M1.5,4.1L0,5v1.7h0.1C1,6.7,1.7,6,1.7,5.1l0,0V4.9C1.7,4.7,1.6,4.4,1.5,4.1z M0.1,13.3L0.1,13.3L0,15l1.5,0.9 c0.1-0.2,0.2-0.5,0.2-0.8V15C1.7,14,1,13.3,0.1,13.3L0.1,13.3z"/> <path class="st2" d="M8.6,20V10L0,5v10L8.6,20z"/> <path class="st3" d="M17.3,14.9V5l-8.6,5v10L17.3,14.9z"/> </g> </svg>
+                    </div>
+                    <div class="techstatus-actions">
+                        <div class="tip">IPFS services</div>
+                        Pubsub connected
+                    </div>
+                </div>
+
+                <!-- Link for page with settings -->
+                <!-- <a href="" title="advanced settings">
+                    <svg version="1.1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve"> <path d="M10.6,20H9.4c-1,0-1.8-0.8-1.8-1.8v-0.4c-0.4-0.1-0.9-0.3-1.3-0.5L6,17.5c-0.7,0.7-1.9,0.7-2.6,0l-0.9-0.9 c-0.7-0.7-0.7-1.9,0-2.6l0.3-0.3c-0.2-0.4-0.4-0.8-0.5-1.3H1.8c-1,0-1.8-0.8-1.8-1.8V9.4c0-1,0.8-1.8,1.8-1.8h0.4 c0.1-0.4,0.3-0.9,0.5-1.3L2.5,6c-0.7-0.7-0.7-1.9,0-2.6l0.9-0.9c0.7-0.7,1.9-0.7,2.6,0l0.3,0.3c0.4-0.2,0.8-0.4,1.3-0.5V1.8 c0-1,0.8-1.8,1.8-1.8h1.3c1,0,1.8,0.8,1.8,1.8v0.4c0.4,0.1,0.9,0.3,1.3,0.5L14,2.5c0.7-0.7,1.9-0.7,2.6,0l0.9,0.9 c0.7,0.7,0.7,1.9,0,2.6l-0.3,0.3c0.2,0.4,0.4,0.8,0.5,1.3h0.4c1,0,1.8,0.8,1.8,1.8v1.3c0,1-0.8,1.8-1.8,1.8h-0.4 c-0.1,0.4-0.3,0.9-0.5,1.3l0.3,0.3c0.7,0.7,0.7,1.9,0,2.6l-0.9,0.9c-0.7,0.7-1.9,0.7-2.6,0l-0.3-0.3c-0.4,0.2-0.8,0.4-1.3,0.5v0.4 C12.5,19.2,11.6,20,10.6,20z M6.5,16c0.6,0.3,1.2,0.6,1.8,0.7c0.3,0.1,0.4,0.3,0.4,0.6v0.9c0,0.4,0.3,0.7,0.7,0.7h1.3 c0.4,0,0.7-0.3,0.7-0.7v-0.9c0-0.3,0.2-0.5,0.4-0.6c0.6-0.2,1.2-0.4,1.8-0.7c0.2-0.1,0.5-0.1,0.7,0.1l0.6,0.6c0.3,0.3,0.7,0.3,0.9,0 l0.9-0.9c0.3-0.3,0.3-0.7,0-0.9l-0.6-0.6c-0.2-0.2-0.2-0.5-0.1-0.7c0.3-0.6,0.6-1.2,0.7-1.8c0.1-0.3,0.3-0.4,0.6-0.4h0.9 c0.4,0,0.7-0.3,0.7-0.7V9.4c0-0.4-0.3-0.7-0.7-0.7h-0.9c-0.3,0-0.5-0.2-0.6-0.4C16.6,7.6,16.3,7,16,6.5c-0.1-0.2-0.1-0.5,0.1-0.7 l0.6-0.6c0.3-0.3,0.3-0.7,0-0.9l-0.9-0.9c-0.3-0.3-0.7-0.3-0.9,0L14.3,4c-0.2,0.2-0.5,0.2-0.7,0.1c-0.6-0.3-1.2-0.6-1.8-0.7 c-0.3-0.1-0.4-0.3-0.4-0.6v-1c0-0.4-0.3-0.7-0.7-0.7H9.4C9,1.2,8.7,1.5,8.7,1.8v0.9c0,0.3-0.2,0.5-0.4,0.6C7.6,3.4,7,3.7,6.5,4 C6.2,4.2,5.9,4.1,5.8,3.9L5.1,3.3C4.9,3,4.5,3.1,4.2,3.3L3.3,4.2C3.1,4.5,3,4.9,3.3,5.1l0.6,0.6C4.1,5.9,4.2,6.2,4,6.5 C3.7,7,3.4,7.6,3.3,8.3C3.2,8.5,3,8.7,2.7,8.7H1.8C1.5,8.7,1.2,9,1.2,9.4v1.3c0,0.4,0.3,0.7,0.7,0.7h0.9c0.3,0,0.5,0.2,0.6,0.4 c0,0.6,0.3,1.2,0.6,1.7c0.1,0.2,0.1,0.5-0.1,0.7l-0.6,0.6c-0.3,0.3-0.3,0.7,0,0.9l0.9,0.9c0.3,0.3,0.7,0.3,0.9,0L5.7,16 C5.9,15.9,6.2,15.8,6.5,16L6.5,16z M10,14.4c-2.4,0-4.4-2-4.4-4.4s2-4.4,4.4-4.4s4.4,2,4.4,4.4S12.4,14.4,10,14.4z M10,6.8 c-1.8,0-3.2,1.4-3.2,3.2s1.4,3.2,3.2,3.2s3.2-1.4,3.2-3.2S11.8,6.8,10,6.8L10,6.8z"/> </svg>
+                </a> -->
+            </div>
+        </div> 
+    </header>
+
+    <main fragment="4b1ec2800b" role="main">
+        <div id="mobile-sidebarmenu" class="sidebar popup"><section><div class="sidebar__title">Robonomics</div><nav class="sidebar__nav"><a href="#/" class=""> Getting started </a></nav></section><section><div class="sidebar__title">My devices</div><nav class="sidebar__nav"><a href="#/iot/devices" class=""> Devices </a><a href="#/iot/telemetry" class=""> Telemetry </a></nav></section><section><div class="sidebar__title">Marketplace</div><nav class="sidebar__nav"><a href="#/services" class=""> Services </a></nav></section><section><div class="sidebar__title">For providers</div><nav class="sidebar__nav"><a href="#/lighthouse" class=""> Lighthouses </a><a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama.rpc.robonomics.network%2F#/explorer" target="_blank"> Parachain </a></nav></section><section><div class="sidebar__title">For tokenholders</div><nav class="sidebar__nav"><a href="#/uniswap" class=""> Uniswap </a><a href="#/xrt-for-vote" class=""> XRT → DAO VOTES </a><a href="#/alembic" class=""> AIRA → XRT </a><a href="#/exodus" class=""> Exodus </a><a href="#/pioneer" aria-current="page" class="router-link-exact-active active"> NFT card </a></nav></section><section><div class="sidebar__title">Wiki and support</div><nav class="sidebar__nav"><a href="https://robonomics.network/" target="_blank"> robonomics.network </a><a href="https://robonomics.events/" target="_blank">rewards</a><a href="https://wiki.robonomics.network/" target="_blank"> wiki </a><a href="https://riot.im/app/#/room/#robonomics:matrix.org" target="_blank"> Riot chat </a><a href="https://t.me/robonomics" target="_blank">Telegram EN</a><a href="https://t.me/joinchat/A6wE1FiSPStvVN4MKmZDyg" target="_blank"> Telegram Trade EN </a><a href="https://t.me/robonomicsru" target="_blank">Telegram RU</a></nav></section></div>
+        
+        
+        <div class="content">
+            <div class="content-in">
+                <section class="grid-1-3 layout-wide">
+
+                    <div class="hyphens">
+                        <h1>Staking</h1>
+                        <p>Here you can stake XRT transferred from Ethereum to Parachain in <a href="https://dapp.robonomics.network/#/exodus">Exodus</a> and get rewards.</p>
+                        <p>
+                            <b>Important tips:</b>
+                            <ul>   
+                                <li>Unbonding takes approx. 50 000 blocks</li>
+                                <li>Once you have bonded any amount, you can't add to your stake more with chosen account. We are working on it and in the future this option should be available.</li>
+                                <li><a href="https://robonomics.network/kusama-slot/" target="_blank" rel="noopener">Crowdloan</a> contributors will get increased reward rate.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <code>Rewards Distribution</code>
+                            <br/>
+                            <code>= 40Wn * XRT / block</code>
+                        </p>
+                        <p>
+                            <code>Increased Rewards Distribution</code>
+                            <br/>
+                            <code>= 200Wn * XRT / block</code>
+                        </p>
+
+                        <a class="btn-outline" href="https://github.com/airalab/robonomics/issues" target="_blank" rel="noopener">Troubleshooting</a>
+
+                        <!-- <ul>
+                            <li><a href="#" target="_blank" rel="noopener">Robonomics article</a></li>
+                            <li><a href="https://github.com/airalab/robonomics/issues" target="_blank" rel="noopener">Troubleshooting (GitHub Issue)</a></li>
+                        </ul> -->
+                    </div>
+
+                    <div>
+
+                        <section class="section-light disabled">
+
+                            <h3>Your bondings</h3>
+    
+                            <table class="bonding-table container-full">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Account
+                                            <p class="tip">This account holds funds bonded for staking, signalling decisions, pays transaction fees, gets rewards</p>
+                                        </th>
+                                        <th>
+                                            Balance
+                                            <p class="tip">Here you can bond and unbond your tokens</p>
+                                        </th>
+                                        <th>
+                                            Rewards
+                                            <p class="tip">Track and claim your rewards here</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3" style="text-align: center; font-style: italic; opacity: 1; color: #000">
+                                            Here will be your bondings. Reload page, if you expect updates and they are not coming.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+
+                        <section class="section-light">
+
+                            <h3>Your bondings</h3>
+    
+                            <table class="bonding-table container-full">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Account
+                                            <p class="tip">This account holds funds bonded for staking, signalling decisions, pays transaction fees, gets rewards</p>
+                                        </th>
+                                        <th>
+                                            Balance
+                                            <p class="tip">Here you can bond and unbond your tokens</p>
+                                        </th>
+                                        <th>
+                                            Rewards
+                                            <p class="tip">Track and claim your rewards here</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+    
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Test - 0.00 XRT</span><br/>
+                                                <span>EGB...9BDXGBn</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Bonded: 1.00 XRT</span><br/>
+                                            </div>
+                                            <div>
+                                                <a class="btn-outline" href="#">Unbond</a>
+                                            </div>
+        
+                                        </td>
+                                        <td>
+                                            <div class="disabled">
+                                                <span class="strong">0.00 XRT</span>
+                                            </div>
+    
+                                            <div class="disabled">
+                                                <a class="btn-outline" href="#">Claim</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Test - 0.00 XRT</span><br/>
+                                                <span>EGB...9BDXGBn</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Bonded: 1.00 XRT</span><br/>
+                                            </div>
+    
+                                            <div>
+                                                <p class="input-measured input-size--s">
+                                                    <input class="container-full" type="text" value=""><span class="input-measure">XRT</span>
+                                                </p> 
+                                                <button class="btn-outline" href="#">Unbond</button>
+                                            </div>
+        
+                                        </td>
+                                        <td>
+                                            <div class="disabled">
+                                                <span class="strong">0.00 XRT</span>
+                                            </div>
+    
+                                            <div class="disabled">
+                                                <a class="btn-outline" href="#">Claim</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Test - 0.00 XRT</span><br/>
+                                                <span>EGB...9BDXGBn</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Bonded: 1.00 XRT</span><br/>
+                                            </div>
+    
+                                            <div class="disabled">
+                                                <p class="input-measured input-size--s">
+                                                    <input class="container-full" type="text" value="1"><span class="input-measure">XRT</span>
+                                                </p> 
+                                                <a class="btn-outline" href="#"><span class="loader-ring"></span> Unbonding</a>
+                                            </div>
+        
+                                        </td>
+                                        <td>
+                                            <div class="disabled">
+                                                <span class="strong">0.00 XRT</span>
+                                            </div>
+    
+                                            <div class="disabled">
+                                                <a class="btn-outline" href="#">Claim</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Test - 0.00 XRT</span><br/>
+                                                <span>EGB...9BDXGBn</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Bonded: 1.00 XRT</span><br/>
+                                            </div>
+    
+                                            <div>
+                                                <span class="strong">Unbonding:</span><br/>
+                                                <span class="strong">0.50 XRT (50357 blocks left)</span><br/>
+                                                <span class="strong">0.10 XRT (50357 blocks left)</span><br/>
+                                            </div>
+    
+                                            <div>
+                                                <a class="btn-outline" href="#">Unbond</a>
+                                            </div>
+        
+                                        </td>
+                                        <td>
+                                            <div class="disabled">
+                                                <span class="strong">0.00 XRT</span>
+                                            </div>
+    
+                                            <div class="disabled">
+                                                <a class="btn-outline" href="#">Claim</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    
+    
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Test - 0.00 XRT</span><br/>
+                                                <span>EGB...9BDXGBn</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="strong">Bonded: 1.00 XRT</span><br/>
+                                            </div>
+    
+                                            <div>
+                                                <span class="strong">Unbonding:</span><br/>
+                                                <span class="strong">0.50 XRT (50357 blocks left)</span><br/>
+                                                <span class="strong">0.10 XRT (50357 blocks left)</span><br/>
+                                            </div>
+    
+                                            <div>
+                                                <a class="btn-outline" href="#">Unbond</a>
+                                            </div>
+        
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="strong">0.40 XRT</span>
+                                            </div>
+                                            <div>
+                                                <a class="btn-outline" href="#">Claim</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                  
+                                </tbody>
+                            </table>
+    
+                        </section>
+                    
+                    <section class="section-light">
+
+                        <h3>New bonding</h3>
+
+                        <form>
+                            <!-- disabled если
+                                запрос на Bond отправлен (кнопка нажата)
+                                транзакция прошла и все ок
+                            -->
+                            <section>
+                                <label class="container-full">
+                                    1. Account:
+                                    <p class="tip">This account holds funds bonded for staking, signalling decisions, pays transaction fees, gets rewards</p>
+                                </label>
+
+                                <!-- Если нет аккаунтов в расширении -->
+                                <!-- <p class="error">Connected accounts in Polkadot.js extension not found. Please, connect your account and continue.</p> -->
+
+                                 <!-- Если аккаунт не найден -->
+                                <!-- <div class="error">
+                                    <div class="account-balance">
+                                        <img class="account-balance-pic" alt="" src="polkadot-acc-test.png"/>
+                                        <select><option value="EGBPU...9BDXGBn">Test - EGBPU...9BDXGBn</option></select>
+                                        <span>0.00 XRT</span>
+                                    </div>
+                                    <p>Insufficient balance</p>
+                                </div> -->
+
+
+                                <!-- Если все ок -->
+                                <div>
+                                    <div class="account-balance">
+                                        <img class="account-balance-pic" alt="" src="polkadot-acc-test.png"/><select><option value="EGBPU...9BDXGBn">Test - EGBPU...9BDXGBn</option></select><span>0.00 XRT</span>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- disabled если 
+                                хотя бы на одном из аккаунтов по нулям
+                                запрос на Bond отправлен (кнопка нажата)
+                                транзакция прошла и все ок
+                            -->
+                            <section class="disabled">
+                                <label>2. Value to be bonded</label>
+                                <p class="tip">Don't forget about transaction fee</p>
+
+                                <!-- Если недостаточно денег на stash -->
+                                <!-- <div class="error">
+                                    <div class="input-measured">
+                                        <input class="container-full" type="text" value=""><span class="input-measure">XRT</span>
+                                    </div>
+                                    <p>Insufficient balance on choosen account. It needs to be at least the value you specified here plus supposed transaction fee.</p>
+                                </div> -->
+                                
+                                <!-- Если все ок -->
+                                <div>
+                                    <div class="input-measured">
+                                        <input class="container-full" type="text" value=""><span class="input-measure">XRT</span>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <!-- Если аккаунт с нулевым балансом -->
+                                <button class="lg disabled">Bond</button>
+
+                                <!-- <button class="lg">Bond</button> -->
+
+
+                                <!-- Загрузка -->
+                                <!-- <button class="lg">Bonding <div class="loader-ring"></div></button> -->
+
+
+
+                                <!-- Транзакция прошла -->
+                                <!-- <p>
+                                    <button class="lg btn-green" disabled>
+                                        Bonded
+                                        <div class="i-check"></div>
+                                    </button>
+                                </p> 
+                            
+                                <ul>
+                                    <li><a href="">View Block</a></li>
+                                    <li><a href="">View Extrinsic</a></li>
+                                </ul>-->
+
+                                
+
+                            </section>
+
+                        </form>
+                    </section>
+
+                    
+
+                    
+                    </div>
+
+
+
+            
+                    </div>
+
+                </section>
+                
+                </div></div></main>
+</body>
