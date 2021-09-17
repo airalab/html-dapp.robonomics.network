@@ -388,6 +388,10 @@ header .grid-auto-1 > .flexline {
     margin-right: calc(var(--space) * 0.6);
 }
 
+.flexline-center {
+    align-items: center;
+}
+
 a svg.icon {
     fill: var(--color-blue)
 }
