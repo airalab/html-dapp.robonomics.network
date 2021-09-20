@@ -133,6 +133,10 @@ a:hover svg {
      padding-top: calc(var(--space) * 2);
      padding-bottom: calc(var(--space) * 2);
  }
+
+ blockquote {
+     border-color: var(--color-text-accent) !important
+ }
  /* END OF OVERWRITE OLD STYLES */ 
 
 
@@ -237,6 +241,13 @@ b {
     font-weight: bold;
 }
 
+hr.hr-strong {
+    height: 2px;
+    background-color: var(--color-text) !important;
+    margin-top: calc(var(--space)*2) !important;
+    margin-bottom: calc(var(--space)*2) !important;
+}
+
 /* end of TYPOGRAPHY */
 
 
@@ -297,7 +308,7 @@ Logo with text
 
 
 /* HEADER */
-header {
+header[role="banner"] {
     /* overwrite */
     border-bottom: 0 !important;
     box-shadow: 0 .5rem 1.2rem rgba(189,197,209,.2);
@@ -466,6 +477,31 @@ select.small {
     color: var(--color-gray)
 }
 /* end of FORM */
+
+/* PAGE MESSAGE POPUS */
+
+.messageBoard {
+    position: fixed;
+    right: calc(var(--space)*2);
+    bottom: calc(var(--space)*2);
+    z-index: 1000;
+    overflow-y: scroll;
+    max-width: 400px;
+}
+
+.messageBoard article {
+    border-width: 2px;
+    border-color: var(--color-orange) !important;
+    margin-top: var(--space)
+}
+
+.messageBoard article header {
+    font-weight: bold;
+    font-family: var(--font-mono);
+    margin-bottom: var(--space);
+    color: var(--color-orange);
+}
+/* end of PAGE MESSAGE POPUS */
 
 
 /* STAKING */
