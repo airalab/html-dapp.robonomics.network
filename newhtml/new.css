@@ -161,6 +161,10 @@ a:hover svg {
     padding-right: var(--space);
 }
 
+.layout-narrow {
+    max-width: 500px;
+}
+
 /* END OF LAYOUTS */ 
 
 
