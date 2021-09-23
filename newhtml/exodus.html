@@ -157,7 +157,7 @@
                             </section>
 
                             <!-- Ставим класс disabled, если не выбран парачейновый адрес -->
-                            <section class="">
+                            <section class="disabled">
                                 <label>3. Value to transfer</label>
                                 <p class="tip">You need some amount of ETH to pay for transactions fee: 1) approving; 2) applying</p>
 
@@ -185,6 +185,14 @@
                                      <!-- <button class="btn-outline m-l-10 green" href="#"><span class="i-check"></span>Approved 10 XRT</button> -->
                                 </div>
                                 <div><a href="" class="a-dashed">Apply maximum</a></div>
+                            </section>
+
+
+                            <!-- Ставим класс disabled, если один из предыдущих пунктов не корректны или незаполнены -->
+                            <section >
+                                <label>4. Double-check your transfer</label>
+                                <p class="tip">Please, be sure you have access to selected account for transfering</p>
+                                <input type="checkbox" /> I have seed phrase for my parachain account&nbsp;&nbsp;&nbsp;<code>Test - EGBPU...9BDXGBn</code>
                             </section>
 
                             <section>
